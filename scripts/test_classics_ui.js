@@ -45,6 +45,19 @@ global.fetch = async url => ({
 });
 
 vm.runInThisContext(fs.readFileSync(path.join(root, 'i18n.js'), 'utf8'), { filename: 'i18n.js' });
+
+// classics.js renders its save / quick-look buttons through EA.reading, which
+// reading-list.js provides in the browser. This harness asserts the library
+// rendering itself, so stand in with a no-op that still counts registrations.
+let registered = 0;
+const registrations = () => registered;
+EA.reading = {
+  register: () => { registered += 1; },
+  actionButtons: () => '<button type="button" class="action-button">收藏</button>',
+  quickButton: () => '<button type="button" class="read-link">快速扫读</button>',
+  onChange: () => {}
+};
+
 vm.runInThisContext(fs.readFileSync(path.join(root, 'classics.js'), 'utf8'), { filename: 'classics.js' });
 
 function count(re, html) { return (html.match(re) || []).length; }
@@ -58,12 +71,23 @@ setImmediate(() => {
     `zh initial render mismatch: cards=${cardCount}, filters=${filterCount}, doi=${doiCount}`);
   assert(nodes.classicCount.innerHTML.includes('共整理'), 'zh count copy missing');
   assert(nodes.classicGrid.innerHTML.includes('用实验体系展示基因复制'), 'zh notes missing');
+  // Saving must be reachable from every card. `register` is cumulative across
+  // re-renders, so measure the first render's share only.
+  assert(registrations() === expectedCount,
+    `every card of the initial render must register a record: ${registrations()}/${expectedCount}`);
+  assert(count(/class="classic-actions"/g, nodes.classicGrid.innerHTML) === expectedCount,
+    'cards are missing their save row');
 
+  const beforeFilter = registrations();
   nodes.classicFilters.click({ target: { closest: () => ({ dataset: { source: 'Cell 正刊' } }) } });
   const cellCards = count(/class="classic-card"/g, nodes.classicGrid.innerHTML);
   assert(cellCards === expectedCellCount && nodes.classicCount.innerHTML.includes('Cell 正刊'),
     `zh Cell filter mismatch: cards=${cellCards}`);
   assert(nodes.classicCount.innerHTML.includes('篇'), 'zh filtered count copy missing');
+  assert(registrations() - beforeFilter === expectedCellCount,
+    `filtered cards must register a record: ${registrations() - beforeFilter}/${expectedCellCount}`);
+  assert(count(/class="classic-actions"/g, nodes.classicGrid.innerHTML) === expectedCellCount,
+    'filtered cards are missing their save row');
 
   // ---- switch to English and re-check the same view ----
   EA.setLang('en');

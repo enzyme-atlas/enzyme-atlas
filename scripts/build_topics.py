@@ -6,6 +6,7 @@ VOCAB.topics 一致；新增专题的英文名在此定义并需同步进 i18n.j
 """
 from __future__ import annotations
 
+import datetime as dt
 import json
 from pathlib import Path
 
@@ -85,7 +86,7 @@ def main() -> None:
     # 按总篇数降序，但保证零篇的专题也在（展示完整性）
     topics.sort(key=lambda t: (-t["total"], t["key"]))
 
-    out = {"updatedAt": "2026-09-14", "topics": topics}
+    out = {"updatedAt": dt.date.today().isoformat(), "topics": topics}
     (DATA / "topics.json").write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("已生成 data/topics.json")
     print(f"  专题总数: {len(topics)}")

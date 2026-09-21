@@ -1,7 +1,20 @@
 {
-  "updatedAt": "2026-09-14",
-  "current": 3,
+  "updatedAt": "2026-09-21",
+  "current": 4,
   "editions": [
+    {
+      "edition": 4,
+      "updatedAt": "2026-09-21",
+      "periodStart": "2026-09-02",
+      "periodEnd": "2026-09-21",
+      "itemCount": 9,
+      "featuredCount": 5,
+      "headline": "用合成蛋白组装体自下而上构建 RNA 递送载具",
+      "en": {
+        "headline": "Creating bottom-up RNA transfer vehicles from synthetic protein assemblies"
+      },
+      "path": "data/papers.json"
+    },
     {
       "edition": 3,
       "updatedAt": "2026-09-14",
@@ -13,7 +26,7 @@
       "en": {
         "headline": "MutexaGPT: an intuition-to-design translator for physics-based enzyme engineering"
       },
-      "path": "data/papers.json"
+      "path": "data/history/papers-2026-09-14.json"
     },
     {
       "edition": 2,

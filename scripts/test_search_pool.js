@@ -60,6 +60,21 @@ global.fetch = async url => {
 };
 
 vm.runInThisContext(fs.readFileSync(path.join(root, 'i18n.js'), 'utf8'), { filename: 'i18n.js' });
+
+// The idle result list previews only the first page, so lift the cap to assert
+// that the pool really spans every published record.
+global.EA_SEARCH_PREVIEW_LIMIT = 100000;
+
+// search.js renders its save / quick-look buttons through EA.reading, provided
+// by reading-list.js in the browser. This harness only asserts which records are
+// found, so stand in with a no-op.
+EA.reading = {
+  register: () => {},
+  actionButtons: () => '',
+  quickButton: () => '',
+  onChange: () => {}
+};
+
 vm.runInThisContext(fs.readFileSync(path.join(root, 'search.js'), 'utf8'), { filename: 'search.js' });
 
 const count = (re, html) => (html.match(re) || []).length;
@@ -87,17 +102,23 @@ setImmediate(() => {
   assert(classicHit.includes('search-scope">经典论文库'), 'classics hit is not labelled as such');
 
   // ---- a lookup reaches a record that only exists in a past edition ----
-  const pastHit = search('CatESO');
-  assert(pastHit.includes('CatESO'), 'past-edition record is not searchable');
+  // Probes are taken from the live data instead of a hard-coded title: the
+  // weekly rollover moves the previous edition into the archive, so a fixed
+  // title would stop describing "the current edition" the moment it ships.
+  const oldestArchive = history[history.length - 1];
+  const pastProbe = oldestArchive.data.items[0].doi;
+  const pastHit = search(pastProbe);
+  assert(pastHit.includes(pastProbe), 'past-edition record is not searchable');
   assert(/search-scope">往期 0\d/.test(pastHit), 'past-edition hit is not labelled with its edition');
 
   // ---- a lookup reaches a record from the current edition ----
-  const currentHit = search('MutexaGPT');
-  assert(currentHit.includes('MutexaGPT'), 'current-edition record is not searchable');
+  const currentProbe = papers.items[0].doi;
+  const currentHit = search(currentProbe);
+  assert(currentHit.includes(currentProbe), 'current-edition record is not searchable');
   assert(currentHit.includes('search-scope">本周精选'), 'current-edition hit is not labelled as such');
 
   // ---- whitespace terms are ANDed, so an impossible pair matches nothing ----
-  assert(count(/class="search-row"/g, search('MutexaGPT CatESO')) === 0, 'multi-term search is not ANDed');
+  assert(count(/class="search-row"/g, search(`${currentProbe} ${pastProbe}`)) === 0, 'multi-term search is not ANDed');
 
   // ---- English mode keeps the same pool and reaches the same records ----
   nodes.query.value = '';

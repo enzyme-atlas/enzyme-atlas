@@ -34,6 +34,14 @@
       nav_method: '筛选标准',
       nav_editions: '往期精选',
       reading_list: '打开阅读清单',
+      nf_title: '这个地址没有对应内容。',
+      nf_desc: '链接可能已经失效，或者地址输入有误。下面几个入口覆盖了本站的全部内容。',
+      nf_c1: '编辑筛选的本期推荐',
+      nf_c2: '奠基工作与阅读路径',
+      nf_c3: '按研究问题浏览',
+      nf_c4: '按期号回看每一期',
+      nf_c5: '标题、作者、DOI 或方法',
+      nf_c6: '平台如何挑选文献',
       lang_aria: '切换语言：中文 / English',
       lang_label_zh: '中文',
       lang_label_en: 'EN',
@@ -127,6 +135,7 @@
       archive_loading: '正在载入期号数据…',
       archive_error: '期号数据未能载入，请稍后重试。',
       archive_notfound: '未找到该期号，请从列表中选择。',
+      archive_summary: '共 {total} 期 · 最新第 {current} 期',
       archive_viewing: '正在查看第 {num} 期（{date}）',
       archive_readonly_note: '往期内容为存档视图，收藏与阅读清单请回到首页当期使用。',
 
@@ -173,6 +182,7 @@
       search_scope_classic: '经典论文库',
       search_pool_note: '检索池覆盖本站全部收录：本周 {weekly} 篇、往期 {past} 篇、经典库 {classic} 篇，共 {total} 篇。',
       search_empty: '未找到匹配文献。请尝试英文名称、DOI、同义词或更宽泛的反应关键词。',
+      search_preview_note: '当前显示前 {shown} 条（检索池共 {total} 篇）。输入关键词可精确缩小范围，例如 cascade、定向进化或 10.1038/…。',
       search_error: '文献数据未能载入，请确认本地服务器正在运行。',
 
       /* ---------- records / dialogs / reading list ---------- */
@@ -228,11 +238,13 @@
       title_topics: '研究专题 | Enzyme Atlas',
       title_search: '搜索文献 | Enzyme Atlas',
       title_archive: '往期精选 | Enzyme Atlas',
+      title_notfound: '页面不存在 | Enzyme Atlas',
       meta_home: '面向所有酶研究者的每周文献推荐、完整收录与经典阅读路径。',
       meta_classics: '按研究问题和方法组织的酶学经典论文阅读库。',
       meta_topics: '按研究问题浏览 Enzyme Atlas 的酶学专题入口。',
       meta_search: '在 Enzyme Atlas 已收录的真实 DOI 文献中精确搜索。',
       meta_archive: '按期号回看 Enzyme Atlas 每一期的编辑精选与完整收录。',
+      meta_notfound: '该页面不存在。返回 Enzyme Atlas 首页继续浏览每周酶学文献推荐。',
     },
 
     en: {
@@ -248,6 +260,14 @@
       nav_method: 'Standards',
       nav_editions: 'Past Editions',
       reading_list: 'Open reading list',
+      nf_title: 'Nothing lives at this address.',
+      nf_desc: 'The link may have expired, or the address was mistyped. These six entries cover everything the site publishes.',
+      nf_c1: 'The editors\u2019 picks this week',
+      nf_c2: 'Foundational work and reading paths',
+      nf_c3: 'Browse by research question',
+      nf_c4: 'Revisit each edition by number',
+      nf_c5: 'Title, author, DOI or method',
+      nf_c6: 'How papers are selected',
       lang_aria: 'Switch language: Chinese / English',
       lang_label_zh: '中文',
       lang_label_en: 'EN',
@@ -339,6 +359,7 @@
       archive_loading: 'Loading edition data…',
       archive_error: 'Edition data could not be loaded. Please try again later.',
       archive_notfound: 'That edition number was not found. Pick one from the list.',
+      archive_summary: '{total} editions archived · latest is Edition {current}',
       archive_viewing: 'Viewing Edition {num} ({date})',
       archive_readonly_note: 'Archived editions are read-only; use the current edition on the homepage for saving and reading lists.',
 
@@ -382,6 +403,7 @@
       search_scope_classic: 'Classics',
       search_pool_note: 'The pool covers every record on the site: {weekly} this week, {past} past editions and {classic} classics — {total} in total.',
       search_empty: 'No matching records. Try the English name, a DOI, a synonym or a broader reaction keyword.',
+      search_preview_note: 'Showing the first {shown} of {total} records. Enter a keyword to narrow the list — try cascade, directed evolution or 10.1038/…',
       search_error: 'Literature data could not be loaded; check that the server is running.',
 
       card_why: 'Why',
@@ -439,6 +461,8 @@
       meta_topics: 'Browse Enzyme Atlas research topic entry points by question.',
       meta_search: 'Precise search across the real-DOI records collected by Enzyme Atlas.',
       meta_archive: 'Revisit the editor\u2019s picks and full intake of every Enzyme Atlas edition by number.',
+      title_notfound: 'Page not found | Enzyme Atlas',
+      meta_notfound: 'That page does not exist. Head back to Enzyme Atlas to browse weekly enzyme literature.',
     },
   };
 
@@ -692,10 +716,35 @@
     });
   }
 
+  /**
+   * Mirror the language into the address bar so an English view can be shared
+   * and indexed. `history.replaceState` is used rather than a reload: switching
+   * language already re-renders in place, and a push would fight the back button.
+   */
+  function syncUrlLang() {
+    if (!window.history || !window.history.replaceState) return;
+    let url;
+    try {
+      url = new URL(location.href);
+    } catch (error) {
+      return;
+    }
+    if (lang === 'en') {
+      url.searchParams.set('lang', 'en');
+    } else {
+      url.searchParams.delete('lang');
+    }
+    const next = url.pathname + (url.searchParams.toString() ? '?' + url.searchParams : '') + url.hash;
+    if (next !== location.pathname + location.search + location.hash) {
+      history.replaceState(null, '', next);
+    }
+  }
+
   function setLang(next) {
     if (!SUPPORTED.includes(next) || next === lang) return;
     lang = next;
     storeLang(lang);
+    syncUrlLang();
     document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
     applyStatic(document);
     mountSwitch();
@@ -726,6 +775,7 @@
     applyStatic,
     mountSwitch,
     setLang,
+    syncUrlLang,
     onChange,
     getLang: () => lang,
   };
@@ -734,6 +784,7 @@
     document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
     applyStatic(document);
     mountSwitch();
+    syncUrlLang();
   }
 
   if (document.readyState === 'loading') {

@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="在 Enzyme Atlas 已收录的真实 DOI 文献中精确搜索。">
   <title>搜索文献 | Enzyme Atlas</title>
-  <link rel="icon" href="data:,">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta name="theme-color" content="#0d0d0d">
 <!-- ea-address:start -->
   <link rel="canonical" href="https://enzyme-atlas.github.io/enzyme-atlas/search.html" />
   <meta property="og:type" content="website" />
@@ -13,10 +15,16 @@
   <meta property="og:title" content="搜索文献 | Enzyme Atlas" />
   <meta property="og:description" content="在 Enzyme Atlas 已收录的真实 DOI 文献中精确搜索。" />
   <meta property="og:url" content="https://enzyme-atlas.github.io/enzyme-atlas/search.html" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://enzyme-atlas.github.io/enzyme-atlas/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Enzyme Atlas — 酶学文献推荐" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://enzyme-atlas.github.io/enzyme-atlas/og-cover.png" />
 <!-- ea-address:end -->
   <link rel="stylesheet" href="styles.css">
   <script src="i18n.js"></script>
+  <script src="reading-list.js"></script>
 </head>
 <body data-page="search">
   <header class="topbar">
@@ -30,7 +38,7 @@
     <header class="subpage-hero"><div><p class="eyebrow" data-i18n="search_eyebrow">KNOWN-ITEM LOOKUP</p><h1 id="searchTitle" data-i18n="search_title">搜索文献</h1><p data-i18n="search_desc">在本站全部收录（本周精选、往期精选与经典论文库）中查找。搜索负责“找得到”，首页推荐负责“不会错过”。</p></div></header>
     <section class="subpage-content"><div class="search-workspace">
       <p class="purpose-note" data-i18n="search_purpose">覆盖本站全部收录记录，支持论文标题、作者、期刊、酶学主题、DOI 与方法关键词。搜索结果不会改变首页的公共推荐排序。</p>
-      <form class="site-search" id="searchForm" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input id="query" type="search" placeholder="例如：cascade、10.1038/…、定向进化" aria-label="输入文献搜索词" data-i18n-placeholder="search_input_placeholder" data-i18n-aria="search_input_aria"><button data-i18n="search_button">搜索</button></form>
+      <form class="site-search" id="searchForm" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input id="query" type="search" placeholder="例如：cascade、10.1038/…、定向进化" aria-label="输入文献搜索词" data-i18n-placeholder="search_input_placeholder" data-i18n-aria="search_input_aria"><button type="submit" data-i18n="search_button">搜索</button></form>
       <p class="search-note" id="searchNote" data-i18n="search_idle_note">可搜索论文标题、作者、期刊、酶学主题、DOI 与方法关键词。</p>
       <section id="searchResults" aria-live="polite"></section>
     </div></section>

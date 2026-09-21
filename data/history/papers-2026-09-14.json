@@ -1,0 +1,274 @@
+{
+  "updatedAt": "2026-09-14",
+  "periodStart": "2026-09-07",
+  "periodEnd": "2026-09-14",
+  "source": "curated_crossref_and_publisher",
+  "observations": [
+    [
+      "本期重点",
+      "AI 酶工程本周呈现两条清晰路线：一条把大型语言模型多智能体接上物理建模，让研究者用自然语言驱动突变库设计（MutexaGPT）；另一条在酶检索上引入反应中心图与对比学习，把开集条件下的真实泛化能力当作首要评估指标（GATv2-ECR）。两者的共同点是把“可解释、可泛化”当作硬约束，而非事后修饰。"
+    ],
+    [
+      "证据边界",
+      "本期多篇工作处于计算或材料级演示阶段：MutexaGPT 目前只覆盖两个工程任务、验证规模有限；GATv2-ECR 的基准集中在 6 万余序列的酶池与数十条孤立反应；超声锁定 COF 的结论建立在辣根过氧化物酶这一模型酶上。这些都不能直接外推为“任意酶、任意底物均适用”，具体性能与规模化边界以原文为准。"
+    ],
+    [
+      "栏目覆盖",
+      "“融合酶与多功能酶”栏目本期仍无足够强的新论文入选，继续由经典阅读路线承接；“酶的发现与挖掘”“酶的级联组装”“多酶级联反应”三个栏目本期暂无达到入选标准的新工作，不强行用弱相关论文填充。"
+    ]
+  ],
+  "items": [
+    {
+      "id": "shao-2026-mutexagpt",
+      "title": "MutexaGPT: an intuition-to-design translator for physics-based enzyme engineering",
+      "cn": "MutexaGPT：把酶工程直觉翻译成物理建模设计的多智能体平台",
+      "authors": "Shao et al.",
+      "journal": "Nature Computational Science",
+      "date": "2026-09-10",
+      "topic": "AI 与机器学习辅助酶研究",
+      "type": "original",
+      "doi": "10.1038/s43588-026-01049-y",
+      "url": "https://doi.org/10.1038/s43588-026-01049-y",
+      "featured": true,
+      "summary": "MutexaGPT 是一个开放访问的多智能体大语言模型平台，把研究者关于酶“结构与动力学如何塑造功能”的定性直觉，翻译成可执行的物理建模流程并产出突变库等设计提案。",
+      "why": "酶工程长期依赖研究者脑子里难以量化的物理直觉，而把这些直觉系统性地转成定量、可操作的设计原则一直缺乏通用工具。把 LLM 智能体与高通量分子建模工作流接起来，是“人机协同酶设计”方向的一次标志性尝试。",
+      "evidence": "摘要明确：平台通过网页界面接收英文直觉描述，由 LLM 智能体补齐缺失信息、构建物理模型、配置并执行高通量分子建模，再把结果转为可操作设计（如智能突变库）；验证覆盖两个任务——卤代甲基转移酶面向更大底物的改造、双结构域淀粉酶在更低温度下的活性提升。具体提升幅度与更大规模验证以原文为准。",
+      "audience": "AI 酶设计、计算酶学、酶工程工作流研究者",
+      "minutes": 12,
+      "labels": [
+        "目标驱动设计",
+        "计算筛选",
+        "仅计算验证"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "MutexaGPT is an open-access, multi-agent large language model platform that translates a researcher's qualitative intuition about how enzyme structure and dynamics shape function into executable physics-based modelling workflows, producing design proposals such as mutation libraries.",
+        "why": "Enzyme engineering has long leaned on physical intuition that is hard to quantify, and a general tool for turning that intuition into quantitative, actionable design principles has been missing. Wiring LLM agents to high-throughput molecular modelling workflows is a signature attempt in the direction of human-machine collaborative enzyme design.",
+        "evidence": "The abstract states that the platform takes plain-English intuition-driven requests through a web interface, uses LLM agents to elicit missing information, builds physics-based models, configures and runs high-throughput molecular modelling, and converts the results into actionable designs such as smart mutation libraries; validation covers two tasks, engineering a halide methyltransferase toward bulkier substrates and a bidomain amylase for higher activity at lower temperature. The size of the improvements and larger-scale validation rest with the source paper.",
+        "audience": "Researchers in AI enzyme design, computational enzymology and enzyme engineering workflows",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ]
+    },
+    {
+      "id": "zhou-2026-ultrasound-cof",
+      "title": "Ultrasound-Synchronized In Situ Crystallization Locks Transient High-Activity Enzyme Conformations within Covalent Organic Frameworks",
+      "cn": "超声同步原位结晶把酶的瞬态高活性构象锁定在共价有机框架内",
+      "authors": "Zhou et al.",
+      "journal": "Journal of the American Chemical Society",
+      "date": "2026-09-08",
+      "topic": "酶固定化与酶—材料体系",
+      "type": "original",
+      "doi": "10.1021/jacs.6c13996",
+      "url": "https://doi.org/10.1021/jacs.6c13996",
+      "featured": true,
+      "summary": "酶在激活瞬间会短暂进入暴露隐蔽位点、底物亲和力更高的“高活性构象”，但扰动一撤就弛豫回基态。该工作用单步声化学过程同步驱动酶进入开放构象并促使共价有机框架（COF）原位结晶，把激活态“锁”在框架内。",
+      "why": "酶固定化的传统思路是“保护现有活性”，而这项工作把目标升级为“捕获并保留转瞬即逝的更高活性构象”。若这一思路可迁移，等于为固定化开辟了一条“构象捕获”的新设计轴，而不只是优化载体材料本身。",
+      "evidence": "摘要确认：超声同时驱动酶进入开放构象并促进 COF 水相结晶，框架在酶弛豫前生长并锁定激活态；在六种孔隙与化学组成系统变化的框架中筛选，有效锁定需同时满足紧密空间限域与充足非键相互作用；最优框架使辣根过氧化物酶活性提升 3.4 倍（主要来自米氏常数下降），10 次催化循环后保留 >70% 活性；MD 指出捕获态是全局重排的开放态。结论基于模型酶，向其他酶的迁移性以原文为准。",
+      "audience": "酶固定化、酶-材料界面、生物催化过程强化研究者",
+      "minutes": 12,
+      "labels": [
+        "界面酶学",
+        "局部微环境",
+        "实验验证"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Enzymes transiently access high-activity conformations that expose cryptic sites and bind substrate more tightly, but these states relax back to the ground state once the perturbation is removed. This work uses a single sonochemical step to simultaneously drive enzymes into an open conformation and promote in situ aqueous crystallization of covalent organic frameworks that lock the activated state in place before relaxation.",
+        "why": "The traditional logic of enzyme immobilization is to preserve existing activity; this work upgrades the goal to capturing and retaining the transient, higher-activity conformation. If the idea transfers, it opens a new design axis for immobilization - conformation capture - rather than only optimizing the support material itself.",
+        "evidence": "The abstract confirms that ultrasound simultaneously drives enzymes into open conformations and promotes aqueous COF crystallization, with the framework growing around and locking the activated state before relaxation; across six frameworks with varied pore sizes and chemistries, effective locking requires both tight steric confinement and abundant nonbonded interactions; the optimal framework raised horseradish peroxidase activity 3.4-fold, mainly through a reduced Michaelis constant, while retaining >70% activity over 10 catalytic cycles; MD identifies the captured species as a globally reorganized open state. Conclusions rest on a model enzyme, and transfer to other enzymes rests with the source paper.",
+        "audience": "Researchers in enzyme immobilization, enzyme-material interfaces and biocatalytic process intensification",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      },
+      "topics": [
+        "酶固定化与酶—材料体系"
+      ]
+    },
+    {
+      "id": "onishchenko-2026-robots-physics-ml",
+      "title": "Robots and Minimal, Physics-Informed Features: A Hybrid Framework for Enzyme Catalysis",
+      "cn": "机器人加极简物理特征：面向酶催化的混合预测框架",
+      "authors": "Onishchenko et al.",
+      "journal": "Advanced Science",
+      "date": "2026-09-11",
+      "topic": "酶动力学、选择性与底物特异性",
+      "type": "original",
+      "doi": "10.1002/advs.77474",
+      "url": "https://doi.org/10.1002/advs.77474",
+      "featured": true,
+      "summary": "酶在有机合成中的应用受制于难以预测某酶能作用的底物范围。该工作用低成本化学机器人采集结构多样的活性与非活性底物，再基于这些数据训练一个只用极少量物理特征的 ML 模型来做底物谱预测。",
+      "why": "底物谱预测的瓶颈不止是算法，更是数据——尤其是真实的负样本稀缺。用机器人系统性地补上负样本、再用极简物理特征替代堆砌的描述符，同时解决“数据”和“可解释性”两个痛点，对跨酶家族的泛化能力有直接意义。",
+      "evidence": "摘要确认：机器人采集结构多样的活性与非活性底物，模型只用少量特征学习空间位阻与电子因素之间的平衡，即使在小数据集上也有用；在外部酶家族上保持预测力，且相比描述符密集的主流 ML 有更好的分布外表现。具体底物数量、酶家族与准确率以原文为准。",
+      "audience": "底物谱预测、计算酶学、自动化实验与机器学习研究者",
+      "minutes": 11,
+      "labels": [
+        "计算筛选",
+        "基准设计",
+        "实验验证"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "The utility of enzymes in organic synthesis is limited by the difficulty of predicting which small-molecule substrates a given enzyme can act on. This work deploys affordable chemical robotics to curate structurally diverse active and inactive substrates, then trains a machine-learning model on only a handful of physics-based features for substrate scope prediction.",
+        "why": "The bottleneck in substrate-scope prediction is not only the algorithm but the data - especially the scarcity of genuine negative examples. Systematically filling in negatives with robots while replacing descriptor bloat with minimal physics-based features tackles both the data and the interpretability problems at once, which bears directly on generalization across enzyme families.",
+        "evidence": "The abstract confirms that robots curate structurally diverse active and inactive substrates, the model uses only a few features to learn the balance between steric and electronic factors and remains useful on small datasets, retains predictive power on external enzyme families, and shows improved out-of-distribution performance over descriptor-heavy state-of-the-art ML. Concrete substrate counts, enzyme families and accuracy rest with the source paper.",
+        "audience": "Researchers in substrate-scope prediction, computational enzymology, and automated experimentation with machine learning",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      },
+      "topics": [
+        "酶动力学、选择性与底物特异性"
+      ]
+    },
+    {
+      "id": "wang-2026-gatv2-ecr",
+      "title": "Mechanistically Informed Open-World Enzyme Retrieval with a Dual-Tower Graph-Sequence Model",
+      "cn": "用双塔图-序列模型做机制感知的开集酶检索",
+      "authors": "Wang et al.",
+      "journal": "Journal of Chemical Information and Modeling",
+      "date": "2026-09-08",
+      "topic": "AI 与机器学习辅助酶研究",
+      "type": "original",
+      "doi": "10.1021/acs.jcim.6c02414",
+      "url": "https://doi.org/10.1021/acs.jcim.6c02414",
+      "featured": true,
+      "summary": "针对“在海量序列库中找出能催化特定化学转化的酶”这一生物催化发现的难题，作者提出双轨评估框架区分真实泛化与记忆，并开发 GATv2-ECR——融合反应中心图编码、冻结 ESM-2 序列编码、对比学习与 EC 感知软重排的双塔模型。",
+      "why": "酶检索的常用做法是把分子结构压缩成指纹，但这天然丢失了断键/成键这类机理信息，导致对新反应泛化差。这篇工作的价值在于把评估标准本身升级：用“结构隔离反应”的基准来区分模型是真学会了机制还是记住了训练集。",
+      "evidence": "摘要给出明确基准：在 63259 条序列的酶池中，用 50 条结构隔离反应评估，最强指纹基线 R@10 仅 0.020，GATv2-ECR 在隔离查询上达到 R@10=0.160，在分布外子集（n=39）达 R@10=0.308。该条目为计算基准工作，未含湿实验酶活性验证。",
+      "audience": "酶挖掘、生物催化逆合成、序列-功能预测研究者",
+      "minutes": 10,
+      "labels": [
+        "计算筛选",
+        "基准设计",
+        "纯序列方法"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "To address the challenge of identifying enzymes that catalyse a given chemical transformation across large sequence databases, the authors introduce a dual-track evaluation framework that distinguishes true generalization from memorization, and develop GATv2-ECR, a dual-tower model combining reaction-center graph encoding, a frozen ESM-2 sequence encoder, contrastive learning and EC-aware soft reranking.",
+        "why": "The common approach to enzyme retrieval compresses molecular structure into fingerprints, which inherently discards bond-breaking and bond-forming information and generalizes poorly to new reactions. The value here is upgrading the evaluation itself: a benchmark of structurally isolated reactions separates a model that has learned mechanism from one that has memorized the training set.",
+        "evidence": "The abstract gives explicit benchmarks: within a 63259-sequence enzyme pool, evaluated on 50 structurally isolated reactions, the strongest fingerprint baseline achieves R@10 = 0.020, while GATv2-ECR reaches R@10 = 0.160 on isolated queries and R@10 = 0.308 on an out-of-distribution subset (n = 39). This entry is a computational benchmark and includes no wet-lab enzyme activity validation.",
+        "audience": "Researchers in enzyme mining, biocatalytic retrosynthesis and sequence-to-function prediction",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ]
+    },
+    {
+      "id": "wu-2026-f-amine-dehydrogenase",
+      "title": "Engineering an F-Amine Dehydrogenase for Efficient and Sustainable Biocatalytic Synthesis of a Chiral PDE10 Inhibitor Precursor",
+      "cn": "工程化 F 型胺脱氢酶实现手性 PDE10 抑制剂前体的高效可持续生物催化合成",
+      "authors": "Wu et al.",
+      "journal": "ACS Sustainable Chemistry & Engineering",
+      "date": "2026-09-14",
+      "topic": "定向进化与理性设计",
+      "type": "original",
+      "doi": "10.1021/acssuschemeng.6c06134",
+      "url": "https://doi.org/10.1021/acssuschemeng.6c06134",
+      "featured": true,
+      "summary": "以氨为唯一氮源、只产生水为副产物的胺脱氢酶（AmDH）直接胺化，是合成手性胺 (R)-4IBA 的绿色路线，但此前缺乏可用的 AmDH 催化剂。该工作通过 CAST 与 FRISM 结合策略改造来自 Bacillus badius 的苯丙氨酸 AmDH，得到五突变体 M3-1。",
+      "why": "AmDH 的绿色优势（只用氨、副产物是水）一直被“没有合适催化剂”卡住。把组合饱和突变与聚焦理性迭代两种策略合用拿到 56.6 倍的 kcat/Km 提升，并在制备级补料批次中落地验证，是“从绿色概念走到可放大工艺”的完整闭环。",
+      "evidence": "摘要确认：结合 CAST 与 FRISM 得到五突变体 M3-1（V144G/L306V/V309G/Q308A/T124A），对底物 4IBO 的 kcat/Km 提升 56.6 倍；制备级生物合成采用底物补料批次，109.6 mM 4IBO 被有效转化（摘要给出 91.7% 转化，具体分离收率、对映体过量与循环次数以原文为准）。",
+      "audience": "生物催化、手性胺合成、定向进化与工艺放大研究者",
+      "minutes": 11,
+      "labels": [
+        "实验验证",
+        "高对映选择性",
+        "克级放大"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Direct amination by amine dehydrogenases (AmDHs), which consume only ammonia and release water as the sole byproduct, is a green route to the chiral amine (R)-4IBA, but no usable AmDH catalyst was previously available. This work engineers the phenylalanine AmDH from Bacillus badius by combining CAST and FRISM strategies to yield the quintuple mutant M3-1.",
+        "why": "The green advantage of AmDHs - only ammonia consumed, water as the byproduct - has long been blocked by the lack of a suitable catalyst. Combining combinatorial active-site saturation with focused rational iterative mutagenesis to gain a 56.6-fold kcat/Km improvement, and landing it in preparative-scale fed-batch validation, is a complete loop from green concept to scalable process.",
+        "evidence": "The abstract confirms that combining CAST and FRISM yielded the quintuple mutant M3-1 (V144G/L306V/V309G/Q308A/T124A) with a 56.6-fold increase in kcat/Km toward 4IBO; preparative-scale biosynthesis used a substrate fed-batch strategy, converting 109.6 mM 4IBO effectively (the abstract reports 91.7% conversion; isolated yield, enantiomeric excess and recycle runs rest with the source paper).",
+        "audience": "Researchers in biocatalysis, chiral amine synthesis, and directed evolution with process scale-up",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
+    },
+    {
+      "id": "wu-2026-arginine-upo-cof",
+      "title": "Engineering the Enzyme-Support Interface: Arginine-Directed Anchoring of Peroxygenase on a β-Ketoester Covalent Organic Framework",
+      "cn": "工程化酶-载体界面：过氧合酶在 β-酮酯共价有机框架上的精氨酸定向锚定",
+      "authors": "Wu et al.",
+      "journal": "ACS Applied Materials & Interfaces",
+      "date": "2026-09-14",
+      "topic": "酶固定化与酶—材料体系",
+      "type": "original",
+      "doi": "10.1021/acsami.6c14068",
+      "url": "https://doi.org/10.1021/acsami.6c14068",
+      "featured": false,
+      "summary": "控制酶在固相界面上的构象与取向是生物杂化材料设计的核心难题。该工作开发一种 β-酮酯功能化的酮-烯胺 COF，通过精氨酸定向偶联将非特异性过氧合酶（UPO）以温和水相条件共价锚定，无需外加活化剂或毒性交联剂。",
+      "why": "酶-载体界面常被当作“载体材料的附属”，但这篇把界面化学本身当成可设计的对象：利用 COF 的晶态周期性精确排布锚定位点，比较了物理吸附、赖氨酸环氧偶联与精氨酸定向三种策略，直接给出“界面化学如何决定负载量、泄漏与活性”的对照证据。",
+      "evidence": "摘要确认：β-酮酯基团在温和水相条件下与表面精氨酸残基反应形成稳固共价键，无需外加活化剂或毒性交联剂；相比物理吸附与赖氨酸环氧偶联，精氨酸定向策略有更高酶载量、更低泄漏、更好可重复使用性，并将 ABTS 氧化的 kcat/KM 提升 1.8 倍；光谱与 MD 表明该策略使酶刚性化并影响血红素通道取向。具体批次稳定性与循环次数以原文为准。",
+      "audience": "酶固定化、酶-材料界面、生物杂化材料研究者",
+      "minutes": 10,
+      "labels": [
+        "界面酶学",
+        "载体比较",
+        "实验验证"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Controlling enzyme conformation and orientation at solid interfaces is a central challenge in biohybrid material design. This work develops a β-ketoester-functionalized keto-enamine COF that anchors unspecific peroxygenase (UPO) covalently through arginine-directed coupling under mild aqueous conditions, without external activating agents or toxic cross-linkers.",
+        "why": "The enzyme-support interface is often treated as an accessory to the support material, but this paper makes the interface chemistry itself a designable object: it uses the crystalline periodicity of the COF to place anchoring groups precisely, and compares physical adsorption, lysine-directed epoxy coupling and arginine-directed coupling to give head-to-head evidence for how interface chemistry governs loading, leaching and activity.",
+        "evidence": "The abstract confirms that β-ketoester groups react with surface arginine residues under mild aqueous conditions to form a robust covalent linkage without external activators or toxic cross-linkers; relative to physical adsorption and lysine-directed epoxy coupling, the arginine-directed strategy offers higher enzyme loading, reduced leaching and better reusability, and raises kcat/KM toward ABTS oxidation 1.8-fold; spectroscopy and MD indicate the strategy rigidifies the enzyme and biases heme-channel orientation. Batch stability and cycle counts rest with the source paper.",
+        "audience": "Researchers in enzyme immobilization, enzyme-material interfaces and biohybrid materials",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      },
+      "topics": [
+        "酶固定化与酶—材料体系"
+      ]
+    },
+    {
+      "id": "zhang-2026-bvdod-qmmm",
+      "title": "Fe(III)-Superoxo σ-Addition and PCET-Driven L-DOPA 4,5-Cleavage by the Nonheme Enzyme Bv DOD in the Biosynthesis Pathway of Betalamic Acid",
+      "cn": "非血红素酶 BvDOD 以 Fe(III)-超氧 σ-加成与 PCET 驱动 L-DOPA 4,5-裂解",
+      "authors": "Zhang et al.",
+      "journal": "Inorganic Chemistry",
+      "date": "2026-09-11",
+      "topic": "计算酶学与分子模拟",
+      "type": "original",
+      "doi": "10.1021/acs.inorgchem.6c03609",
+      "url": "https://doi.org/10.1021/acs.inorgchem.6c03609",
+      "featured": false,
+      "summary": "4,5-DOPA 外二醇双加氧酶（BvDOD）催化 L-DOPA 环裂解生成甜菜醛氨酸，虽与其他外二醇双加氧酶折叠相似却采用非典型的铁配位活性位点。该工作通过 MD 与 QM/MM 计算解析其反应机理。",
+      "why": "外二醇双加氧酶是芳香环开环的重要酶家族，但 BvDOD 这种非典型铁配位的个案机制长期不清楚。纯计算把“σ-加成 + PCET + 自旋交叉”这条完整路径拆开，并让计算能垒（24.7 kcal/mol）与实验估计（约 23.8 kcal/mol）对上，为理解非血红素铁开环酶提供了一个可检验的机理框架。",
+      "evidence": "摘要确认：L-DOPA 以单齿方式结合，两个低自旋态（开壳层单重态与三重态）对应被活化的 O2；Fe(III)-超氧先对 L-DOPA 的 C4 发生 σ-加成，随后 PCET 驱动 O-O 断裂，未配位的酚羟基促进 O-O 断裂；之后自旋态交叉到五重态，内酯化与开环计算上较易；开壳层单重态能垒 24.7 kcal/mol 接近实验自由能垒约 23.8 kcal/mol。该条目为纯计算机理研究，无湿实验新数据。",
+      "audience": "酶反应机理、非血红素铁酶、计算酶学与 QM/MM 研究者",
+      "minutes": 10,
+      "labels": [
+        "机制研究",
+        "仅计算验证"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "The 4,5-DOPA extradiol dioxygenase BvDOD catalyses ring cleavage of L-DOPA to form betalamic acid; it shares a fold with other extradiol dioxygenases yet uses an atypical iron-coordination active site. This work resolves its reaction mechanism through MD and QM/MM calculations.",
+        "why": "Extradiol dioxygenases are an important family for aromatic ring opening, but the mechanism of BvDOD's atypical iron coordination has long been unclear. Purely computational work disentangles the full path of σ-addition plus PCET plus spin crossover and aligns the computed barrier (24.7 kcal/mol) with the experimental estimate (about 23.8 kcal/mol), offering a testable mechanistic framework for nonheme-iron ring-cleaving enzymes.",
+        "evidence": "The abstract confirms that L-DOPA binds in a monodentate mode, two low-spin states (open-shell singlet and triplet) correspond to activated O2; the Fe(III)-superoxo first undergoes σ-addition to C4 of L-DOPA, then PCET drives O-O cleavage with the uncoordinated phenolic hydroxyl promoting O-O scission; the spin state then crosses to the quintet, and lactone formation and ring opening are computationally easy; the open-shell singlet barrier of 24.7 kcal/mol is close to the experimental free-energy barrier of about 23.8 kcal/mol. This entry is purely computational with no new wet-lab data.",
+        "audience": "Researchers in enzyme reaction mechanisms, nonheme iron enzymes, and computational enzymology with QM/MM",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      },
+      "topics": [
+        "计算酶学与分子模拟"
+      ]
+    }
+  ],
+  "observationsEn": [
+    [
+      "Focus of this edition",
+      "AI enzyme engineering shows two clear lines this week: one wires large language model multi-agents to physics-based modelling so researchers drive mutation-library design in natural language (MutexaGPT), the other brings reaction-center graphs and contrastive learning to enzyme retrieval and treats true open-world generalization as the primary metric (GATv2-ECR). Both treat interpretability and generalizability as hard constraints rather than afterthoughts."
+    ],
+    [
+      "Evidence boundary",
+      "Several works this edition sit at the computational or materials-demonstration stage: MutexaGPT currently covers only two engineering tasks with limited validation, GATv2-ECR benchmarks on a pool of roughly 63,000 sequences and a few dozen isolated reactions, and the ultrasound-locked COF conclusions rest on the model enzyme horseradish peroxidase. None of these can be generalized to \"any enzyme, any substrate\" without further evidence; performance and scale-up limits rest with the source papers."
+    ],
+    [
+      "Section coverage",
+      "\"Fusion enzymes and multifunctional enzymes\" again has no new paper strong enough to be selected, so the classic reading path carries it; \"enzyme discovery and mining\", \"enzyme cascade assembly\" and \"multi-enzyme cascade reactions\" produced no new work meeting the bar this edition, and are not padded with weakly related papers."
+    ]
+  ],
+  "edition": 3
+}

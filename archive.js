@@ -19,6 +19,7 @@ const noteNode = document.getElementById('archiveNote');
 
 let manifest = null;
 let activeEdition = null;
+let activeData = null;
 
 function requestedEdition() {
   const value = new URLSearchParams(location.search).get('e');
@@ -47,8 +48,14 @@ function renderList() {
   `).join('');
 }
 
+/** Register the record so the shared list keeps a complete snapshot of it. */
+function registerItem(item) {
+  return EA.reading.register(item);
+}
+
 function featureCard(item) {
-  return `<article class="feature-card"><div class="card-meta"><span>${EA.v('topics', item.topic)} · ${EA.typeLabel(item.type)}</span><span>${T('minutes_short', { n: item.minutes })}</span></div><h3>${EA.paperTitle(item)}</h3><p class="card-summary">${EA.pick(item, 'summary')}</p><p class="card-why"><b>${T('card_why')}</b>${EA.pick(item, 'why')}</p><div class="card-labels">${EA.pickList(item, 'labels').map(label => `<span class="recommend-label">${label}</span>`).join('')}</div><p class="card-audience">${T('card_audience_prefix')}${EA.pick(item, 'audience')}</p><div class="card-actions"><span><a class="source-link" href="${item.url}" target="_blank" rel="noopener">${T('act_doi')}</a></span></div></article>`;
+  registerItem(item);
+  return `<article class="feature-card"><div class="card-meta"><span>${EA.v('topics', item.topic)} · ${EA.typeLabel(item.type)}</span><span>${T('minutes_short', { n: item.minutes })}</span></div><h3>${EA.paperTitle(item)}</h3><p class="card-summary">${EA.pick(item, 'summary')}</p><p class="card-why"><b>${T('card_why')}</b>${EA.pick(item, 'why')}</p><div class="card-labels">${EA.pickList(item, 'labels').map(label => `<span class="recommend-label">${label}</span>`).join('')}</div><p class="card-audience">${T('card_audience_prefix')}${EA.pick(item, 'audience')}</p><div class="card-actions"><span>${EA.reading.quickButton(item)}${EA.reading.doiLink(item)}</span>${EA.reading.starButton(item)}</div></article>`;
 }
 
 function renderDetail(data) {
@@ -57,7 +64,10 @@ function renderDetail(data) {
   document.getElementById('archiveFeatured').innerHTML = featured.map(featureCard).join('');
   const sorted = [...data.items].sort((a, b) => b.date.localeCompare(a.date));
   document.getElementById('archiveCount').innerHTML = `<strong>${data.items.length}</strong> · ${data.updatedAt}`;
-  document.getElementById('archivePapers').innerHTML = sorted.map(item => `<article class="paper-row"><span class="paper-date">${item.date}</span><div class="paper-main"><a class="paper-title paper-title-link" href="${item.url}" target="_blank" rel="noopener">${EA.paperTitle(item)} ↗</a><div class="paper-sub">${item.authors} · ${item.journal}</div><div class="row-labels"><span class="topic-label">${EA.v('topics', item.topic)}</span>${EA.pickList(item, 'labels').map(label => `<span class="recommend-label">${label}</span>`).join('')}</div></div><div class="paper-score"><b>${item.minutes}</b><span>${T('minutes_unit')}</span></div></article>`).join('');
+  document.getElementById('archivePapers').innerHTML = sorted.map(item => {
+    registerItem(item);
+    return `<article class="paper-row"><span class="paper-date">${item.date}</span><div class="paper-main"><a class="paper-title paper-title-link" href="${item.url}" target="_blank" rel="noopener">${EA.paperTitle(item)} ↗</a><div class="paper-sub">${item.authors} · ${item.journal}</div><div class="row-labels"><span class="topic-label">${EA.v('topics', item.topic)}</span>${EA.pickList(item, 'labels').map(label => `<span class="recommend-label">${label}</span>`).join('')}</div></div><div class="paper-score"><b>${item.minutes}</b><span>${T('minutes_unit')}</span></div><div class="read-state">${EA.reading.actionButtons(item, true)}${EA.reading.quickButton(item)}</div></article>`;
+  }).join('');
   const observations = (data.observations || []).map((item, index) => {
     const en = data.observationsEn ? data.observationsEn[index] : null;
     return (EA.getLang() === 'en' && en) ? en : item;
@@ -71,14 +81,36 @@ async function loadEdition(entry) {
   return response.json();
 }
 
+/**
+ * Render the plain edition list. Also used as the recovery path when ?e= points
+ * at an edition that does not exist, so a stale or hand-edited link still lands
+ * on something usable instead of an almost-empty page.
+ */
+function showList(statusText) {
+  activeEdition = null;
+  activeData = null;
+  renderSwitcher();
+  renderList();
+  detailNode.hidden = true;
+  viewingNode.hidden = true;
+  noteNode.hidden = true;
+  backNode.hidden = true;
+  listNode.hidden = false;
+  statusNode.textContent = statusText || T('archive_summary', {
+    total: manifest.editions.length,
+    current: editionLabel(manifest.current),
+  });
+}
+
 async function showEdition(number) {
   const entry = manifest.editions.find(item => item.edition === number);
   if (!entry) {
-    statusNode.textContent = T('archive_notfound');
+    showList(T('archive_notfound'));
     return;
   }
   activeEdition = entry;
   const data = await loadEdition(entry);
+  activeData = data;
   renderSwitcher();
   renderDetail(data);
   statusNode.textContent = T('editions_card_counts', { total: data.items.length, featured: data.items.filter(i => i.featured).length });
@@ -106,20 +138,11 @@ async function boot() {
       await showEdition(requested);
     } catch (error) {
       console.error('期号数据载入失败', error);
-      statusNode.textContent = T('archive_error');
-      renderSwitcher();
-      renderList();
+      showList(T('archive_error'));
     }
     return;
   }
-  statusNode.textContent = T('editions_card_counts', {
-    total: manifest.editions.length,
-    featured: manifest.current,
-  });
-  renderSwitcher();
-  renderList();
-  detailNode.hidden = true;
-  listNode.hidden = false;
+  showList();
 }
 
 EA.onChange(async () => {
@@ -133,6 +156,12 @@ EA.onChange(async () => {
     return;
   }
   boot();
+});
+
+// Save/quick-look buttons change state in place; re-render the detail so the
+// button labels and active styling follow the shared reading list.
+EA.reading.onChange(() => {
+  if (activeData) renderDetail(activeData);
 });
 
 boot();

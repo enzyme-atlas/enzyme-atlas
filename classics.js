@@ -41,6 +41,24 @@ function renderFilters() {
   }).join('');
 }
 
+/** Classic record in the shape the shared reading list stores. */
+function readingRecord(item) {
+  return {
+    id: item.doi || item.title,
+    title: item.title,
+    cn: item.title,
+    authors: item.authors,
+    journal: item.journal,
+    date: item.year ? String(item.year) : '',
+    doi: item.doi,
+    url: doiUrl(item.doi),
+    topic: item.topic,
+    topicMap: 'classicTopics',
+    summary: EA.pick(item, 'note'),
+    en: item.en || null,
+  };
+}
+
 function renderGrid() {
   const visible = activeSource === '全部'
     ? classics
@@ -49,18 +67,22 @@ function renderGrid() {
   countNode.innerHTML = activeSource === '全部'
     ? T('classics_count_all', { n: classics.length, m: topicCount })
     : T('classics_count_filter', { source: escapeHtml(displaySource(activeSource)), n: visible.length, m: topicCount });
-  gridNode.innerHTML = visible.map(item => `
+  gridNode.innerHTML = visible.map(item => {
+    const record = readingRecord(item);
+    EA.reading.register(record);
+    return `
     <article class="classic-card">
       <div class="classic-meta"><span>${escapeHtml(EA.classicTopic(item))}</span><span>${item.year}</span></div>
       <div class="classic-badges"><span class="source-badge">${escapeHtml(EA.sourceGroup(item))}</span><span>${escapeHtml(EA.kind(item))}</span></div>
       <h2>${escapeHtml(item.title)}</h2>
       <p class="classic-note">${escapeHtml(EA.pick(item, 'note'))}</p>
+      <div class="classic-actions">${EA.reading.actionButtons(record, true)}${EA.reading.quickButton(record)}</div>
       <div class="classic-bottom">
         <div class="classic-citation">${escapeHtml(item.authors)} · ${escapeHtml(item.journal)}</div>
         <a href="${doiUrl(item.doi)}" target="_blank" rel="noopener">${T('classics_doi_link')}</a>
       </div>
-    </article>
-  `).join('');
+    </article>`;
+  }).join('');
 }
 
 filtersNode.addEventListener('click', event => {
@@ -76,6 +98,12 @@ EA.onChange(() => {
   renderStats();
   renderFilters();
   renderGrid();
+});
+
+// Save/quick-look buttons change state in place; re-render the grid so the
+// button labels and active styling follow the shared reading list.
+EA.reading.onChange(() => {
+  if (classics.length) renderGrid();
 });
 
 fetch('data/classics.json')

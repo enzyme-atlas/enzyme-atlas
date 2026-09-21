@@ -1,41 +1,23 @@
+/**
+ * Homepage runtime: current edition, featured picks, full intake and the past
+ * edition grid.
+ *
+ * The reading list, its buttons and the record detail dialog live in
+ * reading-list.js so every page shares one implementation — see EA.reading.
+ */
 let papers = [];
 let editionObservations = [];
 let currentEdition = null;
 let editionManifest = null;
-const paperDialog = document.getElementById('paperDialog');
-const savedDialog = document.getElementById('savedDialog');
-const storageKey = 'enzyme-atlas-reading-state';
-const state = { saved: [], later: [], read: [], hidden: [], ...JSON.parse(localStorage.getItem(storageKey) || '{}') };
-const unique = values => [...new Set(values)];
-const paper = id => papers.find(item => item.id === id);
-const isActive = (id, kind) => state[kind].includes(id);
 const T = (key, vars) => EA.t(key, vars);
 const typeLabel = type => EA.typeLabel(type);
 const editionLabel = num => String(num).padStart(2, '0');
 
-function persist() {
-  ['saved', 'later', 'read', 'hidden'].forEach(key => state[key] = unique(state[key] || []));
-  localStorage.setItem(storageKey, JSON.stringify(state));
-  document.getElementById('savedBadge').textContent = state.saved.length + state.later.length;
-}
-
-function move(id, kind) {
-  const alreadyActive = kind !== 'clear' && isActive(id, kind);
-  ['saved', 'later', 'read', 'hidden'].forEach(key => state[key] = state[key].filter(item => item !== id));
-  if (kind !== 'clear' && !alreadyActive) state[kind].push(id);
-  persist();
-  renderAll();
-}
-
 function labels(item) { return EA.pickList(item, 'labels').map(label => `<span class="recommend-label">${label}</span>`).join(''); }
-
-function actionButtons(item, compact = false) {
-  return [`<button class="action-button ${isActive(item.id, 'saved') ? 'active' : ''}" onclick="move('${item.id}','saved')">${isActive(item.id, 'saved') ? T('act_saved') : T('act_save')}</button>`, `<button class="action-button ${isActive(item.id, 'later') ? 'active' : ''}" onclick="move('${item.id}','later')">${isActive(item.id, 'later') ? T('act_later_on') : T('act_later')}</button>`, compact ? '' : `<button class="action-button ${isActive(item.id, 'read') ? 'active' : ''}" onclick="move('${item.id}','read')">${isActive(item.id, 'read') ? T('act_read_on') : T('act_read')}</button>`].join('');
-}
 
 function featureCard(item) {
   const type = typeLabel(item.type);
-  return `<article class="feature-card"><div class="card-meta"><span>${EA.v('topics', item.topic)} · ${type}</span><span>${T('minutes_short', { n: item.minutes })}</span></div><h3>${EA.paperTitle(item)}</h3><p class="card-summary">${EA.pick(item, 'summary')}</p><p class="card-why"><b>${T('card_why')}</b>${EA.pick(item, 'why')}</p><div class="card-labels">${labels(item)}</div><p class="card-audience">${T('card_audience_prefix')}${EA.pick(item, 'audience')}</p><div class="card-actions"><span><button class="read-link" onclick="openPaper('${item.id}')">${T('act_quick')}</button><a class="source-link" href="${item.url}" target="_blank" rel="noopener">${T('act_doi')}</a></span><button class="save-btn ${isActive(item.id, 'saved') ? 'saved' : ''}" aria-label="${isActive(item.id, 'saved') ? T('act_saved') : T('act_save')}" onclick="move('${item.id}','saved')">${isActive(item.id, 'saved') ? '★' : '☆'}</button></div></article>`;
+  return `<article class="feature-card"><div class="card-meta"><span>${EA.v('topics', item.topic)} · ${type}</span><span>${T('minutes_short', { n: item.minutes })}</span></div><h3>${EA.paperTitle(item)}</h3><p class="card-summary">${EA.pick(item, 'summary')}</p><p class="card-why"><b>${T('card_why')}</b>${EA.pick(item, 'why')}</p><div class="card-labels">${labels(item)}</div><p class="card-audience">${T('card_audience_prefix')}${EA.pick(item, 'audience')}</p><div class="card-actions"><span>${EA.reading.quickButton(item)}${EA.reading.doiLink(item)}</span>${EA.reading.starButton(item)}</div></article>`;
 }
 
 function renderEdition() {
@@ -68,9 +50,16 @@ function renderObservations() {
 }
 
 function renderPapers() {
-  const list = [...papers].filter(item => !state.hidden.includes(item.id)).sort((a, b) => b.date.localeCompare(a.date));
-  document.getElementById('resultCount').innerHTML = T('intake_count_html', { total: papers.length, shown: list.length, hidden: state.hidden.length });
-  document.getElementById('paperList').innerHTML = list.map(item => `<article class="paper-row"><span class="paper-date">${item.date}</span><div class="paper-main"><a class="paper-title paper-title-link" href="${item.url}" target="_blank" rel="noopener">${EA.paperTitle(item)} ↗</a><div class="paper-sub">${item.authors} · ${item.journal}</div><div class="row-labels"><span class="topic-label">${EA.v('topics', item.topic)}</span>${labels(item)}</div></div><div class="paper-score"><b>${item.minutes}</b><span>${T('minutes_unit')}</span></div><div class="read-state">${actionButtons(item, true)}<button class="muted-button" onclick="move('${item.id}','hidden')">${T('act_hide')}</button></div></article>`).join('') || `<p class="empty-state">${T('empty_intake')}</p>`;
+  const hidden = EA.reading.state.hidden.map(record => record.id);
+  const list = [...papers].filter(item => !hidden.includes(item.id)).sort((a, b) => b.date.localeCompare(a.date));
+  document.getElementById('resultCount').innerHTML = T('intake_count_html', { total: papers.length, shown: list.length, hidden: hidden.length });
+  document.getElementById('paperList').innerHTML = list.map(item => `<article class="paper-row"><span class="paper-date">${item.date}</span><div class="paper-main"><a class="paper-title paper-title-link" href="${item.url}" target="_blank" rel="noopener">${EA.paperTitle(item)} ↗</a><div class="paper-sub">${item.authors} · ${item.journal}</div><div class="row-labels"><span class="topic-label">${EA.v('topics', item.topic)}</span>${labels(item)}</div></div><div class="paper-score"><b>${item.minutes}</b><span>${T('minutes_unit')}</span></div><div class="read-state">${EA.reading.actionButtons(item, true)}${hideButton(item)}</div></article>`).join('') || `<p class="empty-state">${T('empty_intake')}</p>`;
+}
+
+/** Hide keeps using the shared list state, but goes through the record registry. */
+function hideButton(item) {
+  EA.reading.register(item);
+  return `<button type="button" class="muted-button" onclick="EA.reading.toggle('${item.id}','hidden')">${T('act_hide')}</button>`;
 }
 
 function renderEditions() {
@@ -96,33 +85,14 @@ function renderEditions() {
   `).join('');
 }
 
+/** Homepage quick look: register the full record so the dialog shows every field. */
 function openPaper(id) {
-  const item = paper(id);
-  document.getElementById('dialogContent').innerHTML = `<div class="modal-copy quick-card"><p class="eyebrow">${EA.v('topics', item.topic)} · ${typeLabel(item.type)} · ${T('min_scan', { n: item.minutes })}</p><h2>${EA.paperTitle(item)}</h2><p class="detail-meta">${item.title}<br>${item.authors} · ${item.journal} · ${item.date}</p><div class="quick-grid"><div><h3>${T('q_summary')}</h3><p>${EA.pick(item, 'summary')}</p></div><div><h3>${T('q_why')}</h3><p>${EA.pick(item, 'why')}</p></div><div><h3>${T('q_evidence')}</h3><p>${EA.pick(item, 'evidence')}</p></div><div><h3>${T('q_audience')}</h3><p>${EA.pick(item, 'audience')}</p></div></div><p class="verification-note"><b>${T('q_verification')}</b>${EA.pick(item, 'verification')}</p><div class="detail-actions">${actionButtons(item)}<a class="primary-button" href="${item.url}" target="_blank" rel="noopener">${T('q_doi')}</a></div></div>`;
-  paperDialog.showModal();
+  const item = papers.find(entry => entry.id === id);
+  if (item) EA.reading.register(item);
+  EA.reading.openDetail(id);
 }
 
-function bib(item) { return `@article{${item.id},\n  title={${item.title}},\n  author={${item.authors}},\n  journal={${item.journal}},\n  year={${item.date.slice(0, 4)}},\n  doi={${item.doi}},\n  url={${item.url}}\n}`; }
-
-function exportSaved() {
-  const records = state.saved.map(paper).filter(Boolean);
-  if (!records.length) { document.getElementById('savedList').insertAdjacentHTML('afterbegin', `<p class="form-note">${T('export_needs_saved')}</p>`); return; }
-  const blob = new Blob([records.map(bib).join('\n\n')], { type: 'application/x-bibtex' });
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = 'enzyme-atlas-reading-list.bib';
-  link.click();
-  URL.revokeObjectURL(link.href);
-}
-
-function readingSection(label, key) {
-  const records = state[key].map(paper).filter(Boolean);
-  return `<section class="reading-section"><h3>${label} <small>${records.length}</small></h3>${records.length ? records.map(item => `<div class="saved-item"><span><b>${EA.paperTitle(item)}</b><small>${item.journal} · ${item.date}</small></span><span><a href="${item.url}" target="_blank" rel="noopener">DOI ↗</a><button onclick="move('${item.id}','clear')">${T('act_remove')}</button></span></div>`).join('') : `<p>${T('list_empty')}</p>`}</section>`;
-}
-
-function renderSaved() { document.getElementById('savedList').innerHTML = `<button class="export-button" onclick="exportSaved()">${T('export_bibtex')}</button>${readingSection(T('sec_saved'), 'saved')}${readingSection(T('sec_later'), 'later')}${readingSection(T('sec_read'), 'read')}${readingSection(T('sec_hidden'), 'hidden')}`; }
-
-function renderAll() { renderFeatured(); renderObservations(); renderPapers(); renderSaved(); persist(); }
+function renderAll() { renderFeatured(); renderObservations(); renderPapers(); }
 
 async function init() {
   try {
@@ -145,12 +115,22 @@ async function init() {
   renderEditions();
 }
 
-document.getElementById('openSaved').onclick = () => { renderSaved(); savedDialog.showModal(); };
+document.getElementById('openSaved').addEventListener('click', () => EA.reading.openSavedList());
+
+// Re-render the lists that show button state, and the panel if it is open.
+EA.reading.onChange(() => {
+  renderFeatured();
+  renderPapers();
+  const dialog = document.getElementById('savedDialog');
+  if (dialog && dialog.open) EA.reading.renderSaved();
+});
 
 EA.onChange(() => {
   renderEdition();
   renderAll();
   renderEditions();
+  const dialog = document.getElementById('savedDialog');
+  if (dialog && dialog.open) EA.reading.renderSaved();
 });
 
 init();

@@ -31,11 +31,14 @@ jobs:
           python scripts/test_weekly_pipeline.py
           python scripts/check_public_disclosure.py --verbose
           python scripts/set_site_address.py --check
+          python scripts/prune_public.py --check
           node --check i18n.js
+          node --check reading-list.js
           node --check app.js
           node --check search.js
           node --check classics.js
           node --check archive.js
+          node --check topics.js
           node scripts/test_classics_ui.js
           node scripts/test_search_pool.js
 
@@ -48,6 +51,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      # The Pages artifact is the repository root, so anything committed here is
+      # publicly downloadable. Keep the development tooling, agent notes and
+      # audit reports out of the published output; scripts/prune_public.py holds
+      # the list and fails the build if a kept file would leak.
+      - name: Remove non-public files from the artifact
+        run: python scripts/prune_public.py --apply
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

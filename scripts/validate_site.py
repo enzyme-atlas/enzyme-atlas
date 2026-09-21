@@ -160,9 +160,21 @@ for prohibited in ("每日更新", "每日推送", "每周文献雷达", "编辑
     assert prohibited not in index, f"homepage contains prohibited copy: {prohibited}"
 for prohibited in ("setFilter(", "classicBtn", "weeklyCount", "第 01 期"):
     assert prohibited not in app, f"stale runtime reference: {prohibited}"
-for required in ("exportSaved", "quick-grid", "fetch('data/papers.json')", "function move(id, kind)", "renderEdition", "renderEditions", "fetch('data/editions.json')", "EA.pick(item, 'summary')", "T('act_hide')"):
+for required in ("fetch('data/papers.json')", "renderEdition", "renderEditions", "fetch('data/editions.json')", "EA.pick(item, 'summary')", "T('act_hide')", "EA.reading"):
     assert required in app, f"missing interaction: {required}"
+# The reading list, its save buttons and the record dialog moved out of app.js so
+# every page shares one implementation; guard the new owner instead.
+reading_js = (ROOT / "reading-list.js").read_text(encoding="utf-8")
+for required in ("exportSaved", "quick-grid", "openSavedList", "actionButtons", "wireBackdropClose"):
+    assert required in reading_js, f"reading list runtime missing {required}"
 assert "fetch('data/papers.json')" in search and "record.url" in search, "search is not using the shared real-DOI data"
+# Saving must be reachable everywhere: on the pages that hold most of the papers
+# the list used to be missing entirely.
+for page in ("index.html", "classics.html", "topics.html", "search.html", "archive.html"):
+    html = (ROOT / page).read_text(encoding="utf-8")
+    assert 'src="reading-list.js"' in html, f"{page} cannot save papers: shared reading list not loaded"
+    assert 'rel="icon" href="favicon.png"' in html, f"{page} is missing the real favicon"
+    assert "og:image" in html, f"{page} is missing its social preview image"
 assert "EA.v('topics'" in search and "EA.paperTitle" in search, "search is not bilingual"
 for required in ("fetch('data/classics.json')", "sourceOrder", "doiUrl", "EA.pick(item, 'note')", "EA.classicTopic(item)"):
     assert required in classics_js, f"classic library missing {required}"

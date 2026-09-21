@@ -134,13 +134,34 @@ function poolNote() {
   });
 }
 
+/**
+ * Without a query the result list is the entire pool (100+ records, an 11k-pixel
+ * wall of text), so the idle view previews the first page instead and asks for a
+ * keyword. Any real query always shows every hit.
+ *
+ * `EA_SEARCH_PREVIEW_LIMIT` lets the Node contract test lift the cap: pool
+ * completeness is only observable when every record is rendered.
+ */
+const PREVIEW_LIMIT = Number.isFinite(globalThis.EA_SEARCH_PREVIEW_LIMIT)
+  ? globalThis.EA_SEARCH_PREVIEW_LIMIT
+  : 30;
+
 function render(value) {
   const clean = value.trim();
   const terms = clean.toLowerCase().split(/\s+/).filter(Boolean);
-  const list = terms.length ? records.filter(record => matches(record, terms)) : records;
+  const matched = terms.length ? records.filter(record => matches(record, terms)) : records;
+  const collapsed = !terms.length && matched.length > PREVIEW_LIMIT;
+  const list = collapsed ? matched.slice(0, PREVIEW_LIMIT) : matched;
   title.textContent = clean ? T('search_results_title', { q: clean }) : T('search_title');
-  note.textContent = clean ? T('search_note', { n: list.length }) : poolNote();
-  results.innerHTML = list.map(record => `<article class="search-row"><small>${escapeHtml(record.date)}</small><div><h2><a href="${escapeHtml(record.url)}" target="_blank" rel="noopener">${escapeHtml(EA.paperTitle(record))} ↗</a></h2><p>${escapeHtml(record.authors)} · ${escapeHtml(record.journal)} · DOI: ${escapeHtml(record.doi)}</p></div><span>${escapeHtml(topicLabel(record))}<em class="search-scope">${escapeHtml(scopeLabel(record))}</em></span></article>`).join('')
+  note.textContent = clean
+    ? T('search_note', { n: matched.length })
+    : (collapsed
+      ? T('search_preview_note', { shown: list.length, total: matched.length })
+      : poolNote());
+  results.innerHTML = list.map(record => {
+    EA.reading.register(record);
+    return `<article class="search-row"><small>${escapeHtml(record.date)}</small><div><h2><a href="${escapeHtml(record.url)}" target="_blank" rel="noopener">${escapeHtml(EA.paperTitle(record))} ↗</a></h2><p>${escapeHtml(record.authors)} · ${escapeHtml(record.journal)} · DOI: ${escapeHtml(record.doi)}</p><span class="topic-item-actions">${EA.reading.actionButtons(record, true)}${EA.reading.quickButton(record)}</span></div><span>${escapeHtml(topicLabel(record))}<em class="search-scope">${escapeHtml(scopeLabel(record))}</em></span></article>`;
+  }).join('')
     || `<p class="search-note">${T('search_empty')}</p>`;
 }
 
@@ -215,6 +236,11 @@ document.getElementById('searchForm').onsubmit = event => {
 };
 
 EA.onChange(() => render(query.value));
+
+// Save/quick-look buttons change state in place; re-render so labels follow.
+EA.reading.onChange(() => {
+  if (records.length) render(query.value);
+});
 
 loadPool()
   .then(pool => { records = pool; render(initial); })
