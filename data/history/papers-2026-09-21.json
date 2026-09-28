@@ -1,0 +1,346 @@
+{
+  "updatedAt": "2026-09-21",
+  "periodStart": "2026-09-02",
+  "periodEnd": "2026-09-21",
+  "source": "curated_crossref_and_publisher",
+  "observations": [
+    [
+      "本期重点",
+      "本期检索窗口为 2026-09-02 至 2026-09-21：为收录 9 月 2 日在线发表在 Nature 的合成蛋白组装体 RNA 递送载具工作，窗口在常规一周基础上向前扩展。技术路线上，三篇工作恰好串成一条「设计—发现—表征」的链：用生成式蛋白设计造出可编程的模块化骨架再赋予递送功能（Nature），跨进化距离迭代挖掘直系同源酶并用可解释模型外推（Nature Communications），以及用 2.45 Å 冷冻电镜结构重新判定糖基自由基酶的脱羧机理（PNAS）。另一条并行线索是把默认假设改写成设计变量：JACS 一篇表明多孔框架会主动扰动被限域蛋白的结构，另一篇把非天然氨基酸装进蛋白口袋，为自由基化学提供手性环境。"
+    ],
+    [
+      "证据边界",
+      "本期多数结论都有明确适用范围，不宜直接外推。Nature 的 RNA 递送载具属于蛋白组装与递送工程，不是酶催化研究，其效率比较也是相对作者选定的对照载具而言；多孔框架扰动蛋白构象的结论建立在 Zr 基 MOF NU-1000 与红外光谱指认之上，孔径、静电条件与离子强度改变后是否同样成立以原文为准；ACS Catalysis 的最适温度结论来自对 260 组已发表数据的荟萃分析，本身不产生新的实验测量，且作者明确指出部分拟合出的热力学参数属于「表观」的统计结果。其余条目涉及的具体酶种、底物范围、突变位点与动力学绝对值同样以原文为准。"
+    ],
+    [
+      "栏目覆盖",
+      "本期补齐了三个此前空白的专题：「酶的发现与挖掘」由迭代式直系同源挖掘入选，「酶的稳定性工程」由最适温度荟萃分析入选，「辅因子、辅酶与再生」由天然酶中的非经典氧化还原辅因子基序入选。「融合酶与多功能酶」「酶的级联组装」「多酶级联反应」本期仍无达到入选标准的新工作，继续由经典阅读路线承接，不用弱相关论文填充。"
+    ]
+  ],
+  "items": [
+    {
+      "id": "schuhmacher-2026-rna-transfer-vehicles",
+      "title": "Creating bottom-up RNA transfer vehicles from synthetic protein assemblies",
+      "cn": "用合成蛋白组装体自下而上构建 RNA 递送载具",
+      "authors": "Schuhmacher et al.",
+      "journal": "Nature",
+      "date": "2026-09-02",
+      "topic": "AI 与机器学习辅助酶研究",
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ],
+      "type": "original",
+      "doi": "10.1038/s41586-026-10952-3",
+      "url": "https://doi.org/10.1038/s41586-026-10952-3",
+      "featured": true,
+      "summary": "病毒用数十亿年进化出高度相似的衣壳尺寸与形状来完成遗传信息递送；该工作反过来问：生成式模型设计出的蛋白组装体是否也能被功能化，做成不依赖进化史的核酸运输载具。作者把天然蛋白结构域与合成蛋白组装体结合，构建出 100 多个尺寸与形状各异的自下而上 RNA 递送载具。",
+      "why": "对蛋白工程读者来说，值得读的不是又一个递送载体，而是一条被验证过的通用路线：生成式模型产出的蛋白架构本身可以当可编程的模块化骨架，功能与靶向性再通过拼接天然功能域和计算设计的结合肽补上。这与酶工程里「先搭支架、再装活性中心」的思路同源，是可以迁移借鉴的设计范式。",
+      "evidence": "摘要确认：作者把天然蛋白结构域与合成蛋白组装体结合，构建了 100 多个尺寸与形状各异的自下而上 RNA 递送载具；这些载具的 RNA 递送效率比广泛使用的递送载具高出数个数量级；通过引入计算设计的肽结合体可实现趋向性编程，并把有治疗意义的 cargo RNA 递送到多种细胞模型；对其中一个载具在小鼠体内做到接近单细胞分辨率的生物分布，确认其安全性，并用它在患者来源细胞与猪上执行了一项杜氏肌营养不良的基因编辑治疗策略。具体效率数值、载具结构参数与安全性数据以原文为准。",
+      "audience": "蛋白质设计与 AI 辅助大分子工程、递送载体、基因编辑治疗研究者",
+      "minutes": 13,
+      "labels": [
+        "目标驱动设计",
+        "多层实验验证",
+        "开放获取"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Viruses spent billions of years converging on remarkably similar capsid sizes and shapes for transferring genetic information. This work asks the reverse question: can protein assemblies produced by generative models be functionalized into nucleic acid transport vehicles that do not depend on evolutionary history? Combining natural protein domains with synthetic protein assemblies, the authors create more than 100 bottom-up RNA transfer vehicles of unique sizes and shapes.",
+        "why": "For protein engineers the value is not another delivery vehicle but a validated general route: protein architectures produced by generative models can themselves serve as programmable modular scaffolds, with function and tropism then supplied by joining natural functional domains and computationally designed peptide binders. That logic mirrors how enzyme engineers build a scaffold and then install an active site, so it is worth transferring.",
+        "evidence": "The abstract confirms that the authors combined natural protein domains with synthetic protein assemblies to create more than 100 bottom-up RNA transfer vehicles with unique sizes and shapes; these vehicles surpass the RNA transfer efficiency of widely used delivery vehicles by several orders of magnitude; tropism can be programmed by incorporating computationally designed peptide binders, and therapeutically relevant cargo RNAs were delivered into a wide range of cellular models; for one vehicle, in vivo biodistribution was shown in a mouse at near-single-cell resolution, its safety was confirmed, and it was used to perform a gene-editing treatment strategy for Duchenne muscular dystrophy in patient-derived cells and a pig. Concrete efficiency values, vehicle structural parameters and safety data rest with the source paper.",
+        "audience": "Researchers in protein design, AI-assisted macromolecular engineering, delivery vehicles and gene-editing therapeutics",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "swinnen-2026-enzyme-zr-mof",
+      "title": "Folding within Frameworks: Confinement in Zr-MOFs Reshapes Enzyme Structure and Catalytic Activity",
+      "cn": "框架内的折叠：Zr-MOF 限域重塑酶的结构与催化活性",
+      "authors": "Swinnen et al.",
+      "journal": "Journal of the American Chemical Society",
+      "date": "2026-09-16",
+      "topic": "酶固定化与酶—材料体系",
+      "topics": [
+        "酶固定化与酶—材料体系"
+      ],
+      "type": "original",
+      "doi": "10.1021/jacs.6c11124",
+      "url": "https://doi.org/10.1021/jacs.6c11124",
+      "featured": true,
+      "summary": "把酶固定到金属有机框架（MOF）常被当作提升稳定性的成熟手段，但酶在孔道内的构象状态长期缺少直接证据，通常被默认成「基本不变」。该工作用原位衰减全反射红外光谱追踪蛋白在 Zr 基 MOF NU-1000 中的吸附与限域，得到的结果是：MOF 不是被动宿主，会显著扰动被限域蛋白的结构。",
+      "why": "它正面挑战了「固定化只影响稳定性、不大改构象」这一默认假设，并给出结构扰动与催化活性变化相关的证据：动态受扰的蛋白活性提高，结构被约束的体系活性下降。若这一关系成立，酶@多孔材料的设计就不该继续靠经验试错，而应把构象当作可设计变量。",
+      "evidence": "摘要确认：作者用原位 ATR 红外监测蛋白在 NU-1000 中的吸附与限域过程，通过酰胺谱带追踪反映结构与局域环境变化；识别出一个与蛋白进入 MOF 孔环境相关的框架敏感光谱特征，并用摄取动力学、扩散分析、孔径对照与蛋白酶可及性实验支持该指认；蛋白摄取不仅取决于尺寸相容性，还受静电相互作用、离子强度与蛋白构象状态影响；这些固定化与限域相关的结构扰动与催化活性变化相关——动态受扰的蛋白活性增强，结构受约束的体系活性下降。具体酶种、活性变化幅度与孔径阈值以原文为准。",
+      "audience": "酶固定化、酶-材料界面、生物杂化材料与生物催化工程研究者",
+      "minutes": 11,
+      "labels": [
+        "界面酶学",
+        "载体非惰性",
+        "开放获取"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Immobilizing enzymes in metal-organic frameworks (MOFs) is a routine way to improve stability, yet the conformational state of proteins inside the pores has long lacked direct evidence and is usually assumed to stay largely unchanged. Using in situ attenuated total reflectance infrared spectroscopy to follow protein adsorption and confinement in the Zr-based MOF NU-1000, this work finds that MOFs are not passive hosts and can markedly perturb the structure of the protein they confine.",
+        "why": "It directly challenges the default assumption that immobilization mainly affects stability and leaves conformation alone, and links the structural perturbation to changes in catalytic activity: dynamically perturbed proteins gain activity while structurally constrained systems lose it. If that relationship holds, designing enzyme@porous-material systems should stop being trial and error and start treating conformation as a design variable.",
+        "evidence": "The abstract confirms that the authors monitored protein adsorption and confinement in NU-1000 with in situ ATR infrared spectroscopy, tracking amide bands that report on protein structure and local environment; they identified a framework-sensitive spectroscopic signature associated with protein uptake into the MOF pore environment and supported the assignment with uptake kinetics, diffusion analysis, pore-size controls and protease accessibility experiments; uptake is governed not only by size compatibility but also by electrostatic interactions, ionic strength and protein conformational state; these immobilization- and confinement-associated structural perturbations correlate with changes in catalytic activity, with enhanced activity for dynamically perturbed proteins and reduced activity for structurally constrained systems. The specific enzyme, the magnitude of activity change and the pore-size threshold rest with the source paper.",
+        "audience": "Researchers in enzyme immobilization, enzyme-material interfaces, biohybrid materials and biocatalytic engineering",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "andon-2026-pace-tyrosine",
+      "title": "Phage-assisted continuous evolution of enzymes for noncanonical tyrosine biosynthesis",
+      "cn": "噬菌体辅助连续进化改造酶，实现非天然酪氨酸的细胞内生物合成",
+      "authors": "Andon et al.",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "date": "2026-09-10",
+      "topic": "定向进化与理性设计",
+      "topics": [
+        "定向进化与理性设计"
+      ],
+      "type": "original",
+      "doi": "10.1073/pnas.2614167123",
+      "url": "https://doi.org/10.1073/pnas.2614167123",
+      "featured": true,
+      "summary": "遗传密码扩展能往蛋白里装入新化学基团，但可用范围常被非天然氨基酸（ncAA）的供给卡住。体外进化得到的「ncAA 合成酶」为制备级合成优化，活性往往无法平移到细胞内生物合成。该工作用噬菌体辅助非连续与连续进化，直接在大肠杆菌里改造这类酶的细胞内产量。",
+      "why": "它把选择压力压在「细胞内产量」而不是「体外转化率」上，这恰好是 ncAA 合成酶从实验室走向细胞工厂的关键差别。仅用简单连续传代就拿到产量翻倍的变体，并进化出亲本酶在细胞内根本做不到的新转化，说明这类进化平台可以定点攻克「活性不可平移到胞内」这一瓶颈。",
+      "evidence": "摘要确认：作者用噬菌体辅助非连续与连续进化改造大肠杆菌中非天然酪氨酸衍生物的合成；通过简单连续传代发现使 tyrosine phenol lyase 对昂贵 ncAA 3-甲氧基酪氨酸产量翻倍的突变，并进化出能够在细胞内完成 3-碘酪氨酸生物合成的变体，而亲本酶在细胞内无法催化该转化；此外改造了一个新报道的 tyrosine synthase 以提高 3-卤代酪氨酸产量，所得变体在低底物浓度下仍保持高活性，对应 KM 约降低 8 倍。具体突变位点、产量绝对值与拷贝数效应以原文为准。",
+      "audience": "定向进化、遗传密码扩展、非天然氨基酸合成与细胞工厂研究者",
+      "minutes": 11,
+      "labels": [
+        "组合突变",
+        "新酶反应",
+        "实验验证",
+        "开放获取"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Genetic code expansion installs new chemical groups into proteins, but the accessible scope is often limited by the availability of noncanonical amino acids (ncAAs). In vitro evolution has produced useful ncAA synthases, yet those enzymes are optimized for preparative-scale synthesis and their activities often do not translate to cellular biosynthesis. This work applies phage-assisted noncontinuous and continuous evolution to improve such enzymes directly for production inside Escherichia coli.",
+        "why": "It puts selection pressure on cellular production rather than in vitro conversion, which is precisely the gap that keeps ncAA synthases in the lab instead of in cell factories. Doubling the production of an expensive ncAA through simple serial passaging, and evolving variants that perform a transformation the parent enzyme cannot perform in cells, shows the platform can be aimed at the specific bottleneck of non-transferable intracellular activity.",
+        "evidence": "The abstract confirms that the authors used phage-assisted noncontinuous and continuous evolution to engineer enzymes for improved synthesis of noncanonical tyrosine derivatives in Escherichia coli; simple serial passaging uncovered mutations that doubled the production of the expensive ncAA 3-methoxytyrosine by tyrosine phenol lyase, and variants were evolved enabling 3-iodotyrosine biosynthesis, a transformation the parent enzyme cannot perform in cells; a recently reported tyrosine synthase was also evolved for improved production of 3-halogenated tyrosines, yielding variants with high activity even at low substrate concentrations owing to a roughly eightfold reduction in KM. Specific mutation sites, absolute titres and copy-number effects rest with the source paper.",
+        "audience": "Researchers in directed evolution, genetic code expansion, noncanonical amino acid synthesis and cell factories",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "stockinger-2026-kred-ortholog-mining",
+      "title": "Iterative and data-driven ortholog mining enables reliable discovery of stereoselective ketoreductases",
+      "cn": "迭代式数据驱动直系同源挖掘，可靠发现立体选择性酮还原酶",
+      "authors": "Stockinger et al.",
+      "journal": "Nature Communications",
+      "date": "2026-09-15",
+      "topic": "酶的发现与挖掘",
+      "topics": [
+        "酶的发现与挖掘"
+      ],
+      "type": "original",
+      "doi": "10.1038/s41467-026-77715-6",
+      "url": "https://doi.org/10.1038/s41467-026-77715-6",
+      "featured": true,
+      "summary": "酮还原酶（KRED）是工业上合成手性醇的常用酶，但为非天然底物找到兼顾选择性与工艺兼容性的酶仍要靠大规模筛选。该工作提出迭代式直系同源挖掘：先从一个已知 KRED 出发，在其直系同源组中取样 48 个进化距离较远的变体，再对 60 个系统发育上更近的同源体做精细取样。",
+      "why": "酶挖掘常被叙述成「从数据库里捞到好酶」的运气故事，这篇把它拆成可复现的取样策略——先远后近、逐步收敛，并正面处理直系同源挖掘的天然盲区（基因组未被测序的生物）：用自动化流程 HomoLogic 把搜索空间扩大 15 倍，让挖掘与可解释预测衔接起来。对做酶发现与功能预测的读者有直接方法学价值。",
+      "evidence": "摘要确认：作者从已知 KRED 出发，在其直系同源组中取样 48 个进化上较远的变体，得到 5 个能生产药用相关醇的酶，de/ee 覆盖 42.8% 到 >99%；对 60 个系统发育上更近的同源体精细取样后，得到 de/ee 98% 到 >99% 的进一步改进的 KRED；由于直系同源挖掘依赖基因组，作者用已有数据集探索取样同源组之外的同源 KRED，把搜索空间扩大 15 倍，并开发自动化流程 HomoLogic，其功能描述符输入可解释模型后能较准确预测 KRED 表现（R² 最高 0.76）。具体底物、筛选规模与工艺条件以原文为准。",
+      "audience": "酶挖掘与发现、生物催化工艺、酶功能预测研究者",
+      "minutes": 12,
+      "labels": [
+        "酶发现",
+        "计算筛选",
+        "实验验证",
+        "开放获取"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Ketoreductases (KREDs) are widely used industrially for stereoselective alcohol synthesis, yet identifying process-compatible and selective enzymes for non-native substrates still requires extensive screening. This work presents an iterative ortholog mining strategy: starting from a known KRED, it samples 48 evolutionarily distant variants of its orthogroup, then refines the search with 60 phylogenetically close orthologs.",
+        "why": "Enzyme mining is often told as a lucky catch from a database; this paper breaks it into a reproducible sampling strategy that moves from distant to close relatives and converges stepwise, while squarely addressing the blind spot of ortholog mining - organisms whose genomes are unsequenced. The automated pipeline HomoLogic expands the search space fifteenfold and connects mining to interpretable prediction, which is directly useful for readers working on enzyme discovery and function prediction.",
+        "evidence": "The abstract confirms that, starting from a known KRED, the authors sampled its orthogroup across 48 evolutionarily distant variants and identified five enzymes producing pharmaceutically relevant alcohols with de/ee from 42.8% to >99%; refined sampling of 60 phylogenetically close orthologs yielded further improved KREDs with de/ee from 98% to >99%; because ortholog mining is genome-dependent, they used their dataset to explore homologous KREDs beyond the sampled orthogroup, expanding the search space fifteenfold, and developed the automated pipeline HomoLogic, whose functional descriptors fed into interpretable models predict KRED performance accurately (R2 up to 0.76). Specific substrates, screening scale and process conditions rest with the source paper.",
+        "audience": "Researchers in enzyme mining and discovery, biocatalytic process development and enzyme function prediction",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "silverstein-2026-enzyme-optimal-temperature",
+      "title": "Why Do Enzymes Have an Optimal Temperature? A Meta-Analysis Testing Three Models for Activity Decline at High T",
+      "cn": "酶为什么有最适温度？对高温下活性下降模型的荟萃分析",
+      "authors": "Silverstein",
+      "journal": "ACS Catalysis",
+      "date": "2026-09-11",
+      "topic": "酶的稳定性工程",
+      "topics": [
+        "酶的稳定性工程"
+      ],
+      "type": "review",
+      "doi": "10.1021/acscatal.6c03810",
+      "url": "https://doi.org/10.1021/acscatal.6c03810",
+      "featured": true,
+      "summary": "几乎所有酶都有最适温度 Topt，超过后活性下降。1990 年代以后的证据表明，许多酶在 Topt 以上活性下降时并没有可测的变性，于是出现两类主要解释：Daniel 与 Danson 的失活平衡模型，以及 Arcus 组的宏观速率假说。该工作汇总 260 组已发表数据、覆盖 27 种酶与 5 个多酶代谢过程做荟萃分析。",
+      "why": "「最适温度」是酶工程里最常被引用、也最常被误用的概念之一。这篇把两套模型放到同一批数据上比较，明确指出哪些类型的数据集能支撑哪种解释、以及拟合出的热力学参数有多少只是「表观」的统计结果。这直接关系到升温实验怎么设计、kcat–T 曲线怎么解读。",
+      "evidence": "摘要确认：荟萃分析覆盖 27 种酶与 5 个多酶代谢过程的 260 组已发表数据集；只有 kcat 对 T 的数据集能给出专门对应催化步骤的热力学与活化参数，而自变量更复杂的数据集（如 kcat/Km、Vmax/Km、v0、酶活性）拟合出的参数可能同时描述催化与底物结合；两套模型拟合出的活化参数都表现出焓熵补偿（ΔH‡ 对 ΔS‡ 严格线性，R² > 0.98），作者判定这种补偿是「表观」的，即统计性而非热力学性；对对称的活性–温度曲线两模型拟合同样好，而对不对称曲线失活平衡模型拟合显著更好；作者同时指出 Arcus 组近期提出的六参数「两态」MMRt 修正模型可拟合不对称峰，而失活平衡模型只有四个可调参数。该条目是对已发表数据的荟萃分析，未产生新的实验测量。",
+      "audience": "酶热稳定性工程、酶动力学、生物催化工艺与酶学教学研究者",
+      "minutes": 12,
+      "labels": [
+        "系统综述",
+        "机制研究",
+        "开放获取"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Almost all enzymes have an optimal temperature (Topt) above which catalytic activity declines. Since the 1990s, many enzymes have been shown to lose activity above Topt without measurable denaturation, which produced two main explanations: the Inactivation Equilibrium Model of Daniel and Danson, and the Macromolecular Rate hypothesis of the Arcus group. This work presents a meta-analysis of 260 published data sets covering 27 enzymes and 5 multienzyme metabolic processes.",
+        "why": "The optimal temperature is one of the most cited and most misused concepts in enzyme engineering. By putting the two models on the same body of data, this paper states which kinds of data sets can support which explanation and how much of the fitted thermodynamic output is merely an apparent statistical result. That bears directly on how heating experiments are designed and how kcat-versus-T curves are interpreted.",
+        "evidence": "The abstract confirms that the meta-analysis covers 260 published data sets from 27 enzymes and 5 multienzyme metabolic processes; only kcat-versus-T data sets yield thermodynamic and activation parameters related specifically to the catalytic step, while data sets with a more complex independent variable (kcat/Km, Vmax/Km, v0, enzyme activity) give parameters that could characterize catalysis, substrate binding or both; for both models the fitted activation parameters show enthalpy-entropy compensation (strictly linear dH(‡) versus dS(‡) plots, R2 > 0.98) that the author finds is apparent, i.e. statistical rather than thermodynamic; for symmetric activity-versus-T curves the two models fit equally well, whereas for asymmetric curves the Inactivation Equilibrium Model fits significantly better; the author also notes that a recently presented six-parameter two-state modification of the MMRt model can fit asymmetric peaks, compared with four adjustable parameters in the Inactivation Equilibrium Model. This entry is a meta-analysis of published data and produces no new experimental measurements.",
+        "audience": "Researchers in enzyme thermostability engineering, enzyme kinetics, biocatalytic process development and enzymology teaching",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "kano-2026-thiophenol-hat",
+      "title": "Thiophenol-Based Designer Enzymes for Asymmetric Hydrogen/Deuterium Atom Transfer",
+      "cn": "基于硫酚的设计酶：不对称氢/氘原子转移",
+      "authors": "Kano et al.",
+      "journal": "Journal of the American Chemical Society",
+      "date": "2026-09-10",
+      "topic": "酶催化方法与分析技术",
+      "topics": [
+        "酶催化方法与分析技术"
+      ],
+      "type": "original",
+      "doi": "10.1021/jacs.6c12383",
+      "url": "https://doi.org/10.1021/jacs.6c12383",
+      "featured": false,
+      "summary": "在水相中控制短寿命自由基的对映选择性是催化领域的难题。该工作把非天然氨基酸 4-巯基苯丙氨酸（pSHF）通过终止密码子抑制编码进转录调控因子 LmrR 的疏水口袋，让硫酚基团充当氢原子转移（HAT）催化中心，与 Ru 光催化剂引发的单电子转移循环配合，实现高对映选择性的光诱导亚胺还原。",
+      "why": "它给出一条「把非天然化学基团装进蛋白口袋」的具体做法：催化功能来自基因编码的非天然氨基酸，手性环境与底物结合由蛋白骨架提供。对做新酶功能设计的读者，这是把自由基化学纳入酶催化范畴的范例，且同一体系顺带提供制备手性氘代胺的路线。",
+      "evidence": "摘要确认：作者通过终止密码子抑制把 pSHF 引入 LmrR 的疏水口袋，pSHF 作为 HAT 催化中心，在 Ru 光催化剂的光诱导单电子转移循环中控制前手性自由基，实现高度对映选择性的光诱导亚胺还原；定向进化得到的优化变体能催化环状亚胺的不对称还原，收率与对映选择性可达 >99% 收率与 >99% ee；在 D2O 缓冲液中实现氘原子转移（DAT），可为手性胺产物引入单个氘原子，氘掺入率最高 98%；机理研究与计算表明 pSHF 的硫酚基团在疏水骨架内促进 HAT/DAT。具体突变位点、底物范围与转化条件以原文为准。",
+      "audience": "新酶功能设计、非天然氨基酸与光生物催化、自由基不对称催化研究者",
+      "minutes": 11,
+      "labels": [
+        "新酶反应",
+        "高对映选择性",
+        "实验验证"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Controlling the enantioselectivity of short-lived radicals in aqueous media is a long-standing catalytic challenge. This work encodes the noncanonical amino acid 4-mercaptophenylalanine (pSHF) into the hydrophobic pocket of the transcriptional regulator LmrR through stop codon suppression, turning the thiophenol group into a hydrogen atom transfer (HAT) catalytic centre that works with a Ru-photocatalyst single-electron-transfer cycle to achieve highly enantioselective photoinduced imine reduction.",
+        "why": "It gives a concrete recipe for installing a noncanonical chemical group inside a protein pocket: the catalytic function comes from a genetically encoded noncanonical amino acid while the protein scaffold supplies the chiral environment and substrate binding. For readers designing new enzyme functions this is a worked example of bringing radical chemistry into enzymatic catalysis, and the same system offers a route to chiral deuterated amines.",
+        "evidence": "The abstract confirms that the authors incorporated pSHF into the hydrophobic pocket of LmrR by stop codon suppression and showed that pSHF acts as a HAT catalytic centre controlling prochiral radicals generated by photoinduced single-electron transfer within a Ru-photocatalyst cycle, giving highly enantioselective photoinduced imine reduction; a directed evolution campaign yielded an optimized variant catalysing asymmetric reduction of cyclic imines with up to >99% yield and >99% ee; deuterium atom transfer (DAT) was achieved in D2O buffer to install a single deuterium atom in chiral amine products with up to 98% D incorporation; mechanistic studies and calculations indicate the thiophenol moiety of pSHF promotes HAT/DAT within the hydrophobic scaffold. Specific mutation sites, substrate scope and reaction conditions rest with the source paper.",
+        "audience": "Researchers in new enzyme function design, noncanonical amino acids and photobiocatalysis, and asymmetric radical catalysis",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "saleh-2026-nrc-cofactor-motif",
+      "title": "A sequence motif enables widespread use of noncanonical redox cofactors in natural enzymes",
+      "cn": "一段序列基序让天然酶广泛支持非经典氧化还原辅因子",
+      "authors": "Saleh et al.",
+      "journal": "Nature Chemical Biology",
+      "date": "2026-09-09",
+      "topic": "辅因子、辅酶与再生",
+      "topics": [
+        "辅因子、辅酶与再生"
+      ],
+      "type": "original",
+      "doi": "10.1038/s41589-026-02315-w",
+      "url": "https://doi.org/10.1038/s41589-026-02315-w",
+      "featured": false,
+      "summary": "非经典氧化还原辅因子（NRC）比 NAD(P)+ 便宜、电子传递也更可控，但适配的酶太少限制了其应用。作者筛选醛脱氢酶（ALDH）家族，发现一段保守的 RH/QxxR 基序，使天然酶普遍具备 NRC 活性。",
+      "why": "辅因子替代的常规路径是先选定辅因子、再对酶做大改。这篇反过来从天然序列里找「本来就存在的兼容性基序」，并说明该基序的作用是强化辅因子定位、在不依赖 NAD+ 腺嘌呤单核苷酸部分的前提下预组织活性中心。对做辅因子工程与低成本生物制造的读者，这既是一个可复用的基序，也是一种「从天然多样性里找工程起点」的范式。",
+      "evidence": "摘要确认：作者筛选 ALDH 家族后鉴定出保守的 RH/QxxR 基序，使天然酶广泛具备 NRC 活性；牛 ALDH3a1 对烟酰胺单核苷酸（NMN+）表现出前所未有的周转能力，kcat 超过使用 NAD+ 时，并比多数已工程化的 NRC 活性酶高 10 到 10^5 倍；结构分析显示该基序强化辅因子定位，并在不依赖 NAD+ 腺嘌呤单磷酸部分的情况下预组织活性中心；该基序支持 1-(2-氨甲酰甲基)烟酰胺等简单合成 NRC 的活性，把它引入不同 ALDH 骨架后 NMN+ 活性最多提升 60 倍。具体筛选规模、突变集合与动力学条件以原文为准。",
+      "audience": "辅因子工程、氧化还原酶改造与低成本生物制造研究者",
+      "minutes": 11,
+      "labels": [
+        "机制研究",
+        "实验验证",
+        "开放获取"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Noncanonical redox cofactors (NRCs) are cheaper alternatives to NAD(P)+ for biomanufacturing and offer finer control of electron delivery, but their adoption is limited by the scarcity of compatible enzymes. Screening the aldehyde dehydrogenase (ALDH) family, the authors identify a conserved RH/QxxR motif that confers widespread NRC activity on natural enzymes.",
+        "why": "The usual route to cofactor substitution starts with the cofactor and then heavily re-engineers the enzyme. This work reverses the direction and looks for compatibility motifs that natural sequences already carry, showing that the motif reinforces cofactor positioning and preorganizes the active site independently of the NAD+ adenosine monophosphate moiety. For readers in cofactor engineering and low-cost biomanufacturing it is both a reusable motif and a template for mining latent engineering starting points from natural diversity.",
+        "evidence": "The abstract confirms that screening the ALDH family identified a conserved RH/QxxR motif enabling widespread NRC activity among natural enzymes; Bos taurus ALDH3a1 shows unprecedented turnover with nicotinamide mononucleotide (NMN+), with kcat values exceeding those with NAD+ and surpassing most engineered NRC-active enzymes by 10 to 10^5-fold; structural analyses reveal that the motif reinforces cofactor positioning and preorganizes the active site independently of the NAD+ adenosine monophosphate moiety; the motif supports activity with simple synthetic NRCs such as 1-(2-carbamoylmethyl)nicotinamide, and introducing it into diverse ALDH scaffolds enhances NMN+ activity up to 60-fold. Specific screening scale, mutation sets and kinetic conditions rest with the source paper.",
+        "audience": "Researchers in cofactor engineering, oxidoreductase engineering and low-cost biomanufacturing",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "imrich-2026-iad-skatole-structure",
+      "title": "The structural basis of malodorant skatole formation by the glycyl radical enzyme indoleacetate decarboxylase",
+      "cn": "粪臭素生成的结构基础：糖基自由基酶吲哚乙酸脱羧酶的冷冻电镜结构",
+      "authors": "Imrich et al.",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "date": "2026-09-18",
+      "topic": "酶的结构与催化机制",
+      "topics": [
+        "酶的结构与催化机制"
+      ],
+      "type": "original",
+      "doi": "10.1073/pnas.2618341123",
+      "url": "https://doi.org/10.1073/pnas.2618341123",
+      "featured": false,
+      "summary": "糖基自由基酶（GRE）用翻译后安装的糖基自由基催化困难反应。吲哚乙酸脱羧酶（IAD）把吲哚-3-乙酸（I3A）脱羧生成粪臭素，后者是恶臭分子，同时也是人与家畜的肺部毒素、疑似致癌物和蚊虫引诱剂。该工作用冷冻电镜解析肠道菌 Olsenella uli 来源 IAD 的 2.45 Å 结构。",
+      "why": "这是一个用结构纠正既有机理推断的案例：此前用 D2O 中粪臭素的高氘含量支持氢原子转移（HAT）机理，而底物在活性位点的取向更符合 Kolbe 型脱羧，即由羧基的单电子氧化引发。作者进一步证明氘含量并不能可靠指示机理，因为 IAD 能在转化后交换粪臭素 3′-甲基上的氢。对做自由基酶机理与抑制剂设计的读者，这类工作提示「同位素标记证据」本身也需要机制层面的交叉验证。",
+      "evidence": "摘要确认：作者用冷冻电镜解出 Olsenella uli 来源 IAD 的 2.45 Å 结构，为同源四聚体，四个原体均结合底物 I3A；I3A 在活性位点的定位出乎意料，更符合 Kolbe 型脱羧机理（由羧基的 1 电子氧化引发），而不是由氢原子转移引发；作者指出此前用 D2O 中粪臭素高氘含量支持 HAT 机理并不可靠，因为 IAD 能在转化后催化粪臭素 3′-甲基氢的交换；结构比较显示 IAD 与羟苯基乙酸脱羧酶带有其他已表征 GRE 所没有的结构特征，提示二者可能构成一个独立的 GRE 亚类。该条目以结构证据为主，动力学与抑制剂实验细节以原文为准。",
+      "audience": "酶结构与催化机制、自由基酶、肠道菌代谢与抑制剂设计研究者",
+      "minutes": 11,
+      "labels": [
+        "机制研究",
+        "实验验证",
+        "开放获取"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Glycyl radical enzymes (GREs) catalyse difficult reactions using a posttranslationally installed glycyl radical cofactor. Indoleacetate decarboxylase (IAD) decarboxylates indole-3-acetate (I3A) to form skatole, a malodourant that is also a human and livestock lung toxin, a suspected carcinogen and a mosquito attractant. This work solves a 2.45 A cryo-EM structure of IAD from the gut bacterium Olsenella uli.",
+        "why": "This is a case where structure corrects a previous mechanistic inference: high deuterium content in skatole from D2O assays had been used to argue for a hydrogen atom transfer (HAT) mechanism, yet the position of the substrate in the active site is more consistent with Kolbe-type decarboxylation initiated by one-electron oxidation of the carboxylate. The authors further show that deuterium content does not necessarily report on mechanism, because IAD can exchange the 3'-methyl hydrogens of skatole post-turnover. For readers working on radical enzyme mechanisms and inhibitor design, it is a reminder that isotopic labelling evidence also needs mechanistic cross-validation.",
+        "evidence": "The abstract confirms that the authors solved a 2.45 A cryo-EM structure of IAD from Olsenella uli in a homotetrameric form with the substrate I3A bound in all four protomers; the positioning of I3A in the active site is unexpected and more consistent with a Kolbe-type decarboxylation mechanism initiated by one-electron oxidation of the carboxylate moiety rather than by hydrogen atom transfer; the authors show that deuterium content does not necessarily inform on mechanism because IAD can catalyse exchange of skatole's 3'-methyl hydrogens post-turnover; structural comparisons show that IAD and hydroxyphenylacetate decarboxylase display features not found in other characterized GREs, suggesting they represent a distinct GRE subclass. This entry rests mainly on structural evidence; kinetic and inhibitor experiment details rest with the source paper.",
+        "audience": "Researchers in enzyme structure and catalytic mechanism, radical enzymes, gut microbial metabolism and inhibitor design",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "sajeevan-2026-catrange",
+      "title": "CatRange enables robust prediction of enzyme variant kinetic regimes",
+      "cn": "CatRange：稳健预测酶变体的动力学区间",
+      "authors": "Sajeevan et al.",
+      "journal": "PNAS Nexus",
+      "date": "2026-09-16",
+      "topic": "AI 与机器学习辅助酶研究",
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ],
+      "type": "original",
+      "doi": "10.1093/pnasnexus/pgag309",
+      "url": "https://doi.org/10.1093/pnasnexus/pgag309",
+      "featured": false,
+      "summary": "从序列直接预测酶动力学仍是难题，催化关键残基的突变尤其棘手：现有模型在活性大幅下降时仍倾向给出接近野生型的预测。CatRange 在 CatLog-27k（对 BRENDA 与 SABIO-RK 做系统审计与纠错后得到的 27176 条体外酶–底物动力学记录）上训练，把动力学预测从数值回归改为对 kcat 与 KM 的量级分类。",
+      "why": "价值有两层。一是任务形式：实验上酶动力学本就常按数量级解读，把回归换成量级分类更贴合测量本身的不确定度，也能缓解测定批次差异；二是数据来源被公开说明——训练集经人工与智能体协同核对（2158 篇原始文献）并随方法披露，正面回应了「训练数据不透明导致指标虚高」的领域痛点。对做酶动力学预测与突变效应建模的读者，这是一次更贴近实际使用方式的重新表述。",
+      "evidence": "摘要确认：CatRange 在 CatLog-27k 上训练，该数据集含 27176 条体外酶–底物动力学记录，由人机协同的 AI 智能体流程对 BRENDA 与 SABIO-RK 做系统审计与纠错得到，所有突变条目均与 2158 篇原始文献人工核对；模型把 kcat 与 KM 的预测表述为对 log10 分箱的分类任务，使用酶–底物联合表示与梯度提升分类器，在标准留出、分布外与少样本突变设置下预测野生型与突变体的动力学区间，能给出量级层面的恢复与类别平衡的区分度，并捕捉突变引起的动力学区间迁移，包括注释催化残基受扰动带来的活性损失；模型还能识别非酶序列输入。该条目为计算方法，未含新的湿实验动力学测量；绝对误差数值与基线比较以原文为准。",
+      "audience": "酶动力学预测、突变效应建模与机器学习辅助酶工程研究者",
+      "minutes": 12,
+      "labels": [
+        "Kcat 预测",
+        "基准设计",
+        "仅计算验证",
+        "开放获取"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Predicting enzyme kinetics directly from sequence remains hard, and mutations at catalytically essential residues are especially difficult: existing models tend to default to wild-type predictions even when activity is substantially lost. CatRange is trained on CatLog-27k, a human-in-the-loop, AI-agent curated dataset of 27,176 in vitro enzyme-substrate kinetic records produced by systematically auditing and correcting BRENDA and SABIO-RK, and it reframes kinetic prediction from numeric regression into classification over order-of-magnitude bins for kcat and KM.",
+        "why": "The value has two layers. First, the task formulation: experimental enzyme kinetics are commonly read at the order-of-magnitude scale, so bin classification matches the uncertainty of the measurement itself and mitigates assay-level variability. Second, the provenance of the training data is stated - reconciled against 2,158 source articles and disclosed alongside the method - which answers a known pain point in the field where opaque training data inflate reported metrics. For readers working on kinetic prediction and mutation-effect modelling, it is a reformulation closer to how the numbers are actually used.",
+        "evidence": "The abstract confirms that CatRange is trained on CatLog-27k, a human-in-the-loop, AI-agent trustworthy dataset of 27,176 in vitro enzyme-substrate kinetic records created by systematic audit and correction of BRENDA and SABIO-RK, with all mutant entries manually reconciled against 2,158 source articles; the model casts kcat and KM prediction as classification over log10-spaced bins, uses joint enzyme-substrate representations and gradient-boosted classifiers, and predicts kinetic ranges for wild-type and mutant enzymes across standard held-out, out-of-distribution and few-shot mutation settings, showing order-of-magnitude recovery with class-balanced discrimination and capturing mutation-induced movement across kinetic regimes, including losses associated with perturbation of annotated catalytic residues; the model also detects non-enzyme sequence inputs. This entry is a computational method with no new wet-lab kinetic measurements; absolute error values and baseline comparisons rest with the source paper.",
+        "audience": "Researchers in enzyme kinetics prediction, mutation-effect modelling and machine-learning-assisted enzyme engineering",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    }
+  ],
+  "observationsEn": [
+    [
+      "Focus of this edition",
+      "The search window for this edition runs from 2026-09-02 to 2026-09-21: it was extended beyond the usual week so that the Nature paper on synthetic protein assemblies as RNA transfer vehicles, published online on 2 September, could be included. Three of the entries line up as a design-discover-characterize chain: generative protein design producing programmable modular scaffolds that are then functionalized for delivery (Nature), iterative mining across evolutionary distances with interpretable models to extrapolate further (Nature Communications), and a 2.45 A cryo-EM structure that revises the decarboxylation mechanism of a glycyl radical enzyme (PNAS). A second thread turns default assumptions into design variables, with one JACS paper showing that a porous framework actively perturbs the structure of the protein it confines and another installing a noncanonical amino acid inside a protein pocket to give radical chemistry a chiral environment."
+    ],
+    [
+      "Evidence boundary",
+      "Most conclusions in this edition have a defined scope and should not be generalized directly. The Nature RNA transfer vehicles are a protein-assembly and delivery-engineering study rather than enzyme catalysis, and its efficiency comparison is against the comparator vehicles the authors chose; the conclusion that porous frameworks perturb protein conformation comes from the Zr-based MOF NU-1000 and an infrared assignment, so whether it holds as pore size, electrostatics and ionic strength change rests with the source paper; the optimal-temperature conclusions come from a meta-analysis of 260 published data sets and produce no new experimental measurements, and the author states explicitly that part of the fitted thermodynamic output is apparent rather than thermodynamic. For the remaining entries, the specific enzymes, substrate scope, mutation sites and absolute kinetic values also rest with the source papers."
+    ],
+    [
+      "Section coverage",
+      "This edition fills three previously empty topics: enzyme discovery and mining through iterative ortholog mining, enzyme stability engineering through the optimal-temperature meta-analysis, and cofactors, coenzymes and regeneration through the noncanonical redox cofactor motif in natural enzymes. Fusion enzymes and multifunctional enzymes, enzyme cascade assembly, and multi-enzyme cascades again produced no new work meeting the selection bar; they remain served by the classic reading path rather than being padded with weakly related papers."
+    ]
+  ],
+  "edition": 4
+}

@@ -1,7 +1,20 @@
 {
-  "updatedAt": "2026-09-21",
-  "current": 4,
+  "updatedAt": "2026-09-28",
+  "current": 5,
   "editions": [
+    {
+      "edition": 5,
+      "updatedAt": "2026-09-28",
+      "periodStart": "2026-09-22",
+      "periodEnd": "2026-09-28",
+      "itemCount": 12,
+      "featuredCount": 5,
+      "headline": "血红素蛋白催化的氮丙啶化级联：从未活化烯烃直接构建手性噁唑烷酮",
+      "en": {
+        "headline": "Chiral oxazolidinones via biocatalytic aziridination of unactivated alkenes"
+      },
+      "path": "data/papers.json"
+    },
     {
       "edition": 4,
       "updatedAt": "2026-09-21",
@@ -13,7 +26,7 @@
       "en": {
         "headline": "Creating bottom-up RNA transfer vehicles from synthetic protein assemblies"
       },
-      "path": "data/papers.json"
+      "path": "data/history/papers-2026-09-21.json"
     },
     {
       "edition": 3,

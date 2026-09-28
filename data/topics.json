@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-28",
   "topics": [
     {
       "key": "定向进化与理性设计",
@@ -7,8 +7,8 @@
       "description": "通过定向进化或理性设计改造酶的活性、选择性与新功能。",
       "en_description": "Engineering enzyme activity, selectivity and new functions by directed evolution or rational design.",
       "classicCount": 31,
-      "paperCount": 3,
-      "total": 34
+      "paperCount": 10,
+      "total": 41
     },
     {
       "key": "酶的结构与催化机制",
@@ -16,8 +16,8 @@
       "description": "酶的三维结构、催化机理、变构调控与底物识别机制。",
       "en_description": "Three-dimensional structure, catalytic mechanism, allosteric regulation and substrate recognition.",
       "classicCount": 13,
-      "paperCount": 3,
-      "total": 16
+      "paperCount": 5,
+      "total": 18
     },
     {
       "key": "AI 与机器学习辅助酶研究",
@@ -25,8 +25,8 @@
       "description": "用机器学习与人工智能方法辅助酶的功能预测、设计、筛选与工程化。",
       "en_description": "Machine learning and AI methods for enzyme function prediction, design, screening and engineering.",
       "classicCount": 6,
-      "paperCount": 9,
-      "total": 15
+      "paperCount": 10,
+      "total": 16
     },
     {
       "key": "计算酶学与分子模拟",
@@ -34,8 +34,8 @@
       "description": "计算酶设计、结构预测、分子动力学与 QM/MM 模拟。",
       "en_description": "Computational enzyme design, structure prediction, molecular dynamics and QM/MM simulation.",
       "classicCount": 12,
-      "paperCount": 1,
-      "total": 13
+      "paperCount": 2,
+      "total": 14
     },
     {
       "key": "多酶级联反应",
@@ -43,17 +43,8 @@
       "description": "多酶级联反应的设计、动力学协调与辅因子循环。",
       "en_description": "Design, kinetic orchestration and cofactor recycling of multi-enzyme cascades.",
       "classicCount": 12,
-      "paperCount": 0,
-      "total": 12
-    },
-    {
-      "key": "酶固定化与酶—材料体系",
-      "en": "Enzyme immobilization & enzyme–material systems",
-      "description": "酶的固定化策略及其与多孔材料、纳米材料、框架材料结合的体系。",
-      "en_description": "Enzyme immobilization and systems combining enzymes with porous, nano and framework materials.",
-      "classicCount": 3,
-      "paperCount": 8,
-      "total": 11
+      "paperCount": 1,
+      "total": 13
     },
     {
       "key": "酶催化方法与分析技术",
@@ -61,8 +52,17 @@
       "description": "酶催化的合成方法、分析表征技术与非天然催化反应。",
       "en_description": "Synthetic methods, analytical techniques and non-natural reactions in enzyme catalysis.",
       "classicCount": 6,
-      "paperCount": 3,
-      "total": 9
+      "paperCount": 7,
+      "total": 13
+    },
+    {
+      "key": "酶固定化与酶—材料体系",
+      "en": "Enzyme immobilization & enzyme–material systems",
+      "description": "酶的固定化策略及其与多孔材料、纳米材料、框架材料结合的体系。",
+      "en_description": "Enzyme immobilization and systems combining enzymes with porous, nano and framework materials.",
+      "classicCount": 3,
+      "paperCount": 10,
+      "total": 13
     },
     {
       "key": "酶动力学、选择性与底物特异性",
@@ -70,8 +70,17 @@
       "description": "酶动力学参数、化学/对映选择性、底物特异性与催化多功能性。",
       "en_description": "Enzyme kinetics, chemo/enantioselectivity, substrate specificity and catalytic promiscuity.",
       "classicCount": 8,
-      "paperCount": 1,
-      "total": 9
+      "paperCount": 2,
+      "total": 10
+    },
+    {
+      "key": "酶的稳定性工程",
+      "en": "Enzyme stability engineering",
+      "description": "提升酶的热稳定性、溶剂耐受性与长期储存稳定性的工程策略。",
+      "en_description": "Engineering strategies to improve enzyme thermostability, solvent tolerance and storage stability.",
+      "classicCount": 6,
+      "paperCount": 2,
+      "total": 8
     },
     {
       "key": "酶的级联组装",
@@ -83,15 +92,6 @@
       "total": 8
     },
     {
-      "key": "酶的稳定性工程",
-      "en": "Enzyme stability engineering",
-      "description": "提升酶的热稳定性、溶剂耐受性与长期储存稳定性的工程策略。",
-      "en_description": "Engineering strategies to improve enzyme thermostability, solvent tolerance and storage stability.",
-      "classicCount": 6,
-      "paperCount": 1,
-      "total": 7
-    },
-    {
       "key": "酶的发现与挖掘",
       "en": "Enzyme discovery & mining",
       "description": "从自然序列与宏基因组中发现、挖掘与表征新酶。",
@@ -101,22 +101,22 @@
       "total": 6
     },
     {
-      "key": "融合酶与多功能酶",
-      "en": "Fusion enzymes & multifunctional enzymes",
-      "description": "融合酶与多功能酶的设计、连接策略与级联应用。",
-      "en_description": "Design, linking strategies and cascade applications of fusion and multifunctional enzymes.",
-      "classicCount": 3,
-      "paperCount": 0,
-      "total": 3
-    },
-    {
       "key": "辅因子、辅酶与再生",
       "en": "Cofactors, coenzymes & regeneration",
       "description": "辅因子与辅酶的循环再生、替代物与酶促再生策略。",
       "en_description": "Recycling, regeneration, surrogates and enzymatic regeneration of cofactors and coenzymes.",
       "classicCount": 2,
+      "paperCount": 3,
+      "total": 5
+    },
+    {
+      "key": "融合酶与多功能酶",
+      "en": "Fusion enzymes & multifunctional enzymes",
+      "description": "融合酶与多功能酶的设计、连接策略与级联应用。",
+      "en_description": "Design, linking strategies and cascade applications of fusion and multifunctional enzymes.",
+      "classicCount": 3,
       "paperCount": 1,
-      "total": 3
+      "total": 4
     },
     {
       "key": "酶的应用与环境生物催化",
@@ -124,8 +124,8 @@
       "description": "面向塑料降解、污染物治理等应用与环境场景的酶催化。",
       "en_description": "Enzyme catalysis for applications such as plastic degradation and pollutant remediation.",
       "classicCount": 1,
-      "paperCount": 0,
-      "total": 1
+      "paperCount": 3,
+      "total": 4
     }
   ]
 }
