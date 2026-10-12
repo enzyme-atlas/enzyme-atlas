@@ -1,7 +1,20 @@
 {
-  "updatedAt": "2026-09-28",
-  "current": 5,
+  "updatedAt": "2026-10-12",
+  "current": 6,
   "editions": [
+    {
+      "edition": 6,
+      "updatedAt": "2026-10-12",
+      "periodStart": "2026-10-05",
+      "periodEnd": "2026-10-12",
+      "itemCount": 7,
+      "featuredCount": 5,
+      "headline": "时间分辨 X 射线自由电子激光揭示异青霉素 N 合酶催化中的意外中间体",
+      "en": {
+        "headline": "Unanticipated intermediates during isopenicillin N synthase catalysis identified by time-resolved X-ray free-electron laser studies"
+      },
+      "path": "data/papers.json"
+    },
     {
       "edition": 5,
       "updatedAt": "2026-09-28",
@@ -13,7 +26,7 @@
       "en": {
         "headline": "Chiral oxazolidinones via biocatalytic aziridination of unactivated alkenes"
       },
-      "path": "data/papers.json"
+      "path": "data/history/papers-2026-09-28.json"
     },
     {
       "edition": 4,
