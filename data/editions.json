@@ -1,7 +1,20 @@
 {
-  "updatedAt": "2026-10-12",
-  "current": 6,
+  "updatedAt": "2026-10-19",
+  "current": 7,
   "editions": [
+    {
+      "edition": 7,
+      "updatedAt": "2026-10-19",
+      "periodStart": "2026-10-12",
+      "periodEnd": "2026-10-19",
+      "itemCount": 5,
+      "featuredCount": 5,
+      "headline": "单个金黄色葡萄球菌 SauUSI 限制酶马达切碎甲基化 DNA",
+      "en": {
+        "headline": "Single Staphylococcus aureus SauUSI restriction enzyme motors fragment methylated DNA"
+      },
+      "path": "data/papers.json"
+    },
     {
       "edition": 6,
       "updatedAt": "2026-10-12",
@@ -13,7 +26,7 @@
       "en": {
         "headline": "Unanticipated intermediates during isopenicillin N synthase catalysis identified by time-resolved X-ray free-electron laser studies"
       },
-      "path": "data/papers.json"
+      "path": "data/history/papers-2026-10-12.json"
     },
     {
       "edition": 5,

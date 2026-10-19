@@ -1,283 +1,215 @@
 {
-  "updatedAt": "2026-10-12",
-  "periodStart": "2026-10-05",
-  "periodEnd": "2026-10-12",
+  "updatedAt": "2026-10-19",
+  "periodStart": "2026-10-12",
+  "periodEnd": "2026-10-19",
   "source": "curated_crossref_and_publisher",
   "observations": [
     [
       "本期重点",
-      "本期严格采用 2026-10-05 至 2026-10-12 的在线发表窗口，精选五篇研究分别覆盖时间分辨结构酶学、P450 选择性氧化、全细胞硝基芳烃生物制造、糖基转移酶多策略工程和酶电极界面定量建模。"
+      "本期严格采用 2026-10-12 至 2026-10-19 的在线发表窗口，五篇精选覆盖限制性内切酶单分子机制、CRISPR RNA 调控的微生物细胞工厂、酶—纳米酶级联组装、数据稀缺酶家族的发现与活性预测，以及工业酶 pH 适应策略。"
+    ],
+    [
+      "从机制到部署",
+      "本期形成一条清晰的方法链：SauUSI 工作解析单个酶分子如何转位并切割甲基化 DNA；hfCas13d/CgRNA 将 RNA 敲低转化为代谢通量调控；EcENN 把中间体传递问题压缩到同一纳米腔室；UPO 工作流则把序列挖掘、表达筛选与活性预测连成闭环。"
     ],
     [
       "证据边界",
-      "IPNS 条目报告的是瞬态中间体与机制证据；P450 条目的高选择性来自工程化 P450PL2 及其特定底物体系；硝基芳烃条目是通过组合敲除硝基还原酶改善细胞内化合物保留和生物制造；UGTX1 的 54 倍提升与超过 98.5% 转化率属于该酶和该反应条件；SAEKP 是预测方法，不能替代实验动力学测定。"
-    ],
-    [
-      "阅读路线",
-      "先读 IPNS 机制研究理解如何捕捉催化中间体，再按研究方向选择：做不对称生物催化读 P450，做代谢工程读硝基还原酶敲除，做酶工程读 UGTX1，做生物电催化读界面 pH 建模；SAEKP 和 TbEst 可作为方法与酶固定化补充阅读。"
+      "SauUSI 的切割分布和循环机制来自特定甲基化 DNA 体系；HDA 的 17.8 g/L 与 37.2 g/L 分别属于摇瓶和生物反应器条件；EcENN 的 7 倍产量与 93.1% 转化率属于所报道的 DAAO–Pd 级联；UPO 模型的前瞻测试最高 MCC 为 48%、准确率为 70%，仍显示跨底物空间泛化的限制；pH 适应条目为综述，不是单一工程方案的性能验证。"
     ]
   ],
   "items": [
     {
-      "id": "rabe-2026-ipns-transient-intermediates",
-      "title": "Unanticipated intermediates during isopenicillin N synthase catalysis identified by time-resolved X-ray free-electron laser studies",
-      "cn": "时间分辨 X 射线自由电子激光揭示异青霉素 N 合酶催化中的意外中间体",
-      "authors": "Rabe et al.",
-      "journal": "Nature Catalysis",
-      "date": "2026-10-09",
+      "id": "shaw-2026-sauusi-motors",
+      "title": "Single Staphylococcus aureus SauUSI restriction enzyme motors fragment methylated DNA",
+      "cn": "单个金黄色葡萄球菌 SauUSI 限制酶马达切碎甲基化 DNA",
+      "authors": "Shaw et al.",
+      "journal": "Nature Chemical Biology",
+      "date": "2026-10-15",
       "topic": "酶的结构与催化机制",
       "topics": [
         "酶的结构与催化机制",
-        "计算酶学与分子模拟"
+        "酶动力学、选择性与底物特异性"
       ],
       "type": "original",
-      "doi": "10.1038/s41929-026-01618-4",
-      "url": "https://doi.org/10.1038/s41929-026-01618-4",
+      "doi": "10.1038/s41589-026-02353-4",
+      "url": "https://doi.org/10.1038/s41589-026-02353-4",
       "featured": true,
-      "summary": "研究者用时间分辨串行飞秒晶体学和 X 射线发射光谱，观察 Fe(II) 依赖的异青霉素 N 合酶将 ACV 转化为青霉素骨架的过程。结构显示，ACV 半胱氨酸残基氧化后形成的硫醛并不与铁中心配位；氘标记 ACV 还帮助捕捉到恢复 Fe–S 键的单环 β-内酰胺。结合突变、光谱和计算结果，作者支持了由 Fe(IV) 介导、活性位点水参与的成环机制。",
-      "why": "它把酶机制研究从终态结构推进到瞬态中间体层面，并展示了 XFEL、同位素标记、突变和计算如何互相约束机制解释。对研究非血红素铁氧化酶的人，这篇文章尤其适合作为“怎样证明中间体确实存在”的方法学案例。",
-      "evidence": "Crossref 摘要确认：时间分辨串行飞秒晶体学和 X 射线发射光谱用于研究 IPNS:Fe(II):ACV 微晶与氧气反应；高分辨率结构显示硫醛不与铁中心配位；氘标记实验观察到恢复 Fe–S 键的单环 β-内酰胺；突变、光谱和计算共同支持 Fe(IV) 介导且有活性位点水参与的青霉素形成。",
-      "audience": "结构酶学、非血红素铁酶、抗生素生物合成与酶催化机制研究者",
-      "minutes": 12,
+      "summary": "研究者结合生物物理、单分子和纳米孔测序方法，解析二聚体 ATP 依赖型 IV 型限制酶 SauUSI 如何识别并切碎含 5-甲基胞嘧啶或 5-羟甲基胞嘧啶的非己 DNA。甲基化识别首先驱动一个解旋酶样亚基单向转位并置换其靶标识别结构域；在约一半事件中，伙伴结构域结合暴露的修饰位点并稳定不断扩大的 DNA 环。对称甲基化 DNA 更容易形成环，两个马达也可参与双向环转位；切割在转位过程中随机发生，多轮结合—转位—切割最终造成 DNA 碎片化。",
+      "why": "这项工作把限制酶的终点切割图谱拆解为可观察的马达运动、DNA 成环和随机切割事件，提供了连接单分子动力学与最终片段分布的机制框架。对研究核酸酶、ATP 驱动分子马达和宿主防御系统的人，它是一个方法与机制都值得优先阅读的案例。",
+      "evidence": "Crossref 摘要明确支持：SauUSI 是二聚体、ATP 依赖型 IV 型限制酶；5-甲基胞嘧啶识别诱导单亚基单向转位；伙伴靶标识别结构域可稳定 DNA 环；对称甲基化提高成环并允许双马达参与；切割在转位中随机发生，多轮循环最终切碎修饰 DNA。",
+      "audience": "限制性内切酶、核酸酶、单分子生物物理、DNA 修饰识别与细菌防御系统研究者",
+      "minutes": 11,
       "labels": [
         "机制研究",
         "多层实验验证",
         "在线先行"
       ],
-      "verification": "Nature Catalysis 出版信息、Crossref DOI、摘要与 2026-10-09 在线发表日期已核验；OpenAlex 标记为 article 且未标记撤稿；未见更正或撤稿关系。",
+      "verification": "Nature Chemical Biology 出版信息、Crossref DOI、摘要与 2026-10-15 在线发表日期已核验；OpenAlex 标记为 article、非 paratext 且未标记撤稿；Crossref 未见更正或撤稿关系。",
       "en": {
-        "summary": "Using time-resolved serial femtosecond crystallography and X-ray emission spectroscopy, the authors follow the Fe(II)-dependent isopenicillin N synthase reaction that converts ACV into the penicillin ring system. The structures show that oxidation of the ACV cysteinyl group produces a thioaldehyde that does not coordinate the iron centre. Deuterium-labelled ACV further reveals a monocyclic β-lactam with restoration of the Fe–S bond. Mutagenesis, spectroscopy and computation together support an Fe(IV)-mediated ring-forming mechanism involving active-site water.",
-        "why": "The study moves mechanistic enzymology from endpoint structures toward transient intermediates and shows how XFEL measurements, isotope labelling, mutagenesis and computation can constrain a catalytic proposal. It is a particularly useful case study for researchers working on non-haem iron oxygenases.",
-        "evidence": "The Crossref abstract confirms the time-resolved crystallography and X-ray emission experiments on IPNS:Fe(II):ACV microcrystals, the non-coordinating thioaldehyde, the labelled monocyclic β-lactam with restored Fe–S bonding, and the combined evidence supporting Fe(IV)-mediated penicillin formation with active-site water involvement.",
-        "audience": "Researchers in structural enzymology, non-haem iron enzymes, antibiotic biosynthesis and catalytic mechanisms",
-        "verification": "The Nature Catalysis publication information, Crossref DOI, abstract and online publication date of 9 October 2026 were checked. OpenAlex classifies it as an article and does not mark it as retracted; no correction or retraction relation was found."
+        "summary": "Combining biophysical, single-molecule and nanopore-sequencing methods, the authors examine how the dimeric ATP-dependent type IV restriction enzyme SauUSI recognizes and fragments nonself DNA containing 5-methylcytosine or 5-hydroxymethylcytosine. Recognition first drives unidirectional translocation by one helicase-like subunit and displaces its target-recognition domain. In about half of the events, the partner domain binds the exposed modified site and stabilizes a growing DNA loop. Symmetrically methylated DNA loops more often and can engage both motors in bidirectional loop translocation. Cleavage occurs stochastically during translocation, and repeated binding–translocation–cleavage cycles ultimately fragment the DNA.",
+        "why": "The study resolves an endpoint restriction pattern into observable motor movement, DNA looping and stochastic cleavage events. It provides a mechanistic bridge between single-molecule dynamics and the final fragment distribution, making it particularly useful for researchers studying nucleases, ATP-driven molecular motors and host-defence systems.",
+        "evidence": "The Crossref abstract supports SauUSI as a dimeric ATP-dependent type IV restriction enzyme, methylcytosine-triggered unidirectional translocation by one subunit, stabilization of a DNA loop by the partner target-recognition domain, more frequent looping and dual-motor engagement on symmetrically methylated DNA, stochastic cleavage during translocation, and eventual fragmentation through repeated cycles.",
+        "audience": "Researchers in restriction enzymes, nucleases, single-molecule biophysics, DNA-modification recognition and bacterial defence systems",
+        "verification": "The Nature Chemical Biology publication information, Crossref DOI, abstract and online publication date of 15 October 2026 were checked. OpenAlex classifies the work as an article, not paratext, and does not mark it as retracted; Crossref lists no correction or retraction relation."
       }
     },
     {
-      "id": "ma-2026-p450-haloalcohols",
-      "title": "P450-catalyzed enantiodivergent kinetic oxidation to access chiral haloalcohols",
-      "cn": "P450 催化的对映分化动力学氧化制备手性卤代醇",
-      "authors": "Ma et al.",
+      "id": "le-2026-cas13d-cgrna-yeast",
+      "title": "Coupling hfCas13d with Circular gRNA Array Precursors Extends RNA Knockdown and Improves Biocatalysis in Yeast",
+      "cn": "hfCas13d 与环状 gRNA 阵列前体耦合，延长 RNA 敲低并提升酵母生物催化",
+      "authors": "Le et al.",
       "journal": "Nature Communications",
-      "date": "2026-10-09",
-      "topic": "酶动力学、选择性与底物特异性",
-      "topics": [
-        "酶动力学、选择性与底物特异性",
-        "定向进化与理性设计"
-      ],
-      "type": "original",
-      "doi": "10.1038/s41467-026-78486-w",
-      "url": "https://doi.org/10.1038/s41467-026-78486-w",
-      "featured": true,
-      "summary": "该研究工程化细胞色素 P450 酶 P450PL2，对含甲基和氯取代基的芳基底物进行动力学对映选择性羟基化，制备具有两个立体中心的卤代醇。出版商摘要报告，工程化策略同时改善底物选择性和立体选择性；分子动力学与 DFT 计算提示，酶通过位阻差异识别两个半径高度接近的取代基。该体系获得的产物最高达到 99:1 对映体比和超过 99:1 非对映体比。",
-      "why": "这篇工作抓住了不对称催化中一个很难的识别问题：甲基和氯取代基的尺寸差异只有 0.07 Å。它值得酶工程研究者关注的地方，是把多轮突变、底物选择性和立体选择性放在同一个 P450 设计问题中处理，而不是只追求单一产率指标。",
-      "evidence": "Nature Communications 出版商摘要明确支持：P450PL2 经多种突变策略工程化；该酶催化 (2-chloropropyl)benzene 衍生物的动力学对映选择性羟基化；分子动力学和 DFT 计算推断存在对甲基/氯取代基的位阻区分；产物最高达到 99:1 对映体比和超过 99:1 非对映体比。",
-      "audience": "P450 工程、不对称生物催化、选择性氧化与药物中间体合成研究者",
-      "minutes": 10,
-      "labels": [
-        "高对映选择性",
-        "实验验证",
-        "组合突变"
-      ],
-      "verification": "Nature Communications 出版商页面、Crossref DOI、摘要与页面标示的 2026-10-09 发表日期已核验；OpenAlex 未标记撤稿；未见更正或撤稿关系。",
-      "en": {
-        "summary": "The study engineers cytochrome P450 P450PL2 for kinetically enantioselective hydroxylation of aryl substrates bearing methyl and chloro substituents, giving haloalcohols with two stereocentres. The publisher abstract reports that the engineering strategies improve both substrate and stereoselectivity, while molecular-dynamics simulations and DFT calculations suggest steric discrimination between substituents whose radii differ by only 0.07 Å. The products reach up to a 99:1 enantiomeric ratio and more than a 99:1 diastereomeric ratio.",
-        "why": "The paper addresses a demanding recognition problem in asymmetric catalysis: distinguishing methyl and chloro substituents with almost indistinguishable size. Its main interest for enzyme engineers is the joint treatment of substrate selectivity and stereoselectivity in a P450 design problem, rather than optimization of a single yield metric.",
-        "evidence": "The Nature Communications abstract supports the engineering of P450PL2 through multiple mutagenesis strategies, kinetically enantioselective hydroxylation of (2-chloropropyl)benzene derivatives, the proposed steric-discrimination interpretation from molecular dynamics and DFT, and selectivities of up to 99:1 enantiomeric ratio and above 99:1 diastereomeric ratio.",
-        "audience": "Researchers in P450 engineering, asymmetric biocatalysis, selective oxidation and pharmaceutical-intermediate synthesis",
-        "verification": "The Nature Communications publisher page, Crossref DOI, abstract and the page-stated publication date of 9 October 2026 were checked. OpenAlex does not mark the work as retracted; no correction or retraction relation was found."
-      }
-    },
-    {
-      "id": "anderson-2026-nitroarene-retention",
-      "title": "Retention and biosynthesis of diverse nitroarenes in Escherichia coli after combinatorial nitroreductase gene deletions",
-      "cn": "组合敲除硝基还原酶基因后大肠杆菌对多种硝基芳烃的保留与生物合成",
-      "authors": "Anderson et al.",
-      "journal": "Nature Chemistry",
-      "date": "2026-10-07",
+      "date": "2026-10-15",
       "topic": "酶的应用与环境生物催化",
       "topics": [
         "酶的应用与环境生物催化",
-        "酶的发现与挖掘"
+        "酶催化方法与分析技术"
       ],
       "type": "original",
-      "doi": "10.1038/s41557-026-02266-8",
-      "url": "https://doi.org/10.1038/s41557-026-02266-8",
+      "doi": "10.1038/s41467-026-78647-x",
+      "url": "https://doi.org/10.1038/s41467-026-78647-x",
       "featured": true,
-      "summary": "为解决硝基芳烃在微生物细胞中不稳定、难以生物制造的问题，研究者构建了最多包含 15 个已知和候选硝基还原酶基因敲除的大肠杆菌菌株，并测试了超过 20 种外源补充的硝基芳烃。摘要显示，针对二硝基化合物和硝基醛等化学类型，工程菌株能够改善化合物保留；作者进一步将这些底盘用于胺前体到硝基化合物的生物催化转化、硝基苯甲醛生物合成以及硝基苯丙氨酸的半合成与位点特异性引入。",
-      "why": "它把“细胞会不会把目标分子还原掉”提升为全细胞生物制造的底盘工程问题。对代谢工程和合成生物学研究者，文章的价值在于将硝基还原酶网络、底物保留和下游生物合成放在同一套可测试的菌株设计中。",
-      "evidence": "Nature Chemistry 摘要明确支持：工程化大肠杆菌最多敲除 15 个已知及候选硝基还原酶基因；测试超过 20 种外源硝基芳烃；部分二硝基化合物和硝基醛在敲除菌株中得到保留；研究还展示了硝基化合物、硝基苯甲醛和硝基苯丙氨酸相关的生物制造或半合成路线。",
-      "audience": "全细胞生物催化、代谢工程、合成生物学与含硝基化学品生物制造研究者",
-      "minutes": 11,
+      "summary": "研究者在 Candida viswanathii 中重构三种哺乳动物来源的 CRISPR RNA 切割系统，用于阻断中间代谢反应并生产尼龙前体羟基癸酸（HDA）。筛选确定 hfCas13d 为较优效应器，随后设计环状 guide RNA（CgRNA）前体以增强并延长相关基因的敲低。单阵列和双阵列可实现多重通路抑制；双阵列降低副产物形成，使 HDA 在摇瓶中的滴度达到 17.8 g/L，生物反应器发酵进一步达到 37.2 g/L。",
+      "why": "它把可编程 RNA 切割从基因功能工具推进到代谢流动态调控，并用产物滴度验证了多重敲低的工艺价值。对细胞工厂研究者，值得关注的不只是 Cas13d 本身，还包括环状 gRNA 架构对敲低持续时间和多靶点组合的影响。",
+      "evidence": "Nature Communications 出版商摘要支持：研究在 C. viswanathii 中比较三种 RNA 切割系统并选出 hfCas13d；CgRNA 前体增强并延长 HDA 通路相关基因敲低；该平台也能在其他酵母和大肠杆菌中抑制基因；双阵列减少副产物，使 HDA 滴度在摇瓶和生物反应器中分别达到 17.8 g/L 和 37.2 g/L。",
+      "audience": "代谢工程、合成生物学、CRISPR RNA 工具、酵母细胞工厂与工业生物催化研究者",
+      "minutes": 10,
       "labels": [
         "工业菌株",
         "实验验证",
         "过程强化"
       ],
-      "verification": "Nature Chemistry 出版商页面、Crossref DOI、摘要与页面标示的 2026-10-07 发表日期已核验；OpenAlex 未标记撤稿；未见更正或撤稿关系。",
+      "verification": "Nature Communications 出版商页面确认文章类别为 Article、发表日期为 2026-10-15，并提供摘要；Crossref DOI 与日期已核验；OpenAlex 标记为 article、非 paratext 且未标记撤稿；Crossref 未见更正或撤稿关系。",
       "en": {
-        "summary": "To address the instability of nitroarenes in microbial cells, the authors engineered Escherichia coli strains carrying up to 15 deletions of known and candidate nitroreductase genes and tested more than 20 exogenously supplemented nitroarenes. The abstract reports improved retention for chemical classes including dinitro compounds and nitroaldehydes. The engineered chassis were then used for biocatalytic conversion of an amine precursor to a nitro compound, biosynthesis of nitrobenzaldehydes, and semisynthesis with site-specific incorporation of nitrophenylalanines.",
-        "why": "The work reframes intracellular reduction of the target molecule as a whole-cell chassis-engineering problem. For metabolic engineers and synthetic biologists, its value is the integration of nitroreductase networks, compound retention and downstream biosynthesis into a testable strain-design strategy.",
-        "evidence": "The Nature Chemistry abstract confirms E. coli strains with up to 15 deletions of known and candidate nitroreductase genes, testing of more than 20 exogenous nitroarenes, retention of selected dinitro compounds and nitroaldehydes, and demonstrations involving nitro compounds, nitrobenzaldehydes and nitrophenylalanines.",
-        "audience": "Researchers in whole-cell biocatalysis, metabolic engineering, synthetic biology and biomanufacturing of nitro compounds",
-        "verification": "The Nature Chemistry publisher page, Crossref DOI, abstract and the page-stated publication date of 7 October 2026 were checked. OpenAlex does not mark the work as retracted; no correction or retraction relation was found."
+        "summary": "The authors reconstitute three mammalian CRISPR RNA-cleavage systems in Candida viswanathii to interrupt intermediate metabolic reactions during production of hydroxydecanoic acid (HDA), a nylon precursor. They identify hfCas13d as the preferred effector and design a circular guide-RNA precursor architecture to strengthen and extend knockdown of pathway genes. Single and dual arrays enable multiplexed repression; the dual arrays reduce by-product formation and raise the HDA titre to 17.8 g/L in shake flasks, with bioreactor fermentation reaching 37.2 g/L.",
+        "why": "The study moves programmable RNA cleavage from a gene-function tool toward dynamic control of metabolic flux and validates multiplexed knockdown with product titres. For cell-factory researchers, the key point is not only Cas13d but also how the circular guide architecture affects knockdown duration and multi-target combinations.",
+        "evidence": "The Nature Communications publisher abstract supports comparison of three RNA-cleavage systems in C. viswanathii, selection of hfCas13d, stronger and longer knockdown with circular guide-RNA precursors, repression in other yeasts and E. coli, reduced by-product formation with dual arrays, and HDA titres of 17.8 g/L in shake flasks and 37.2 g/L in a bioreactor.",
+        "audience": "Researchers in metabolic engineering, synthetic biology, CRISPR RNA tools, yeast cell factories and industrial biocatalysis",
+        "verification": "The Nature Communications publisher page identifies the work as an Article, gives a publication date of 15 October 2026 and provides the abstract. The Crossref DOI and date were checked. OpenAlex classifies it as an article, not paratext, and does not mark it as retracted; Crossref lists no correction or retraction relation."
       }
     },
     {
-      "id": "lu-2026-ugtx1-mogroside",
-      "title": "Multi-strategy Engineering of a Glycosyltransferase for More Sustainable and Efficient Biosynthesis of Mogroside IE",
-      "cn": "多策略工程改造糖基转移酶，实现更可持续高效的罗汉果苷 IE 生物合成",
-      "authors": "Lu et al.",
-      "journal": "ACS Sustainable Chemistry & Engineering",
-      "date": "2026-10-12",
-      "topic": "定向进化与理性设计",
+      "id": "zhang-2026-encapsulin-enzyme-nanozyme",
+      "title": "Nanoconfined Protein Scaffold as a Generalizable Platform Empowers Synergistic Enzyme–Nanozyme Catalysis for Cascade Biotransformation",
+      "cn": "纳米限域蛋白支架构建协同酶—纳米酶级联生物转化平台",
+      "authors": "Zhang et al.",
+      "journal": "ACS Nano",
+      "date": "2026-10-15",
+      "topic": "酶的级联组装",
       "topics": [
-        "定向进化与理性设计",
-        "AI 与机器学习辅助酶研究",
-        "酶的稳定性工程"
+        "酶的级联组装",
+        "多酶级联反应",
+        "酶固定化与酶—材料体系"
       ],
       "type": "original",
-      "doi": "10.1021/acssuschemeng.6c05850",
-      "url": "https://doi.org/10.1021/acssuschemeng.6c05850",
+      "doi": "10.1021/acsnano.6c09440",
+      "url": "https://doi.org/10.1021/acsnano.6c09440",
       "featured": true,
-      "summary": "研究者将初始转化率仅为 2.4% 的推定糖基转移酶 UGTX1 改造为高效生物催化剂。工程流程结合 ESM-2 零样本预测、动态交叉相关网络分析和结构引导的通道工程，先定位有益单点突变，再按核心、通道和壳层三个功能区域进行 FRISM 组合装配，得到五突变体 UGTX1-M5。该变体的催化效率提高 54 倍，且在 35 ℃ 水相条件下 14 小时内将 1.5 mM mogrol 的转化率提高到超过 98.5%，无需外加金属离子。",
-      "why": "这篇文章的重点不是某一个模型或某一次筛选，而是把零样本预测、动力学网络、结构通道和组合突变组织成连续的工程决策链。它给酶工程研究者提供了一个具体案例：如何把计算信号转译成分区突变和可验证的组合库。",
-      "evidence": "Crossref 摘要确认：UGTX1 初始转化率为 2.4%；ESM-2、DCCNA 和结构引导通道工程共同参与设计；FRISM 组合装配得到五突变体 UGTX1-M5；其 kcat/Km 为 1.13 × 10^4 M−1 s−1、催化效率提高 54 倍；35 ℃ 水相中 14 小时转化 1.5 mM mogrol 的转化率超过 98.5%，不需外加金属离子。作者提出的跨酶工程范式不在本条中写成已被广泛验证的结论。",
-      "audience": "糖基转移酶工程、AI 辅助蛋白设计、天然产物生物合成与绿色生物催化研究者",
-      "minutes": 11,
-      "labels": [
-        "计算筛选",
-        "组合突变",
-        "目标驱动设计"
-      ],
-      "verification": "ACS Sustainable Chemistry & Engineering 出版信息、Crossref DOI、摘要与 2026-10-12 在线发表日期已核验；OpenAlex 未标记撤稿；未见更正或撤稿关系。",
-      "en": {
-        "summary": "The authors turn a putative glycosyltransferase, UGTX1, with an initial conversion of only 2.4% into a more efficient biocatalyst. The workflow combines ESM-2 zero-shot prediction, dynamic cross-correlation analysis and structure-guided tunnel engineering. Beneficial mutations are mapped into core, tunnel and shell zones, then assembled through a focused rational iterative site-specific mutagenesis strategy to produce the quintuple mutant UGTX1-M5. Its catalytic efficiency increases 54-fold, and it converts more than 98.5% of 1.5 mM mogrol in aqueous buffer at 35 °C within 14 hours without exogenous metal ions.",
-        "why": "The main contribution is not one model or one screening round, but a continuous engineering decision chain linking zero-shot prediction, dynamic-network analysis, structural tunnels and combinatorial mutagenesis. It offers a concrete example of translating computational signals into spatially organized mutations and testable libraries.",
-        "evidence": "The Crossref abstract confirms the 2.4% starting conversion, the combined use of ESM-2, DCCNA and structure-guided tunnel engineering, FRISM assembly of UGTX1-M5, a 54-fold increase in catalytic efficiency with kcat/Km of 1.13 × 10^4 M−1 s−1, and conversion above 98.5% for 1.5 mM mogrol at 35 °C over 14 hours without added metal ions. The authors' proposed general engineering paradigm is not presented here as broadly validated across enzymes.",
-        "audience": "Researchers in glycosyltransferase engineering, AI-assisted protein design, natural-product biosynthesis and green biocatalysis",
-        "verification": "The ACS Sustainable Chemistry & Engineering publication information, Crossref DOI, abstract and online publication date of 12 October 2026 were checked. OpenAlex does not mark the work as retracted; no correction or retraction relation was found."
-      }
-    },
-    {
-      "id": "liu-2026-enzymatic-microelectrode-ph",
-      "title": "Mapping and Modeling Interfacial pH Dynamics at Enzymatic Microelectrode",
-      "cn": "绘制并建模酶修饰微电极界面的动态 pH",
-      "authors": "Liu et al.",
-      "journal": "Journal of the American Chemical Society",
-      "date": "2026-10-08",
-      "topic": "酶催化方法与分析技术",
-      "topics": [
-        "酶催化方法与分析技术",
-        "酶动力学、选择性与底物特异性"
-      ],
-      "type": "original",
-      "doi": "10.1021/jacs.6c15657",
-      "url": "https://doi.org/10.1021/jacs.6c15657",
-      "featured": true,
-      "summary": "该研究用二维轴对称有限元模型和实验成像，研究固定了 Myrothecium verrucaria 胆红素氧化酶的石墨微电极在直接电子传递氧还原反应中的局部环境变化。模型显式考虑缓冲平衡、离子活度以及实验测得的 pH 依赖动力学参数，并用原位/操作荧光共聚焦显微镜验证。最弱缓冲条件下，界面局部 pH 上升超过两个单位；长期尺度上的空间荧光分布还显示出自然对流迹象。",
-      "why": "它提醒做固定化酶电极的人，酶的高反应速率会主动重塑界面微环境，不能只用体相 pH 和溶液动力学参数描述电极性能。模型与成像的结合也为设计更稳定、更高性能的生物电化学界面提供了可迁移的定量框架。",
-      "evidence": "JACS 摘要确认：研究对象是胆红素氧化酶修饰石墨微电极；模型包含直接电子传递氧还原、缓冲平衡和实验测定的 pH 依赖动力学参数；弱缓冲条件下局部 pH 上升超过两个单位；原位/操作荧光共聚焦显微镜支持模拟的 pH 梯度，并显示长期尺度的自然对流证据。",
-      "audience": "生物电催化、固定化氧化还原酶、酶电极与界面传质研究者",
+      "summary": "研究者将天然装载货物的 encapsulin 改造为纳米反应器，在同一限域腔体内组装 D-氨基酸氧化酶（DAAO）与钯纳米酶。DAAO 通过靶向肽在自组装过程中选择性封装，钯纳米酶则在腔内生物矿化，用于原位清除有毒副产物。分子动力学模拟显示钯纳米酶富集在酶表面附近，可减少中间体扩散损失；该体系在实验室条件下使丙酮酸滴度提高 7 倍，并在中试尺度获得最高 93.1% 的转化率，而游离 DAAO 为 49.7%。",
+      "why": "这项工作把级联催化的三个常见瓶颈——组分共定位、中间体传递和副产物清除——合并到一个可编程蛋白纳米腔室中。它为酶与无机催化单元的空间组织提供了可测量的设计案例，特别适合关注级联组装和过程放大的研究者。",
+      "evidence": "ACS Nano 摘要支持：encapsulin 被用于共同容纳靶向肽融合的 DAAO 与腔内生物矿化的 Pd 纳米酶；Pd 组分用于原位消除有毒副产物；分子动力学提示其在酶表面富集并减少扩散损失；EcENN 在实验室条件下将丙酮酸滴度提高 7 倍，中试转化率最高为 93.1%，对照游离 DAAO 为 49.7%。",
+      "audience": "酶级联组装、酶—纳米材料体系、蛋白纳米反应器、α-酮酸合成与过程生物催化研究者",
       "minutes": 10,
       "labels": [
-        "界面酶学",
-        "局部微环境",
-        "多层实验验证"
+        "酶发现",
+        "多层实验验证",
+        "过程强化"
       ],
-      "verification": "JACS 出版信息、Crossref DOI、摘要与 2026-10-08 在线发表日期已核验；OpenAlex 未标记撤稿；未见更正或撤稿关系。",
+      "verification": "ACS Nano 出版信息、Crossref DOI、摘要与 2026-10-15 在线发表日期已核验；OpenAlex 标记为 article、非 paratext 且未标记撤稿；Crossref 未见更正或撤稿关系。",
       "en": {
-        "summary": "The study combines a two-dimensional axisymmetric finite-element model with imaging experiments to examine the local environment at a graphite microelectrode modified with bilirubin oxidase from Myrothecium verrucaria during direct-electron-transfer oxygen reduction. The model includes buffer equilibria, ion activities and experimentally measured pH-dependent kinetic parameters, and is tested with in situ and operando fluorescence confocal microscopy. Under the weakest buffering conditions, the interfacial pH rises by more than two units; spatial fluorescence profiles also provide evidence of natural convection on longer time scales.",
-        "why": "For researchers working with immobilized enzyme electrodes, the paper makes clear that high reaction rates can actively reshape the interfacial microenvironment, so bulk pH and solution-phase kinetics are not enough to describe electrode performance. The combination of modeling and imaging offers a quantitative framework for designing more stable bioelectrochemical interfaces.",
-        "evidence": "The JACS abstract confirms the bilirubin-oxidase-modified graphite microelectrode, the model components for direct-electron-transfer oxygen reduction and buffer equilibria, the more-than-two-unit local pH increase under weak buffering, and experimental support from in situ and operando fluorescence confocal microscopy, including evidence of longer-timescale natural convection.",
-        "audience": "Researchers in bioelectrocatalysis, immobilized redox enzymes, enzyme electrodes and interfacial mass transfer",
-        "verification": "The JACS publication information, Crossref DOI, abstract and online publication date of 8 October 2026 were checked. OpenAlex does not mark the work as retracted; no correction or retraction relation was found."
+        "summary": "The authors repurpose the naturally cargo-loading protein encapsulin as a nanoreactor that houses D-amino acid oxidase (DAAO) and palladium nanozymes in the same confined cavity. A targeting-peptide fusion selectively packages DAAO during self-assembly, while the palladium component is biomineralized inside the compartment to remove a toxic by-product in situ. Molecular-dynamics simulations indicate enrichment of the nanozyme near the enzyme surface, reducing intermediate diffusion losses. The system raises pyruvate titres sevenfold under laboratory conditions and reaches up to 93.1% conversion at pilot scale, compared with 49.7% for free DAAO.",
+        "why": "The work combines three recurrent cascade-design problems—component colocalization, intermediate transfer and by-product removal—within a programmable protein compartment. It offers a measurable design case for spatially organizing enzymatic and inorganic catalytic units, particularly for researchers interested in cascade assembly and process scale-up.",
+        "evidence": "The ACS Nano abstract supports encapsulin-mediated co-compartmentalization of targeting-peptide-tagged DAAO and biomineralized palladium nanozymes, in situ removal of a toxic by-product, simulation-based enrichment of palladium near the enzyme surface with reduced diffusion loss, a sevenfold increase in pyruvate titre in laboratory experiments, and pilot-scale conversion of up to 93.1% versus 49.7% for free DAAO.",
+        "audience": "Researchers in enzyme cascade assembly, enzyme–nanomaterial systems, protein nanoreactors, α-keto-acid synthesis and process biocatalysis",
+        "verification": "The ACS Nano publication information, Crossref DOI, abstract and online publication date of 15 October 2026 were checked. OpenAlex classifies the work as an article, not paratext, and does not mark it as retracted; Crossref lists no correction or retraction relation."
       }
     },
     {
-      "id": "qiu-2026-saekp-enzyme-kinetics",
-      "title": "SAEKP: A Site Attention Enzyme Kinetics Prediction Method to Facilitate Enzyme Engineering",
-      "cn": "SAEKP：利用位点注意力预测酶动力学参数以促进酶工程",
-      "authors": "Qiu et al.",
+      "id": "lim-2026-upo-discovery-workflow",
+      "title": "An Integrated Computational-Experimental Workflow for Fungal Peroxygenase Discovery and Enzyme–Substrate Prediction",
+      "cn": "用于真菌过氧化物酶发现与酶—底物预测的计算—实验一体化流程",
+      "authors": "Lim et al.",
       "journal": "Journal of Chemical Information and Modeling",
-      "date": "2026-10-07",
-      "topic": "AI 与机器学习辅助酶研究",
+      "date": "2026-10-16",
+      "topic": "酶的发现与挖掘",
       "topics": [
+        "酶的发现与挖掘",
         "AI 与机器学习辅助酶研究",
-        "酶动力学、选择性与底物特异性"
+        "计算酶学与分子模拟"
       ],
       "type": "original",
-      "doi": "10.1021/acs.jcim.6c01516",
-      "url": "https://doi.org/10.1021/acs.jcim.6c01516",
-      "featured": false,
-      "summary": "SAEKP 将酶序列、底物表征和突出功能位点的加权序列表征结合起来，预测 kcat、Km 和 Ki。模型使用 BRENDA 与 SABIO-RK 中的野生型和突变体数据训练，摘要称其整体表现优于现有模型，并且位点注意力模块有助于预测重要位点及其邻近位置的突变。摘要没有提供足够的划分、外部测试和数值细节，因此本文将其作为可检验的预测工具，而不是已经证明跨家族泛化的工程系统。",
-      "why": "对酶工程而言，预测平均性能和识别关键突变位点是两个不同问题。SAEKP 的设计把“位点重要性”显式放进输入表征，值得关注其注意力机制在严格数据划分和真实定向进化循环中的实际增益。",
-      "evidence": "ACS 摘要确认：SAEKP 使用酶序列、底物和加权功能位点序列；训练数据来自 BRENDA 与 SABIO-RK 的野生型和突变体；预测目标包括 kcat、Km 和 Ki；摘要声称该模型优于现有模型，并改善了重要位点或邻近突变的预测。具体数据划分、外部验证和数值指标需查阅全文。",
-      "audience": "酶动力学预测、机器学习辅助酶工程与定向进化筛选研究者",
-      "minutes": 8,
+      "doi": "10.1021/acs.jcim.6c01050",
+      "url": "https://doi.org/10.1021/acs.jcim.6c01050",
+      "featured": true,
+      "summary": "该研究以数据稀缺且异源表达困难的真菌非特异性过氧化物酶（UPO）为案例，建立从大规模序列挖掘、表达可行性排序、实验筛选到酶—底物活性预测的一体化流程。研究从 3000 多条候选序列中筛出 59 条，在大肠杆菌中分两批表达并获得 27 个表达和活性一致的 UPO；随后用 15 个新 UPO、4 个参考酶和 27 种底物建立活性数据集。两类梯度提升模型分别使用结构/对接特征与蛋白—化学语言模型嵌入；回顾性验证最高 MCC 为 55%、准确率为 78%，对未见第二批酶的前瞻测试最高 MCC 为 48%、准确率为 70%。",
+      "why": "它没有把模型性能与实验发现割裂，而是展示了小样本酶家族中如何主动生成数据、筛出可表达酶，再用互补表征做下一轮优先级排序。更重要的是，作者保留了前瞻测试结果和跨化学空间泛化限制，给出了比单一高分指标更可信的工程边界。",
+      "evidence": "Crossref 摘要支持：流程从 3000 多条序列筛至 59 条候选，获得 27 个稳定表达且有活性的 UPO；15 个新 UPO 和 4 个参考序列对 27 种底物构成数据集；两种梯度提升协议分别整合结构/对接特征和蛋白/化学语言模型嵌入；回顾性测试最高 MCC 55%、准确率 78%，选定的前瞻测试最高 MCC 48%、准确率 70%，摘要同时指出向更广底物空间泛化仍具挑战。",
+      "audience": "新酶挖掘、UPO/过氧化物酶、酶—底物预测、蛋白语言模型与数据稀缺酶家族研究者",
+      "minutes": 12,
       "labels": [
         "计算筛选",
-        "基准设计",
-        "可检验假说"
+        "实验验证",
+        "基准设计"
       ],
-      "verification": "ACS 出版信息、Crossref DOI、摘要与 2026-10-07 在线发表日期已核验；OpenAlex 未标记撤稿；未见更正或撤稿关系。",
+      "verification": "JCIM 出版信息、Crossref DOI、摘要与 2026-10-16 在线发表日期已核验；OpenAlex 标记为 article、非 paratext 且未标记撤稿；Crossref 未见更正或撤稿关系。",
       "en": {
-        "summary": "SAEKP combines enzyme-sequence and substrate representations with a weighted sequence representation that highlights functionally important sites to predict kcat, Km and Ki. It is trained on wild-type and mutant data from BRENDA and SABIO-RK. The abstract reports stronger overall performance than existing models and an additional benefit from site attention when predicting mutations at or near important residues. Because the abstract does not provide sufficient split, external-test or numerical details, this record treats SAEKP as a testable prediction tool rather than as a system already shown to generalize across enzyme families.",
-        "why": "For enzyme engineering, predicting average performance and identifying influential mutation sites are different tasks. SAEKP makes site importance explicit in its representation, so its practical value should be tested under strict data splits and in real directed-evolution cycles.",
-        "evidence": "The ACS abstract confirms the sequence, substrate and weighted functional-site representations, training on wild-type and mutant data from BRENDA and SABIO-RK, prediction of kcat, Km and Ki, and reported gains over existing models including for mutations at or near important sites. Specific data splits, external validation and numerical metrics require the full paper.",
-        "audience": "Researchers in enzyme-kinetics prediction, machine-learning-assisted enzyme engineering and directed-evolution screening",
-        "verification": "The ACS publication information, Crossref DOI, abstract and online publication date of 7 October 2026 were checked. OpenAlex does not mark the work as retracted; no correction or retraction relation was found."
+        "summary": "Using fungal unspecific peroxygenases (UPOs), a data-poor family that is difficult to express heterologously, the study builds an integrated workflow from large-scale sequence mining and expression-aware prioritization to experimental screening and enzyme–substrate activity prediction. More than 3,000 sequences are narrowed to 59 candidates, expressed in two E. coli batches, and reduced to 27 UPOs with consistent expression and activity. Fifteen novel UPOs, four reference enzymes and 27 substrates then form the activity data set. Two gradient-boosting protocols use either structure and docking features or joint protein/chemical language-model embeddings. Retrospective performance reaches an MCC of 55% and 78% accuracy; selected prospective tests on unseen second-batch enzymes reach an MCC of 48% and 70% accuracy.",
+        "why": "Rather than separating model performance from experimental discovery, the paper shows how to generate targeted data in a small enzyme family, identify expressible enzymes and use complementary representations to prioritize the next round. Its prospective results and explicit limits on generalization across chemical space provide a more credible engineering boundary than a single retrospective score.",
+        "evidence": "The Crossref abstract supports narrowing more than 3,000 sequences to 59 candidates, obtaining 27 consistently expressed and active UPOs, building a data set from 15 novel UPOs, four references and 27 substrates, and training two gradient-boosting protocols using structure/docking features or protein/chemical language-model embeddings. It reports retrospective maxima of 55% MCC and 78% accuracy, prospective maxima of 48% MCC and 70% accuracy, and an unresolved challenge in generalizing to broader substrate space.",
+        "audience": "Researchers in enzyme mining, UPOs and peroxygenases, enzyme–substrate prediction, protein language models and data-poor enzyme families",
+        "verification": "The JCIM publication information, Crossref DOI, abstract and online publication date of 16 October 2026 were checked. OpenAlex classifies the work as an article, not paratext, and does not mark it as retracted; Crossref lists no correction or retraction relation."
       }
     },
     {
-      "id": "barbosa-bento-2026-thermotogaceae-esterease",
-      "title": "Characterization and Nanoparticle Immobilization of a Thermotogaceae Esterase Active on Aromatic and Aliphatic Esters",
-      "cn": "Thermotogaceae 酯酶的表征及其在芳香族和脂肪族酯上的纳米颗粒固定化",
-      "authors": "Barbosa Bento et al.",
-      "journal": "ACS Omega",
-      "date": "2026-10-07",
-      "topic": "酶固定化与酶—材料体系",
+      "id": "almansoori-2026-enzyme-ph-adaptation-review",
+      "title": "Enhancing Enzyme pH Adaptation for Industrial Biocatalysis: From Sequence-Dependent Engineering to Sequence-Independent Stabilization",
+      "cn": "提升工业生物催化中的酶 pH 适应性：从序列依赖工程到序列无关稳定化",
+      "authors": "Almansoori et al.",
+      "journal": "ACS Synthetic Biology",
+      "date": "2026-10-13",
+      "topic": "酶的稳定性工程",
       "topics": [
-        "酶固定化与酶—材料体系",
-        "酶的稳定性工程"
+        "酶的稳定性工程",
+        "定向进化与理性设计",
+        "酶固定化与酶—材料体系"
       ],
-      "type": "original",
-      "doi": "10.1021/acsomega.6c05063",
-      "url": "https://doi.org/10.1021/acsomega.6c05063",
-      "featured": false,
-      "summary": "研究者发现并表征了来自 Thermotogaceae 的新酯酶 TbEst。该酶预测为典型 α/β 水解酶折叠，含 Ser-His-Asp 催化三联体；已完成克隆、异源表达和纯化，在 pH 8.0 下熔解温度为 78 ℃，最适条件为 pH 8.0、50 ℃，并能作用于芳香族和脂肪族酯。TbEst 固定到 Ag/AgCl 纳米颗粒后仍保留催化活性，摘要同时报告其热稳定性增强和活性寿命延长，但没有给出相应提升的具体倍数。",
-      "why": "这篇文章把新酶发现、基础表征和纳米尺度固定化串在一起，适合作为“从序列/结构线索到可部署酶材料”的补充案例。阅读时应特别区分游离酶的热稳定性数据与固定化复合物的寿命提升，不把摘要中的定性描述擅自扩展成定量性能。",
-      "evidence": "ACS 摘要确认 TbEst 来自 Thermotogaceae，具有 α/β 水解酶折叠和 Ser-His-Asp 三联体，已克隆表达纯化；pH 8.0 下熔解温度为 78 ℃，最适条件为 pH 8.0、50 ℃；对芳香族和脂肪族酯有活性；固定到 Ag/AgCl 纳米颗粒后保留活性，并报告热稳定性增强和活性寿命延长。摘要未提供提升倍数。",
-      "audience": "新酶挖掘、酯酶表征、酶固定化与酶—纳米材料体系研究者",
-      "minutes": 8,
+      "type": "review",
+      "doi": "10.1021/acssynbio.6c00630",
+      "url": "https://doi.org/10.1021/acssynbio.6c00630",
+      "featured": true,
+      "summary": "这篇综述围绕工业酶在非天然酸碱条件下活性、催化效率与结构完整性下降的问题，对比两类干预路径。序列依赖方法包括理性设计、定向进化、突变、截短、融合和环化，但通常需要结构知识或大规模筛选，并可能面临稳定性—活性权衡；序列无关方法则尝试在不改变主要催化序列的前提下稳定酶，重点讨论与稳定伙伴共表达和蛋白添加剂形成的分子屏蔽策略及其简便性、可扩展性和工艺兼容性。",
+      "why": "pH 适应常被简化为几个表面电荷突变，但工业体系还需要考虑筛选成本、放大兼容性和活性权衡。这篇综述的阅读价值在于把改序列与不改序列的策略放入同一决策框架，帮助研究者判断何时应继续蛋白工程，何时应转向配方或伴侣稳定化。",
+      "evidence": "Crossref 摘要支持：非天然 pH 会改变可电离残基质子化状态并扰动催化微环境与稳定相互作用；综述涵盖理性设计、定向进化、突变、截短、融合和环化等序列依赖方法，也讨论稳定伙伴共表达和蛋白添加剂等序列无关的分子屏蔽策略。摘要提出这些方法具有潜力，但没有给出统一的跨酶性能增益。",
+      "audience": "工业酶工程、pH 稳定性、蛋白配方、洗涤剂/纺织/生物炼制与生物催化工艺研究者",
+      "minutes": 9,
       "labels": [
-        "实验验证",
-        "酶发现",
-        "载体比较"
+        "方法综述",
+        "入门地图",
+        "规模化边界"
       ],
-      "verification": "ACS Omega 出版信息、Crossref DOI、摘要与 2026-10-07 在线发表日期已核验；OpenAlex 未标记撤稿；未见更正或撤稿关系。",
+      "verification": "ACS Synthetic Biology 出版信息、Crossref DOI、摘要与 2026-10-13 在线发表日期已核验；OpenAlex 标记为 article、非 paratext 且未标记撤稿；Crossref 未见更正或撤稿关系。文章按摘要内容归类为 review。",
       "en": {
-        "summary": "The authors identify and characterize a new esterase, TbEst, from the Thermotogaceae family. The predicted structure has a classical α/β-hydrolase fold with a Ser-His-Asp catalytic triad; the enzyme was cloned, heterologously expressed and purified. Its melting temperature is 78 °C at pH 8.0, with optimal activity at pH 8.0 and 50 °C, and it acts on aromatic and aliphatic esters. TbEst retains catalytic activity after immobilization on Ag/AgCl nanoparticles, while the abstract reports enhanced thermostability and a longer active lifetime without giving a numerical improvement factor.",
-        "why": "The paper links enzyme discovery, baseline characterization and nanoscale immobilization as a case study of moving from sequence or structural clues toward deployable enzyme materials. Readers should keep the free-enzyme thermal data separate from the qualitative stability and lifetime claims for the immobilized bioconjugate.",
-        "evidence": "The ACS abstract confirms the Thermotogaceae origin, α/β-hydrolase fold, Ser-His-Asp triad, cloning and purification, a 78 °C melting temperature at pH 8.0, optimal activity at pH 8.0 and 50 °C, activity on aromatic and aliphatic esters, and retained activity after Ag/AgCl nanoparticle immobilization. It reports improved thermostability and active lifetime but gives no improvement factor.",
-        "audience": "Researchers in enzyme discovery, esterase characterization, enzyme immobilization and enzyme–nanomaterial systems",
-        "verification": "The ACS Omega publication information, Crossref DOI, abstract and online publication date of 7 October 2026 were checked. OpenAlex does not mark the work as retracted; no correction or retraction relation was found."
+        "summary": "This review examines why industrial enzymes lose activity, catalytic efficiency or structural integrity under non-native acidic or alkaline conditions and compares two intervention routes. Sequence-dependent approaches include rational design, directed evolution, mutagenesis, truncation, fusion and circularization, but often require structural knowledge or extensive screening and may introduce stability–activity trade-offs. Sequence-independent approaches seek to preserve performance without altering the primary catalytic sequence, with emphasis on molecular shielding through co-expression with stabilizing partners and the use of protein additives, including their potential simplicity, scalability and process compatibility.",
+        "why": "pH adaptation is often reduced to a few surface-charge mutations, whereas industrial use also requires attention to screening cost, scale-up compatibility and activity trade-offs. The review is useful because it places sequence-changing and sequence-preserving strategies in one decision framework, helping readers judge when to continue protein engineering and when to consider formulation or partner-based stabilization.",
+        "evidence": "The Crossref abstract supports changes in ionizable-residue protonation and disruption of catalytic microenvironments and stabilizing interactions at non-native pH. It covers sequence-dependent rational design, directed evolution, mutagenesis, truncation, fusion and circularization, as well as sequence-independent molecular shielding through stabilizing partners and protein additives. The abstract presents these approaches as promising but does not report a uniform performance gain across enzymes.",
+        "audience": "Researchers in industrial enzyme engineering, pH stability, protein formulation, detergents, textiles, biorefineries and biocatalytic processes",
+        "verification": "The ACS Synthetic Biology publication information, Crossref DOI, abstract and online publication date of 13 October 2026 were checked. OpenAlex classifies the work as an article, not paratext, and does not mark it as retracted; Crossref lists no correction or retraction relation. The paper is categorized here as a review based on its abstract."
       }
     }
   ],
   "observationsEn": [
     [
       "This edition at a glance",
-      "Using the strict online-publication window of 5–12 October 2026, this edition features five papers spanning time-resolved structural enzymology, P450-selective oxidation, whole-cell nitroarene biomanufacturing, multi-strategy glycosyltransferase engineering and quantitative pH modeling at enzyme electrodes."
+      "Using the strict online-publication window of 12–19 October 2026, this edition features five papers on the single-molecule mechanism of a restriction enzyme, CRISPR RNA control in microbial cell factories, enzyme–nanozyme cascade assembly, discovery and activity prediction in a data-poor enzyme family, and pH-adaptation strategies for industrial enzymes."
+    ],
+    [
+      "From mechanism to deployment",
+      "The papers form a useful methodological chain: SauUSI resolves how one enzyme translocates and cleaves methylated DNA; hfCas13d/CgRNA turns RNA knockdown into metabolic-flux control; EcENN compresses intermediate transfer into one nanocompartment; and the UPO workflow closes the loop between sequence mining, expression screening and activity prediction."
     ],
     [
       "Evidence boundaries",
-      "The IPNS record reports transient intermediates and mechanistic evidence; the P450 selectivity values belong to engineered P450PL2 and a defined substrate system; the nitroarene study improves compound retention and biomanufacturing through combinatorial nitroreductase deletions; the UGTX1 performance values belong to the reported enzyme and reaction conditions; and SAEKP is a prediction method, not a replacement for experimental kinetic measurements."
-    ],
-    [
-      "How to read this set",
-      "Read the IPNS paper first if you want a model for capturing catalytic intermediates. Then choose P450 for asymmetric biocatalysis, nitroreductase deletions for metabolic engineering, UGTX1 for enzyme engineering, or interfacial pH modeling for bioelectrocatalysis. SAEKP and TbEst provide complementary methods and immobilization case studies."
+      "The SauUSI cleavage distribution and cycling mechanism belong to the tested methylated-DNA systems. The HDA titres of 17.8 and 37.2 g/L come from shake-flask and bioreactor conditions, respectively. EcENN's sevenfold titre increase and 93.1% conversion belong to the reported DAAO–Pd cascade. Prospective UPO prediction reaches at most 48% MCC and 70% accuracy and still shows limits across broader substrate space. The pH-adaptation paper is a review, not a performance validation of one engineering solution."
     ]
   ],
-  "edition": 6
+  "edition": 7
 }
