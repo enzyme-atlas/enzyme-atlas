@@ -1,7 +1,20 @@
 {
-  "updatedAt": "2026-10-19",
-  "current": 7,
+  "updatedAt": "2026-10-26",
+  "current": 8,
   "editions": [
+    {
+      "edition": 8,
+      "updatedAt": "2026-10-26",
+      "periodStart": "2026-10-20",
+      "periodEnd": "2026-10-26",
+      "itemCount": 5,
+      "featuredCount": 5,
+      "headline": "从自然语言出发的功能蛋白可编程设计",
+      "en": {
+        "headline": "Programmable design of functional proteins from natural language"
+      },
+      "path": "data/papers.json"
+    },
     {
       "edition": 7,
       "updatedAt": "2026-10-19",
@@ -13,7 +26,7 @@
       "en": {
         "headline": "Single Staphylococcus aureus SauUSI restriction enzyme motors fragment methylated DNA"
       },
-      "path": "data/papers.json"
+      "path": "data/history/papers-2026-10-19.json"
     },
     {
       "edition": 6,
