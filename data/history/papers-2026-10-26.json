@@ -1,0 +1,217 @@
+{
+  "updatedAt": "2026-10-26",
+  "periodStart": "2026-10-20",
+  "periodEnd": "2026-10-26",
+  "source": "curated_crossref_and_publisher",
+  "observations": [
+    [
+      "本期重点",
+      "本期严格采用 2026-10-20 至 2026-10-26 的在线发表窗口，五篇精选覆盖自然语言驱动的功能蛋白设计、从头人工金属酶光催化、深海环境中的酶嵌入聚酯降解、类囊体—酶凝聚体耦合，以及通过表面氧化还原残基提升 P450 过加氧酶性能。"
+    ],
+    [
+      "设计对象正在扩展",
+      "本期的设计尺度从序列候选延伸到完整催化系统：Pinal 用自然语言提出蛋白候选；人工金属酶工作把生成式支架设计与定向进化衔接；类囊体体系用液—液相分离缩短 NADPH 再生与酶转化之间的空间距离；P450 工作则把非生产性氧化损伤转化为可工程化的电子转移问题。"
+    ],
+    [
+      "证据边界",
+      "Pinal 的四类功能验证来自所报道的候选筛选，不能等同于任意自然语言需求都能一次生成可用蛋白；人工金属酶结论限于所测试的金属多吡啶光催化体系；深海聚酯研究针对本身可堆肥的 PBS、PBSA、PCL 和 PBAT，近完全降解发生在 757 m、5 个月这一条件；类囊体凝聚体的 3.1 倍产率和 2.9 倍转化率分别属于 SmCRV4 与 SsERA314S 模型体系；P450 的“空穴陷阱”策略已扩展到两种 CYP199A4 变体，但其对更广泛氧化酶的适用性仍是作者提出的潜力。"
+    ]
+  ],
+  "items": [
+    {
+      "id": "dai-2026-pinal-natural-language-protein-design",
+      "title": "Programmable design of functional proteins from natural language",
+      "cn": "从自然语言出发的功能蛋白可编程设计",
+      "authors": "Dai et al.",
+      "journal": "Nature",
+      "date": "2026-10-21",
+      "topic": "AI 与机器学习辅助酶研究",
+      "topics": [
+        "AI 与机器学习辅助酶研究",
+        "酶的发现与挖掘",
+        "定向进化与理性设计"
+      ],
+      "type": "original",
+      "doi": "10.1038/s41586-026-11205-z",
+      "url": "https://doi.org/10.1038/s41586-026-11205-z",
+      "featured": true,
+      "summary": "研究者开发了 160 亿参数的基础模型 Pinal，以 17 亿个合成标注的蛋白质—文本对训练，将自然语言功能描述映射到蛋白质序列和结构候选。模型被用于荧光蛋白、PET 水解酶、醇脱氢酶和代谢 H-protein 四类任务，并在每类任务中观察到预期功能，其中两类设计酶具有催化活性。无需迭代实验优化，Pinal 设计的 H-protein 在多酶 CO₂ 固定通路中使产物滴度达到对应天然大肠杆菌 H-protein 的 1.7 倍。",
+      "why": "这项工作把自然语言从检索或注释界面推进为候选蛋白生成入口，并用跨越荧光、塑料水解、氧化还原催化和代谢通路的实验验证检验这一接口。对酶研究者，最值得读的是从宽泛功能意图到候选筛选再到实验验证的完整链条，以及一次生成仍需计算过滤和实验筛选这一现实边界。",
+      "evidence": "Nature 页面摘要与正文摘要支持：Pinal 含 160 亿参数，以 17 亿个合成标注蛋白质—文本对训练；四类设计任务均观察到目标功能；PET 水解酶和醇脱氢酶设计表现出催化活性；H-protein 在未迭代优化条件下使多酶 CO₂ 固定通路产物滴度达到天然大肠杆菌同源蛋白的 1.7 倍。",
+      "audience": "蛋白语言模型、功能蛋白生成、酶设计、计算筛选与合成生物学研究者",
+      "minutes": 12,
+      "labels": [
+        "计算筛选",
+        "实验验证",
+        "基准设计"
+      ],
+      "verification": "Nature 出版商页面确认 2026-10-21 在线发表并提供摘要与实验概览；Crossref DOI、题名、作者和日期已核验且未列更正或撤稿关系；OpenAlex 标记为 article、非 paratext 且未标记撤稿。",
+      "en": {
+        "summary": "The authors develop Pinal, a 16-billion-parameter foundation model trained on 1.7 billion synthetically annotated protein–text pairs to map natural-language functional descriptions to candidate protein sequences and structures. They apply it to four tasks—a fluorescent protein, a PET hydrolase, an alcohol dehydrogenase and a metabolic H-protein—and observe the intended function in each, including catalytic activity for both designed enzymes. Without iterative experimental optimization, a Pinal-designed H-protein raises product titre in a multi-enzyme CO₂-fixation pathway to 1.7 times that obtained with the corresponding native E. coli H-protein.",
+        "why": "The study advances natural language from a search or annotation interface to an entry point for candidate protein generation, then tests that interface across fluorescence, plastic hydrolysis, redox catalysis and metabolism. For enzyme researchers, the valuable part is the complete path from broad functional intent through computational filtering to experimental validation, together with the practical boundary that one-shot generation still requires candidate selection and screening.",
+        "evidence": "The Nature abstract and article summary support a 16-billion-parameter model trained on 1.7 billion synthetic protein–text pairs, intended function observed in all four design tasks, catalytic activity in the PET-hydrolase and alcohol-dehydrogenase designs, and a 1.7-fold product titre for the designed H-protein relative to the native E. coli counterpart in the reported multi-enzyme CO₂-fixation pathway without iterative experimental optimization.",
+        "audience": "Researchers in protein language models, functional protein generation, enzyme design, computational screening and synthetic biology",
+        "verification": "The Nature publisher page confirms online publication on 21 October 2026 and provides the abstract and experimental overview. The Crossref DOI, title, authors and date were checked, with no correction or retraction relation listed. OpenAlex classifies the work as an article, not paratext, and does not mark it as retracted."
+      }
+    },
+    {
+      "id": "mishra-2026-de-novo-artificial-metalloenzyme-photocatalysts",
+      "title": "De novo design of enantioselective artificial metalloenzyme photocatalysts",
+      "cn": "高对映选择性人工金属酶光催化剂的从头设计",
+      "authors": "Mishra et al.",
+      "journal": "Nature",
+      "date": "2026-10-21",
+      "topic": "定向进化与理性设计",
+      "topics": [
+        "定向进化与理性设计",
+        "酶催化方法与分析技术",
+        "计算酶学与分子模拟"
+      ],
+      "type": "original",
+      "doi": "10.1038/s41586-026-11317-6",
+      "url": "https://doi.org/10.1038/s41586-026-11317-6",
+      "featured": true,
+      "summary": "研究者用生成式蛋白设计构建能够选择性结合金属多吡啶光催化剂的从头蛋白支架，再通过定向进化将其转化为高效且高对映选择性的人工金属酶。进化后的蛋白可支持多种光驱动反应、较高催化周转和催化剂回收，并能使用商业化外消旋金属配合物。光谱研究显示，蛋白环境延长了光催化剂激发态寿命，并把底物组织在辅因子附近，从而改变能量转移并控制立体选择性。",
+      "why": "人工金属酶常被天然支架可用性限制，这项工作展示了“先生成一个能容纳非天然金属辅因子的支架，再用进化修正催化性能”的路线。它把蛋白从惰性包裹体提升为同时调控光物理过程与底物空间组织的催化组成部分。",
+      "evidence": "Nature 摘要支持：生成式设计得到可选择性结合金属多吡啶光催化剂的从头支架；定向进化产生高效、高对映选择性的人工金属酶；体系支持多种光驱动反应、催化剂回收及商业化外消旋配合物；光谱证据显示蛋白延长激发态寿命并使底物邻近辅因子，从而影响能量转移与立体选择性。",
+      "audience": "人工金属酶、光生物催化、从头蛋白设计、定向进化与不对称催化研究者",
+      "minutes": 11,
+      "labels": [
+        "计算筛选",
+        "实验验证",
+        "机制研究"
+      ],
+      "verification": "Nature 出版商页面确认文章于 2026-10-21 发表并提供摘要；Crossref DOI、题名、作者、日期及其 ChemRxiv 预印本关系已核验，未列更正或撤稿关系；OpenAlex 标记为 article、非 paratext 且未标记撤稿。",
+      "en": {
+        "summary": "The authors use generative protein design to create de novo scaffolds that selectively bind metal-polypyridine photocatalysts, then apply directed evolution to turn these starting complexes into efficient, highly enantioselective artificial metalloenzymes. The evolved proteins support several light-driven reactions, high catalyst turnover and catalyst recycling, and can operate with commercially available racemic metal complexes. Spectroscopy indicates that the protein environment extends the photocatalyst excited-state lifetime and organizes substrate near the cofactor, thereby altering energy transfer and controlling stereoselectivity.",
+        "why": "Artificial metalloenzymes are often constrained by the availability of suitable natural scaffolds. This paper demonstrates a two-stage route: generate a scaffold for a non-natural metal cofactor, then use evolution to improve catalysis. The protein is not merely a container; it contributes to both photophysical control and substrate organization.",
+        "evidence": "The Nature abstract supports de novo scaffolds that selectively bind metal-polypyridine photocatalysts, conversion into efficient and highly enantioselective artificial metalloenzymes by directed evolution, support for diverse light-driven reactions, recycling and commercial racemic complexes, and spectroscopic evidence for longer excited-state lifetime and substrate placement near the cofactor that affect energy transfer and stereoselectivity.",
+        "audience": "Researchers in artificial metalloenzymes, photobiocatalysis, de novo protein design, directed evolution and asymmetric catalysis",
+        "verification": "The Nature publisher page confirms publication on 21 October 2026 and provides the abstract. The Crossref DOI, title, authors, date and relation to the ChemRxiv preprint were checked, with no correction or retraction relation listed. OpenAlex classifies the work as an article, not paratext, and does not mark it as retracted."
+      }
+    },
+    {
+      "id": "huang-2026-enzyme-embedded-polyesters-deep-sea",
+      "title": "Enzyme-embedded polyesters for accelerated biodegradation in the deep sea",
+      "cn": "酶嵌入聚酯加速深海环境生物降解",
+      "authors": "Huang et al.",
+      "journal": "Nature",
+      "date": "2026-10-21",
+      "topic": "酶的应用与环境生物催化",
+      "topics": [
+        "酶的应用与环境生物催化",
+        "酶固定化与酶—材料体系",
+        "酶的稳定性工程"
+      ],
+      "type": "original",
+      "doi": "10.1038/s41586-026-11192-1",
+      "url": "https://doi.org/10.1038/s41586-026-11192-1",
+      "featured": true,
+      "summary": "研究者将 Candida antarctica 脂肪酶 B 或 Humicola insolens 角质酶热嵌入 PBS、PBSA、PCL 和 PBAT 等可堆肥聚酯，并在 2–6 m 沿岸水域至 5,503 m 深海环境中测试降解。酶嵌入材料在 757 m 深度 5 个月内接近完全降解，在 5,503 m 海底也观察到中等程度降解；沿岸海水中仅嵌入 0.1 wt% 酶的薄膜即可快速降解。材料机械性能与无酶聚酯相近，化学分析和生化需氧量结果分别支持低分子降解产物形成与矿化。",
+      "why": "多数酶降解塑料研究停留在缓冲液或封闭反应器，这项工作把酶—材料设计直接带到天然海洋梯度中检验。它同时回答了催化剂在成型加工后是否保留功能、材料性能是否受损，以及低微生物环境中降解能否发生三个部署问题。",
+      "evidence": "Nature 摘要支持：热嵌入酶显著加快四类可堆肥聚酯在沿岸和深海环境中的降解；757 m 深度 5 个月内接近完全降解，5,503 m 仍有中等降解；沿岸条件下 0.1 wt% 酶即可促成快速降解；机械性能与无酶材料相近，低分子产物与生化需氧量数据支持解聚和矿化。",
+      "audience": "塑料降解酶、环境生物催化、酶固定化、聚合物加工与海洋材料研究者",
+      "minutes": 10,
+      "labels": [
+        "实验验证",
+        "多层实验验证",
+        "规模化边界"
+      ],
+      "verification": "Nature 出版商页面确认文章类别为研究论文、发表日期为 2026-10-21 并提供全文摘要；Crossref DOI、作者、日期与摘要已核验且未列更正或撤稿关系；OpenAlex 标记为 article、非 paratext 且未标记撤稿。",
+      "en": {
+        "summary": "The authors thermally embed Candida antarctica lipase B or Humicola insolens cutinase in the compostable polyesters PBS, PBSA, PCL and PBAT, then test degradation from coastal waters at 2–6 m to deep-sea sites at 5,503 m. Enzyme-embedded materials show near-complete degradation within five months at 757 m and moderate degradation even at 5,503 m; in coastal seawater, films containing only 0.1 wt% enzyme degrade rapidly. Mechanical properties remain similar to enzyme-free polyesters, while chemical analysis and biochemical oxygen-demand measurements support formation of low-molecular-mass products and subsequent mineralization.",
+        "why": "Many enzyme-based plastic-degradation studies remain in buffer or closed reactors. This work tests an enzyme–material design directly across natural marine environments and addresses three deployment questions at once: whether catalytic function survives processing, whether material performance is retained, and whether degradation proceeds in microbe-poor settings.",
+        "evidence": "The Nature abstract supports faster degradation of four compostable polyesters after thermal enzyme embedding across coastal and deep-sea sites, near-complete degradation within five months at 757 m, moderate degradation at 5,503 m, rapid coastal degradation with 0.1 wt% enzyme, mechanical properties similar to enzyme-free controls, and chemical and oxygen-demand evidence for depolymerization and mineralization.",
+        "audience": "Researchers in plastic-degrading enzymes, environmental biocatalysis, enzyme immobilization, polymer processing and marine materials",
+        "verification": "The Nature publisher page identifies the work as a research article, gives a publication date of 21 October 2026 and provides the full abstract. The Crossref DOI, authors, date and abstract were checked, with no correction or retraction relation listed. OpenAlex classifies the work as an article, not paratext, and does not mark it as retracted."
+      }
+    },
+    {
+      "id": "zhang-2026-thylakoid-enzyme-condensates",
+      "title": "Liquid-Liquid Phase Separation Modulated Thylakoid–Enzyme Interfacial Coupling for Enhanced Light-Powered Biocatalysis",
+      "cn": "液—液相分离调控类囊体—酶界面耦合以增强光驱动生物催化",
+      "authors": "Zhang et al.",
+      "journal": "Angewandte Chemie International Edition",
+      "date": "2026-10-24",
+      "topic": "酶的级联组装",
+      "topics": [
+        "酶的级联组装",
+        "多酶级联反应",
+        "酶固定化与酶—材料体系"
+      ],
+      "type": "original",
+      "doi": "10.1002/anie.7079393",
+      "url": "https://doi.org/10.1002/anie.7079393",
+      "featured": true,
+      "summary": "研究者将 UTX 来源的内在无序区与目标酶融合，利用液—液相分离形成富酶凝聚体，再把凝聚体稳定锚定在能够光驱动再生 NADPH 的类囊体膜界面。以羰基还原酶 SmCRV4 和烯还原酶 SsERA314S 为模型，TK–UTX–SmCRV4 使总产物收率最高提高 3.1 倍，TK–UTX–SsERA314S 在 20 min 内实现 2.9 倍更高转化率，提升在 NADPH 再生受限条件下尤其明显。粗粒化分子动力学支持由无序区介导的动态多价膜锚定，同时酶结构域保持溶剂暴露。",
+      "why": "该体系没有单纯提高酶浓度，而是把辅酶生成位置与催化位置在膜界面上耦合，直接针对光驱动生物催化中的反应—扩散瓶颈。它为“凝聚体是否真的改善级联”提供了产率、时间尺度和界面模拟三个层面的证据。",
+      "evidence": "Crossref/Wiley 摘要支持：UTX 内在无序区驱动富酶凝聚体形成并锚定类囊体膜；两种模型酶在 NADPH 再生受限时表现改善；SmCRV4 体系总产率最高提高 3.1 倍，SsERA314S 体系 20 min 转化率提高 2.9 倍；粗粒化模拟显示无序区通过高频残基—脂质相互作用维持膜结合，而酶结构域保持暴露。",
+      "audience": "光生物催化、酶凝聚体、人工光合作用、辅酶再生与级联反应工程研究者",
+      "minutes": 10,
+      "labels": [
+        "实验验证",
+        "机制研究",
+        "过程强化"
+      ],
+      "verification": "Wiley/Crossref 元数据确认 Angewandte Chemie International Edition 于 2026-10-24 在线发表并提供摘要，DOI 与作者信息已核验且未列更正或撤稿关系；OpenAlex 标记为 article、非 paratext 且未标记撤稿。",
+      "en": {
+        "summary": "The authors fuse a UTX-derived intrinsically disordered region to target enzymes, use liquid–liquid phase separation to form enzyme-rich condensates, and stably anchor them at thylakoid membranes that regenerate NADPH under illumination. With carbonyl reductase SmCRV4 and ene-reductase SsERA314S as model enzymes, the TK–UTX–SmCRV4 hybrid raises total product yield by up to 3.1-fold, while TK–UTX–SsERA314S reaches 2.9-fold higher conversion within 20 minutes, with the largest gains under NADPH-regeneration-limited conditions. Coarse-grained molecular dynamics supports dynamic multivalent membrane anchoring by the disordered region while the enzyme domain remains solvent-exposed.",
+        "why": "Rather than merely concentrating enzymes, the system couples the location of cofactor generation to the location of catalysis at a membrane interface, directly targeting a reaction–diffusion bottleneck in light-powered biocatalysis. Yield, reaction-time and interfacial-simulation evidence together make it a useful test of whether condensates improve a coupled catalytic system.",
+        "evidence": "The Crossref/Wiley abstract supports formation of enzyme-rich condensates by a UTX-derived disordered region, anchoring to thylakoid membranes, improved performance for both model enzymes under NADPH-regeneration limitation, up to 3.1-fold higher total yield for SmCRV4, 2.9-fold higher conversion within 20 minutes for SsERA314S, and coarse-grained simulations in which the disordered region maintains membrane binding while the enzyme domain remains exposed.",
+        "audience": "Researchers in photobiocatalysis, enzyme condensates, artificial photosynthesis, cofactor regeneration and cascade engineering",
+        "verification": "Wiley/Crossref metadata confirms online publication in Angewandte Chemie International Edition on 24 October 2026 and provides the abstract. The DOI and authors were checked, with no correction or retraction relation listed. OpenAlex classifies the work as an article, not paratext, and does not mark it as retracted."
+      }
+    },
+    {
+      "id": "wang-2026-p450-redox-active-hole-traps",
+      "title": "Engineering of Redox-Active Residues Enhances P450 Peroxygenase Performance",
+      "cn": "工程化氧化还原活性残基提升 P450 过加氧酶性能",
+      "authors": "Wang et al.",
+      "journal": "Angewandte Chemie International Edition",
+      "date": "2026-10-24",
+      "topic": "酶的稳定性工程",
+      "topics": [
+        "酶的稳定性工程",
+        "定向进化与理性设计",
+        "酶的结构与催化机制"
+      ],
+      "type": "original",
+      "doi": "10.1002/anie.3845288",
+      "url": "https://doi.org/10.1002/anie.3845288",
+      "featured": true,
+      "summary": "针对高价铁氧中间体 Compound I 引发的非生产性氧化损伤，研究者在 P450BM3 F87A 表面的空间定义位置引入氧化还原活性酪氨酸或色氨酸，构建额外“空穴陷阱”。最佳变体 M8（F87A/L215W/H408W）在多种脂肪族和芳香族底物的过氧化物驱动羟化中提高了总周转数；稳态动力学、还原剂补充和半衰期测量共同指向引入的色氨酸对催化输出和稳定性的保护作用。M8 晶体结构显示突变扩展了局部 π–π 相互作用网络，该策略还提升了两种工程化 CYP199A4 过加氧酶变体的性能。",
+      "why": "常见稳定性工程关注全局刚性或活性口袋，而这项工作从氧化损伤的电子转移路径入手，在蛋白表面布置可牺牲或分流氧化当量的残基。它提供了一个把机理假设、结构位置选择、动力学和跨骨架验证串起来的理性工程范例。",
+      "evidence": "Crossref/Wiley 摘要支持：P450BM3 F87A 表面引入 Tyr/Trp 形成额外空穴陷阱；M8 提高多类过氧化物驱动羟化的总周转数；稳态动力学、还原剂补充和半衰期测量支持 Trp 的保护作用；晶体结构显示扩展的 π–π 网络；同一策略改善了 CYP199A4 F182A 与 D251Q/T252E 两个工程化变体。摘要未给出统一的倍数提升。",
+      "audience": "P450、过加氧酶、血红素酶、氧化损伤机制与稳定性工程研究者",
+      "minutes": 10,
+      "labels": [
+        "机制研究",
+        "实验验证",
+        "多层实验验证"
+      ],
+      "verification": "Wiley/Crossref 元数据确认 Angewandte Chemie International Edition 于 2026-10-24 在线发表并提供摘要，DOI 与作者信息已核验且未列更正或撤稿关系；OpenAlex 标记为 article、非 paratext 且未标记撤稿。",
+      "en": {
+        "summary": "To address nonproductive oxidative damage caused by the high-valent iron–oxo intermediate Compound I, the authors introduce redox-active tyrosine or tryptophan residues at structurally defined surface positions in P450BM3 F87A, creating additional ‘hole traps’. The best variant, M8 (F87A/L215W/H408W), increases turnover numbers across peroxide-driven hydroxylations of several aliphatic and aromatic substrates. Steady-state kinetics, reductant-supplementation assays and half-life measurements consistently point to a protective role for the introduced tryptophans in both catalytic output and robustness. The M8 crystal structure shows an expanded local π–π interaction network, and the strategy also improves two engineered CYP199A4 peroxygenase variants.",
+        "why": "Where many stability-engineering strategies focus on global rigidity or the active-site pocket, this study targets electron-transfer routes associated with oxidative damage and places redox-active residues on the protein surface. It is a useful rational-engineering example that connects a mechanistic hypothesis, structural placement, kinetic measurements and testing in additional enzyme backgrounds.",
+        "evidence": "The Crossref/Wiley abstract supports surface Tyr/Trp substitutions that create auxiliary hole traps in P450BM3 F87A, higher turnover numbers for M8 across peroxide-driven hydroxylations, a protective role for the introduced tryptophans supported by kinetics, reductant supplementation and half-life measurements, an expanded π–π network in the crystal structure, and improved performance in CYP199A4 F182A and D251Q/T252E variants. The abstract does not report one uniform fold improvement.",
+        "audience": "Researchers in P450s, peroxygenases, heme enzymes, oxidative-damage mechanisms and enzyme stability engineering",
+        "verification": "Wiley/Crossref metadata confirms online publication in Angewandte Chemie International Edition on 24 October 2026 and provides the abstract. The DOI and authors were checked, with no correction or retraction relation listed. OpenAlex classifies the work as an article, not paratext, and does not mark it as retracted."
+      }
+    }
+  ],
+  "observationsEn": [
+    [
+      "This edition at a glance",
+      "Using the strict online-publication window of 20–26 October 2026, this edition features five papers on natural-language-guided functional protein design, de novo artificial metalloenzyme photocatalysis, enzyme-embedded polyesters in deep-sea degradation, thylakoid–enzyme condensate coupling, and surface redox-residue engineering for P450 peroxygenases."
+    ],
+    [
+      "The object of design is expanding",
+      "The design scale now extends from sequence candidates to complete catalytic systems. Pinal proposes proteins from natural-language intent; the artificial-metalloenzyme study connects generative scaffold design to directed evolution; the thylakoid platform uses phase separation to shorten the distance between NADPH regeneration and enzymatic conversion; and the P450 work reframes nonproductive oxidative damage as an engineerable electron-transfer problem."
+    ],
+    [
+      "Evidence boundaries",
+      "Pinal's four functional demonstrations arise from the reported candidate-selection pipelines and do not show that any natural-language request yields a usable protein in one step. The artificial-metalloenzyme conclusions apply to the tested metal-polypyridine photocatalyst systems. The deep-sea study concerns compostable PBS, PBSA, PCL and PBAT, with near-complete degradation reported at 757 m over five months. The 3.1-fold yield and 2.9-fold conversion gains in the thylakoid condensates belong to the SmCRV4 and SsERA314S model systems, respectively. The P450 hole-trap strategy was transferred to two CYP199A4 variants, while broader applicability to oxidizing enzymes remains a proposed possibility."
+    ]
+  ],
+  "edition": 8
+}
