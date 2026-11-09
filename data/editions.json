@@ -1,7 +1,20 @@
 {
-  "updatedAt": "2026-11-02",
-  "current": 9,
+  "updatedAt": "2026-11-09",
+  "current": 10,
   "editions": [
+    {
+      "edition": 10,
+      "updatedAt": "2026-11-09",
+      "periodStart": "2026-11-03",
+      "periodEnd": "2026-11-09",
+      "itemCount": 7,
+      "featuredCount": 5,
+      "headline": "进化启发的蛋白质工程多目标贝叶斯优化",
+      "en": {
+        "headline": "Evolution-Inspired Multi-Objective Bayesian Optimization for Protein Engineering"
+      },
+      "path": "data/papers.json"
+    },
     {
       "edition": 9,
       "updatedAt": "2026-11-02",
@@ -13,7 +26,7 @@
       "en": {
         "headline": "Multicatalytic cooperativity enables divergent photobiocatalytic C–C couplings for scaffold diversification"
       },
-      "path": "data/papers.json"
+      "path": "data/history/papers-2026-11-02.json"
     },
     {
       "edition": 8,

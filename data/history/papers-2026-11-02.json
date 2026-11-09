@@ -1,0 +1,253 @@
+{
+  "updatedAt": "2026-11-02",
+  "periodStart": "2026-10-27",
+  "periodEnd": "2026-11-02",
+  "source": "curated_crossref_and_publisher",
+  "observations": [
+    [
+      "本期重点",
+      "本期严格采用 2026-10-27 至 2026-11-02 的在线发表窗口，收录两篇 Nature Catalysis、三篇 JACS 与一篇 ACS Sustainable Chemistry & Engineering 研究论文；五篇精选覆盖酶—光催化协同反应发现、亚胺还原酶的 C–P 键构建、TPP 自由基中间体电子结构、分散式天然产物酶挖掘，以及电催化—酶催化级联。"
+    ],
+    [
+      "从新反应到可解释反应",
+      "本期多项工作不只展示产物范围，还追问选择性来自哪里：两篇 Nature Catalysis 研究分别用酶—光催化剂配对和聚焦进化建立发散反应；JACS 的 EPR/ENDOR 工作直接比较同一 TPP 结合酮基自由基在不同蛋白支架中的电子结构；天然产物研究则把转录组与结构引导计算结合，用于发现不在同一基因簇中的 P450 和 Diels–Alderase。"
+    ],
+    [
+      "证据边界",
+      "所谓“发散”均限于论文测试的底物、酶变体与光催化条件；TPP 工作对自由基电子结构的比较来自 BFD 与 BAL 两类支架，不能外推到所有 TPP 酶；Chevalinulin A 的挖掘流程证明了本案例中识别非簇集酶的可行性；电酶级联的通用性来自作者测试的底物和电极扩展；OsLPMO10A 对壳聚糖的作用及后续水解促进仍属于该酶—底物体系。"
+    ]
+  ],
+  "items": [
+    {
+      "id": "zhao-2026-divergent-photobiocatalytic-cc-couplings",
+      "title": "Multicatalytic cooperativity enables divergent photobiocatalytic C–C couplings for scaffold diversification",
+      "cn": "多催化协同实现用于骨架多样化的发散光生物催化 C–C 偶联",
+      "authors": "Zhao et al.",
+      "journal": "Nature Catalysis",
+      "date": "2026-10-28",
+      "topic": "定向进化与理性设计",
+      "topics": [
+        "定向进化与理性设计",
+        "酶催化方法与分析技术",
+        "酶动力学、选择性与底物特异性"
+      ],
+      "type": "original",
+      "doi": "10.1038/s41929-026-01629-1",
+      "url": "https://doi.org/10.1038/s41929-026-01629-1",
+      "featured": true,
+      "summary": "研究者系统筛选具有不同激发态氧化还原电势的光催化剂与多种 γ-官能化 PLP 酶的组合，发现单一催化剂无法实现的发散 C–C 偶联，包括迁移型 β-交叉偶联与经典 γ-交叉偶联。随后通过底物通道工程开展定向进化，获得分别偏向支链或直链非天然氨基酸的正交生物催化剂，并进一步控制反应路径和立体选择性。",
+      "why": "这项工作的核心价值是把“先预测反应”改成“先系统探索催化协同，再进化放大有用反应”。它同时展示了反应发现与酶工程如何衔接：配对筛选负责暴露新反应，通道工程负责把路径与立体结果分开。",
+      "evidence": "Nature Catalysis 摘要支持：系统考察 PLP 酶—光催化剂配对发现迁移型 β-交叉偶联和 γ-交叉偶联；底物通道定向进化得到可选择性生成支链或直链非天然氨基酸的催化剂；机理、光谱、DFT 与分子动力学用于分析协同机制及路径选择性。",
+      "audience": "光生物催化、PLP 酶、自由基酶学、定向进化与非天然氨基酸合成研究者",
+      "minutes": 11,
+      "labels": [
+        "新酶反应",
+        "实验验证",
+        "机制研究"
+      ],
+      "verification": "Nature Catalysis 出版商页面确认类别为 Article、2026-10-28 发表并提供摘要；Crossref DOI、题名、作者和日期已核验，未列更正或撤稿关系；OpenAlex 未标记撤稿。",
+      "en": {
+        "summary": "The authors systematically screen pairings between γ-functionalization PLP enzymes and photocatalysts spanning a range of excited-state redox potentials, uncovering divergent C–C couplings inaccessible to either catalyst alone, including a migratory β-cross-coupling and a canonical γ-cross-coupling. Directed evolution through substrate-tunnel engineering then yields orthogonal biocatalysts that favour branched or linear non-canonical amino acids with improved control over pathway and stereochemical outcome.",
+        "why": "The key contribution is a workflow that explores catalytic cooperation before optimizing a predicted reaction. Pairing screens expose emergent reactivity, while tunnel engineering separates reaction pathway and stereochemical output, linking reaction discovery directly to enzyme evolution.",
+        "evidence": "The Nature Catalysis abstract supports systematic PLP-enzyme–photocatalyst screening, discovery of migratory β- and canonical γ-cross-couplings, tunnel-directed evolution of catalysts selective for branched or linear non-canonical amino acids, and mechanistic, spectroscopic, DFT and molecular-dynamics analyses of cooperativity and pathway selectivity.",
+        "audience": "Researchers in photobiocatalysis, PLP enzymes, radical enzymology, directed evolution and non-canonical amino-acid synthesis",
+        "verification": "The Nature Catalysis publisher page identifies the work as an Article, gives a publication date of 28 October 2026 and provides the abstract. The Crossref DOI, title, authors and date were checked, with no correction or retraction relation listed. OpenAlex does not mark the work as retracted."
+      }
+    },
+    {
+      "id": "mou-2026-photoenzymatic-stereodivergent-hydrophosphinylation",
+      "title": "Photoenzymatic stereodivergent hydrophosphinylation enabled by nicotinamide-dependent imine reductases",
+      "cn": "烟酰胺依赖亚胺还原酶实现光酶促立体发散氢膦酰化",
+      "authors": "Mou et al.",
+      "journal": "Nature Catalysis",
+      "date": "2026-10-30",
+      "topic": "酶动力学、选择性与底物特异性",
+      "topics": [
+        "酶动力学、选择性与底物特异性",
+        "定向进化与理性设计",
+        "辅因子、辅酶与再生"
+      ],
+      "type": "original",
+      "doi": "10.1038/s41929-026-01624-6",
+      "url": "https://doi.org/10.1038/s41929-026-01624-6",
+      "featured": true,
+      "summary": "研究者将烟酰胺依赖亚胺还原酶改造为不对称氢膦酰化酶：光激发 NADP+ 引发仲膦氧化物的单电子氧化，形成 P 中心自由基，并在氧化还原中性条件下完成立体选择性 C–P 偶联。通过聚焦位点进化获得立体发散突变体，制备带有 C、P 或 C/P 双立体中心的多系列叔膦氧化物。",
+      "why": "C–P 键的不对称酶促构建仍较少见。这项工作把亚胺还原酶的烟酰胺环境重新用于自由基生成和立体控制，并用一组互补突变体覆盖不同立体结果，适合用来理解辅酶光化学如何扩展天然酶反应边界。",
+      "evidence": "Nature Catalysis 摘要支持：亚胺还原酶被重用于不对称氢膦酰化；光激发 NADP+ 启动底物单电子氧化；反应在氧化还原中性条件下形成 C–P 键；聚焦进化得到立体发散突变体，并制备含 C、P 或双立体中心的叔膦氧化物。",
+      "audience": "光酶催化、亚胺还原酶、自由基反应、含磷手性分子与立体发散进化研究者",
+      "minutes": 10,
+      "labels": [
+        "新酶反应",
+        "实验验证",
+        "机制研究"
+      ],
+      "verification": "Nature Catalysis 出版商页面确认类别为 Article、2026-10-30 发表并提供摘要；Crossref DOI、作者与日期已核验且未列更正或撤稿关系；OpenAlex 未标记撤稿。",
+      "en": {
+        "summary": "The authors repurpose a nicotinamide-dependent imine reductase for asymmetric hydrophosphinylation. Photoexcited NADP+ initiates single-electron oxidation of secondary phosphine oxides to generate P-centred radicals, enabling stereoselective C–P coupling under redox-neutral conditions. Focused site-directed evolution produces stereodivergent mutants for several series of tertiary phosphine oxides bearing C-, P- or combined C/P stereocentres.",
+        "why": "Asymmetric enzymatic C–P bond formation remains uncommon. This study reuses the nicotinamide environment of an imine reductase for radical generation and stereocontrol, and provides complementary mutants for different stereochemical outcomes, illustrating how cofactor photochemistry can extend an enzyme beyond its native reaction class.",
+        "evidence": "The Nature Catalysis abstract supports repurposing an imine reductase for asymmetric hydrophosphinylation, substrate single-electron oxidation initiated by photoexcited NADP+, redox-neutral C–P coupling, and focused evolution of stereodivergent mutants that furnish tertiary phosphine oxides with C-, P- or combined stereocentres.",
+        "audience": "Researchers in photoenzymatic catalysis, imine reductases, radical reactions, chiral organophosphorus chemistry and stereodivergent evolution",
+        "verification": "The Nature Catalysis publisher page identifies the work as an Article, gives a publication date of 30 October 2026 and provides the abstract. The Crossref DOI, authors and date were checked, with no correction or retraction relation listed. OpenAlex does not mark the work as retracted."
+      }
+    },
+    {
+      "id": "rao-2026-tpp-ketyl-radical-electronic-structure",
+      "title": "Protein Scaffolds Modulate the Electronic Structure of a Common Ketyl Radical Intermediate in Thiamine Pyrophosphate-Dependent Radical Biocatalysis: Insights from EPR and ENDOR Spectroscopy",
+      "cn": "蛋白支架调控 TPP 依赖自由基生物催化中共同酮基自由基的电子结构",
+      "authors": "Rao et al.",
+      "journal": "Journal of the American Chemical Society",
+      "date": "2026-10-30",
+      "topic": "酶的结构与催化机制",
+      "topics": [
+        "酶的结构与催化机制",
+        "酶催化方法与分析技术",
+        "计算酶学与分子模拟"
+      ],
+      "type": "original",
+      "doi": "10.1021/jacs.6c16863",
+      "url": "https://doi.org/10.1021/jacs.6c16863",
+      "featured": true,
+      "summary": "研究者先用工程化苯甲酰甲酸脱羧酶开发醛与烷基三氟硼酸盐的氧化型光生物催化交叉偶联，生成对映富集 α-手性酮；随后用冷冻淬灭多频 EPR、ENDOR 与 DFT 直接表征催化形成的 TPP 结合酮基自由基。尽管该中间体化学组成相同，它在 BFD 与 BAL 支架中呈现不同电子结构；BFD 中更强的底物侧自旋离域与更高自由基 C–C 偶联活性相联系。",
+      "why": "自由基酶工程常以产率和选择性反推机理，这项工作直接测量共同中间体在不同蛋白环境中的电子结构，把“支架效应”推进到可观测的自旋密度分配，为按电子性质而不只按几何口袋设计自由基酶提供依据。",
+      "evidence": "JACS/Crossref 摘要支持：工程化 BFD 催化新的氧化型自由基偶联；EPR/ENDOR 直接识别 TPP 结合酮基自由基；多核超精细相互作用与 DFT 显示蛋白特异构象重新分配 TPP 与底物片段间的自旋密度；BFD 中更强的底物侧离域为其相对 BAL 的更高偶联活性提供机理解释。",
+      "audience": "自由基酶学、TPP 酶、EPR/ENDOR、光生物催化与机理导向酶工程研究者",
+      "minutes": 12,
+      "labels": [
+        "机制研究",
+        "多层实验验证",
+        "新酶反应"
+      ],
+      "verification": "ACS/JACS 页面与 Crossref 确认 Article、2026-10-30 在线发表并提供一致摘要；DOI、作者和日期已核验，未列更正或撤稿关系；OpenAlex 未标记撤稿。",
+      "en": {
+        "summary": "The authors first develop an oxidative photobiocatalytic coupling of aldehydes with alkyltrifluoroborates using engineered benzoylformate decarboxylase variants to produce enantioenriched α-chiral ketones. Freeze-quench multifrequency EPR, ENDOR and DFT then directly characterize the catalytic TPP-bound ketyl radical. Although chemically identical, the intermediate adopts different electronic structures in BFD and BAL scaffolds; greater substrate-centred spin delocalization in BFD is linked to its stronger radical C–C coupling activity.",
+        "why": "Radical-enzyme mechanisms are often inferred from yield and selectivity. Here, the electronic structure of a shared intermediate is measured directly in different protein environments, turning the scaffold effect into an observable redistribution of spin density and suggesting a route to engineering radical enzymes through electronic as well as geometric control.",
+        "evidence": "The JACS/Crossref abstract supports a new oxidative radical coupling catalysed by engineered BFD, direct identification of the TPP-bound ketyl radical by EPR/ENDOR, protein-specific redistribution of spin density between TPP and substrate supported by multinuclear hyperfine data and DFT, and greater substrate-centred delocalization in BFD as a mechanistic basis for its higher coupling activity than BAL.",
+        "audience": "Researchers in radical enzymology, TPP enzymes, EPR/ENDOR, photobiocatalysis and mechanism-guided enzyme engineering",
+        "verification": "The ACS/JACS page and Crossref identify the work as an Article published online on 30 October 2026 and provide consistent abstracts. The DOI, authors and date were checked, with no correction or retraction relation listed. OpenAlex does not mark the work as retracted."
+      }
+    },
+    {
+      "id": "meng-2026-decentralized-chevalinulin-biosynthesis",
+      "title": "Decentralized Biosynthesis of the Spiro-DKP Alkaloid Chevalinulin A Enabled by Nonclustered P450 and Intermolecular [4 + 2] Cyclase",
+      "cn": "非簇集 P450 与分子间 [4+2] 环化酶驱动 Chevalinulin A 的分散式生物合成",
+      "authors": "Meng et al.",
+      "journal": "Journal of the American Chemical Society",
+      "date": "2026-10-29",
+      "topic": "酶的发现与挖掘",
+      "topics": [
+        "酶的发现与挖掘",
+        "酶的结构与催化机制",
+        "酶动力学、选择性与底物特异性"
+      ],
+      "type": "original",
+      "doi": "10.1021/jacs.6c17478",
+      "url": "https://doi.org/10.1021/jacs.6c17478",
+      "featured": true,
+      "summary": "研究者解析螺环二酮哌嗪生物碱 Chevalinulin A 的分散式生物合成，发现两个不在同一基因簇中的关键酶：P450 CalO 生成必需的环外烯烃，FAD 氧化还原酶样 Diels–Alderase FadA 则催化 neoechinulin B 与 3,4-trans-cyclohexadiene 的分子间、内型选择性 [4+2] 环加成。两种酶通过转录组与结构引导计算整合流程识别，而非依赖序列同源性。",
+      "why": "这篇论文同时提供一种少见的分子间酶促 Diels–Alder 反应和一个现实的挖掘难题：关键酶不共簇、序列同源性不足。其转录组—结构计算路线对从基因组“暗区”寻找功能催化剂具有可复用的方法学意义。",
+      "evidence": "JACS 摘要支持：CalO 是形成关键环外烯烃的 P450；FadA 是 FAD 氧化还原酶样 Diels–Alderase，催化指定底物间内型选择性 [4+2] 环加成；两者通过整合转录组和结构引导计算而非序列同源性发现。",
+      "audience": "天然产物生物合成、酶挖掘、P450、Diels–Alderase 与结构引导功能注释研究者",
+      "minutes": 10,
+      "labels": [
+        "新酶反应",
+        "计算筛选",
+        "实验验证"
+      ],
+      "verification": "ACS/JACS 页面确认 Article、2026-10-29 在线发表并提供摘要；Crossref DOI、题名、作者和日期已核验且未列更正或撤稿关系；OpenAlex 未标记撤稿。",
+      "en": {
+        "summary": "The authors resolve the decentralized biosynthesis of the spiro-diketopiperazine alkaloid chevalinulin A and identify two essential enzymes outside a shared gene cluster. The P450 CalO installs an exocyclic olefin, while the FAD oxidoreductase-like Diels–Alderase FadA catalyses an intermolecular, endo-selective [4+2] cycloaddition between neoechinulin B and 3,4-trans-cyclohexadiene. Both enzymes are found through an integrated transcriptomic and structure-guided computational pipeline rather than sequence homology.",
+        "why": "The paper combines a rare intermolecular enzymatic Diels–Alder reaction with a practical discovery problem: key enzymes are not co-clustered and are not evident from sequence homology. Its transcriptome-to-structure workflow is therefore relevant beyond this pathway for mining functional catalysts from genomic dark matter.",
+        "evidence": "The JACS abstract supports CalO as the P450 that generates the required exocyclic olefin, FadA as an FAD oxidoreductase-like Diels–Alderase catalysing the specified endo-selective intermolecular [4+2] reaction, and discovery of both enzymes through integrated transcriptomic and structure-guided computation rather than sequence homology.",
+        "audience": "Researchers in natural-product biosynthesis, enzyme mining, P450s, Diels–Alderases and structure-guided functional annotation",
+        "verification": "The ACS/JACS page identifies the work as an Article published online on 29 October 2026 and provides the abstract. The Crossref DOI, title, authors and date were checked, with no correction or retraction relation listed. OpenAlex does not mark the work as retracted."
+      }
+    },
+    {
+      "id": "tian-2026-electroenzymatic-amino-acid-cascade",
+      "title": "Electroenzymatic Cascade Enables Amino Acid Synthesis through Simultaneous Nitrite Reduction and NADH Regeneration",
+      "cn": "同步亚硝酸盐还原与 NADH 再生的电酶级联实现氨基酸合成",
+      "authors": "Tian et al.",
+      "journal": "Journal of the American Chemical Society",
+      "date": "2026-10-27",
+      "topic": "多酶级联反应",
+      "topics": [
+        "多酶级联反应",
+        "辅因子、辅酶与再生",
+        "酶的应用与环境生物催化"
+      ],
+      "type": "original",
+      "doi": "10.1021/jacs.6c17043",
+      "url": "https://doi.org/10.1021/jacs.6c17043",
+      "featured": true,
+      "summary": "研究者构建电酶级联，将电催化氮氧化物还原、NADH 再生与酶促还原胺化整合。以 L-谷氨酸为模型，铜纳米线作为双功能电催化剂，原位生成 NH4+ 与具有生物活性的 NADH，在温和条件下驱动氨基酸合成；模块化设计还被扩展到不同底物和电极。",
+      "why": "该体系把氮源活化与还原力供给放入同一个电化学界面，再交由酶完成选择性成键，减少了级联中两个独立供给模块的错配。对多酶与电酶耦合研究者，值得关注的是物质流和辅酶流如何同步设计。",
+      "evidence": "JACS/Crossref 摘要支持：平台整合亚硝酸盐还原、NADH 再生和酶促还原胺化；铜纳米线原位产生 NH4+ 与活性 NADH，并以 L-谷氨酸为模型完成温和合成；作者通过不同底物和电极展示模块扩展性。",
+      "audience": "电生物催化、多酶级联、NADH 再生、氮资源转化与氨基酸合成研究者",
+      "minutes": 9,
+      "labels": [
+        "过程强化",
+        "实验验证",
+        "多层实验验证"
+      ],
+      "verification": "ACS 索引页面确认 Article，Crossref 确认 2026-10-27 在线发表并提供摘要；DOI、题名、作者和日期已核验且未列更正或撤稿关系；OpenAlex 未标记撤稿。",
+      "en": {
+        "summary": "The authors build an electroenzymatic cascade that integrates electrocatalytic nitrogen-oxide reduction, NADH regeneration and enzymatic reductive amination. Using L-glutamate as a model, Cu nanowires act as a bifunctional electrocatalyst to generate NH4+ and biologically active NADH in situ, driving amino-acid synthesis under mild conditions. The modular design is also tested with different substrates and electrodes.",
+        "why": "The platform places nitrogen-source activation and reducing-power supply at one electrochemical interface before the enzyme performs selective bond formation, addressing the coordination of two supply modules in a cascade. It is particularly useful for thinking about coupled material flow and cofactor flow in electroenzymatic systems.",
+        "evidence": "The JACS/Crossref abstract supports integration of nitrite reduction, NADH regeneration and enzymatic reductive amination, in situ generation of NH4+ and active NADH by Cu nanowires, mild L-glutamate synthesis as the model reaction, and modular extension across tested substrates and electrodes.",
+        "audience": "Researchers in electrobiocatalysis, multi-enzyme cascades, NADH regeneration, nitrogen valorization and amino-acid synthesis",
+        "verification": "The ACS indexed page identifies the work as an Article, and Crossref confirms online publication on 27 October 2026 and provides the abstract. The DOI, title, authors and date were checked, with no correction or retraction relation listed. OpenAlex does not mark the work as retracted."
+      }
+    },
+    {
+      "id": "su-2026-oslpmo10a-chitosan-oxidation",
+      "title": "Lytic Polysaccharide Monooxygenase OsLPMO10A Redefines Substrate Scope: Chitosan Oxidation",
+      "cn": "裂解多糖单加氧酶 OsLPMO10A 拓展底物范围：壳聚糖氧化",
+      "authors": "Su et al.",
+      "journal": "ACS Sustainable Chemistry & Engineering",
+      "date": "2026-11-02",
+      "topic": "酶动力学、选择性与底物特异性",
+      "topics": [
+        "酶动力学、选择性与底物特异性",
+        "酶的结构与催化机制",
+        "酶的应用与环境生物催化"
+      ],
+      "type": "original",
+      "doi": "10.1021/acssuschemeng.6c03071",
+      "url": "https://doi.org/10.1021/acssuschemeng.6c03071",
+      "featured": false,
+      "summary": "来源于 Oceanobacillus sp. J11TS1 的几丁质活性 AA10 LPMO OsLPMO10A 对壳聚糖表现出高亲和力，并能处理 (GlcN)4 而不作用于 (GlcNAc)4。结构分析提出延长催化腔边缘的 Asp152–Asp153–Arg125 基序可能参与底物定位；酶的氧化“微蚀刻”降低壳聚糖结晶度、基本保留整体框架，并促进后续壳聚糖酶水解。",
+      "why": "该研究把常被按几丁质活性归类的 AA10 LPMO 推向脱乙酰多糖壳聚糖，并把寡糖偏好、口袋几何、材料结晶度和后续水解联系起来，为海洋多糖的分步酶法增值提供候选预处理模块。",
+      "evidence": "ACS/Crossref 摘要支持：OsLPMO10A 对壳聚糖有高亲和力；可处理 (GlcN)4 而不作用于 (GlcNAc)4；结构分析提出特定带电基序可能辅助定位；氧化微蚀刻降低结晶度并增强后续壳聚糖酶水解。基序作用在摘要中属于结构推断。",
+      "audience": "LPMO、壳聚糖转化、海洋多糖、底物特异性与生物质预处理研究者",
+      "minutes": 8,
+      "labels": [
+        "实验验证",
+        "机制研究",
+        "过程强化"
+      ],
+      "verification": "ACS 出版商与 Crossref 均确认 2026-11-02 在线发表并提供摘要；DOI、题名和作者已核验且未列更正或撤稿关系。OpenAlex 暂记 2026-10-31，故日期采用出版商与 Crossref 一致的 2026-11-02；OpenAlex 未标记撤稿。",
+      "en": {
+        "summary": "The chitin-active AA10 LPMO OsLPMO10A from Oceanobacillus sp. J11TS1 shows high affinity for chitosan and processes (GlcN)4 while remaining inactive toward (GlcNAc)4. Structural analysis suggests that an Asp152–Asp153–Arg125 motif at the edge of the elongated catalytic cavity may assist substrate positioning. Oxidative micro-etching lowers chitosan crystallinity while largely preserving the bulk framework and improves subsequent hydrolysis by chitosanases.",
+        "why": "The study extends a chitin-active AA10 LPMO to the deacetylated polysaccharide chitosan and connects oligosaccharide preference, pocket geometry, material crystallinity and downstream hydrolysis. It offers a candidate oxidative pretreatment module for staged enzymatic valorization of marine polysaccharides.",
+        "evidence": "The ACS/Crossref abstract supports high chitosan affinity, activity on (GlcN)4 but not (GlcNAc)4, a proposed charged motif for substrate positioning, reduced crystallinity after oxidative micro-etching, and enhanced subsequent chitosanase hydrolysis. The role of the motif is presented as a structural suggestion rather than direct proof.",
+        "audience": "Researchers in LPMOs, chitosan conversion, marine polysaccharides, substrate specificity and biomass pretreatment",
+        "verification": "The ACS publisher record and Crossref both confirm online publication on 2 November 2026 and provide the abstract. The DOI, title and authors were checked, with no correction or retraction relation listed. OpenAlex currently records 31 October, so the date follows the matching publisher and Crossref records; OpenAlex does not mark the work as retracted."
+      }
+    }
+  ],
+  "observationsEn": [
+    [
+      "This edition at a glance",
+      "Using the strict online-publication window of 27 October–2 November 2026, this edition includes two Nature Catalysis papers, three JACS papers and one ACS Sustainable Chemistry & Engineering paper. The five featured studies cover enzyme–photocatalyst reaction discovery, imine-reductase C–P bond formation, the electronic structure of a TPP radical intermediate, decentralized natural-product enzyme mining, and an electrocatalytic–enzymatic cascade."
+    ],
+    [
+      "From new reactions to explainable reactions",
+      "Several studies go beyond reporting product scope to ask where selectivity originates. The two Nature Catalysis papers combine catalyst pairing or focused evolution with divergent outcomes; the JACS EPR/ENDOR study directly compares the electronic structure of the same TPP-bound ketyl radical in two protein scaffolds; and the natural-product study integrates transcriptomics with structure-guided computation to identify a P450 and Diels–Alderase outside a shared gene cluster."
+    ],
+    [
+      "Evidence boundaries",
+      "Divergence in both photoenzymatic studies is confined to the tested substrates, enzyme variants and photocatalytic conditions. The TPP comparison concerns BFD and BAL scaffolds and should not be generalized to all TPP enzymes. The chevalinulin A workflow demonstrates nonclustered-enzyme discovery in this pathway. The electroenzymatic platform's generality rests on the substrates and electrodes tested by the authors. OsLPMO10A's chitosan activity and downstream-hydrolysis benefit remain specific to the reported enzyme–substrate system."
+    ]
+  ],
+  "edition": 9
+}
